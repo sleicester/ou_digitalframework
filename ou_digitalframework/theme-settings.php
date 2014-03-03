@@ -26,10 +26,8 @@
        'green' => t('Green'),
        'blue' => t('Blue'),
      ),
-    '#default_value' => theme_get_setting('ou_df_colour_scheme','red'),
+    '#default_value' => theme_get_setting('ou_df_colour_scheme'),
     '#description' => t("Select the colour scheme for this site"),    
 
   );
-  
- 
 }
