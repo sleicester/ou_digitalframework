@@ -1,0 +1,9 @@
+name = Open University Digital Futures
+description = The Open University Digital Futures Theme
+core = 7.x
+ 
+stylesheets[all][] = css/style.css
+ 
+regions[header] = Header
+regions[navigation] = Navigation
+regions[content] = Content
