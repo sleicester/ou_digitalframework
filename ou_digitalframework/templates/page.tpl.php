@@ -64,7 +64,7 @@
  *
  * Regions:
  * - $page['header']: Items for the header region.
- * - $page['featured']: Items for the featured region.
+ * - $page['hero']: Items for the featured region.
  * - $page['highlighted']: Items for the highlighted content region.
  * - $page['help']: Dynamic help text, mostly for admin pages.
  * - $page['content']: The main content of the current page.
@@ -78,7 +78,8 @@
  * @see html.tpl.php
  */
 ?>
-<div id="page-wrapper"><div id="page">
+<div id="int-site"><div id="page">
+<?php include base_path() . path_to_theme() . "/assets/header.html"; ?>
 
   <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
 
@@ -140,17 +141,9 @@
          <?php if ($breadcrumb): ?>
 	  	 <div id="breadcrumb"><?php print $breadcrumb; ?></div>
          <?php endif; ?>
-
-         <div class="int-row int-courses-hero">
-		 <div class="int-grid4">
-		 <h1>Be inspired by our courses</h1>
-		 <p>Join our 150 million students who have already begun their life-changing journey.</p>
-		 </div>
-		 <div class="int-grid8">
-		 <img src="../assets/img/ug-home-page/mosaic-01.jpg" class="fullwidth" alt="Full Width">
-		 </div>
-		</div>
-
+    	 <?php if ($page['hero']): ?>
+         <?php print render($page['hero']); ?>
+         <?php endif; ?>
       </div><!-- /.int-container-->
       <hr />
   	</div></div><!-- /.int-courses-hero /.interaction-->
@@ -198,6 +191,7 @@
     </div></div> <!-- /.section, /#content -->
     <?php if ($page['sidebar_second']): ?>
       <div id="sidebar-second" class="int-grid4"><div class="section">
+                           <?php print $my_files_path.'CUSTOM VARIABLE' ?>
         <?php print render($page['sidebar_second']); ?>
       </div></div> <!-- /.section, /#sidebar-second -->
     <?php endif; ?>
@@ -209,12 +203,8 @@
   <div id="footer-wrapper"><div class="section">
 
 
+<?php include base_path() . path_to_theme() . "/assets/footer.html"; ?>
 
-    <?php if ($page['footer']): ?>
-      <div id="footer" class="clearfix">
-        <?php print render($page['footer']); ?>
-      </div> <!-- /#footer -->
-    <?php endif; ?>
 
   </div></div> <!-- /.section, /#footer-wrapper -->
 

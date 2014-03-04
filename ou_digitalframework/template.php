@@ -22,3 +22,9 @@ function ou_digital_futures_breadcrumb($variables) {
      return t("Home");
    }
  }
+
+ function ou_digital_futures_preprocess_html(&$variables) {
+   if (!empty($variables['page']['sidebar_second'])) {
+    $variables['my_files_path'] = 'This is a test';
+    }
+  }
