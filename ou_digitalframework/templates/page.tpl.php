@@ -78,12 +78,11 @@
  * @see html.tpl.php
  */
 ?>
-<div id="int-site"><div id="page">
-<?php include base_path() . path_to_theme() . "/assets/header.html"; ?>
+
+<div id="int-site" class="<?php print theme_get_setting('ou_df_colour_scheme'); ?>"><div id="page">
+<?php include base_path() . path_to_theme() . theme_get_setting('ou_df_path_to_header'); ?>
 
   <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
-
-
 
 
   <main id="int-content">
@@ -203,7 +202,7 @@
   <div id="footer-wrapper"><div class="section">
 
 
-<?php include base_path() . path_to_theme() . "/assets/footer.html"; ?>
+<?php include base_path() . path_to_theme() . theme_get_setting('ou_df_path_to_footer') ; ?>
 
 
   </div></div> <!-- /.section, /#footer-wrapper -->
