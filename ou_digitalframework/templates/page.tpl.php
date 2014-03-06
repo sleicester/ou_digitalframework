@@ -86,7 +86,7 @@
 
 
 <div id="int-site" class="<?php print theme_get_setting('ou_df_colour_scheme'); ?>"><div id="page">
-<?php include base_path() . path_to_theme() . theme_get_setting('ou_df_path_to_header'); ?>
+<?php include path_to_theme() . theme_get_setting('ou_df_path_to_header'); ?>
 
   <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
 
