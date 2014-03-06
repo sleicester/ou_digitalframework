@@ -40,6 +40,6 @@ function ou_digital_futures_breadcrumb($variables) {
      }
    }
 
-function ou_digital_futures_menu_link(array $variables) {
-  return print_r($variables['element']);
-}
+/*function ou_digital_futures_menu_link(array $variables) {
+  return print $variables['element'];
+}*/
