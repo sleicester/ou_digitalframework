@@ -78,13 +78,12 @@
  * @see html.tpl.php
  */
 ?>
-<<<<<<< HEAD
+
 <div id="int-site"><div id="page">
 <?php include base_path() . path_to_theme() . "/assets/header.html"; ?>
 
   <div class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
-=======
->>>>>>> b02434a55b5571df5f84f643e0acc1883729271c
+
 
 <div id="int-site" class="<?php print theme_get_setting('ou_df_colour_scheme'); ?>"><div id="page">
 <?php include base_path() . path_to_theme() . theme_get_setting('ou_df_path_to_header'); ?>
