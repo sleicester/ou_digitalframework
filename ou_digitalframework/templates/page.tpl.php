@@ -199,7 +199,7 @@
   <div id="footer-wrapper"><div class="section">
 
 
-<?php include base_path() . path_to_theme() . theme_get_setting('ou_df_path_to_footer') ; ?>
+<?php include path_to_theme() . theme_get_setting('ou_df_path_to_footer') ; ?>
 
 
   </div></div> <!-- /.section, /#footer-wrapper -->
