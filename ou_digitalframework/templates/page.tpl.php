@@ -80,7 +80,7 @@
 ?>
 
 <div id="int-site"><div id="page">
-<?php include base_path() . path_to_theme() . "/assets/header.html"; ?>
+<?php include path_to_theme() . "/assets/header.html"; ?>
 
   <div class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
 
