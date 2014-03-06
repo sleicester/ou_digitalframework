@@ -81,7 +81,7 @@
 <div id="int-site"><div id="page">
 <?php include base_path() . path_to_theme() . "/assets/header.html"; ?>
 
-  <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
+  <div class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
 
 
 
@@ -90,17 +90,12 @@
     <div class="int-container">
   	<div class="int-row">
       <?php if ($main_menu): ?>
-        <div id="main-menu" class="navigation">
+        <div id="main-menu" class="navigation int-nav-secondary">
           <?php print theme('links__system_main_menu', array(
             'links' => $main_menu,
             'attributes' => array(
               'id' => 'main-menu-links',
-              'class' => array('links', 'clearfix'),
-            ),
-            'heading' => array(
-              'text' => t('Main menu'),
-              'level' => 'h2',
-              'class' => array('element-invisible'),
+              'class' => array('links', 'clearfix','int-container','int-nav-prim-list'),
             ),
           )); ?>
         </div> <!-- /#main-menu -->
@@ -159,11 +154,8 @@
       </div></div> <!-- /.section, /#sidebar-first -->
     <?php endif; ?>
 
-    <div id="content" class="int-grid8"><div class="section">
+    <div id="content" class="int-grid<?php print $main_grid_int?>"><div class="section">
 
-        <?php if ($breadcrumb): ?>
-	      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-         <?php endif; ?>
 
 	      <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
 	      <a id="main-content"></a>
@@ -191,7 +183,6 @@
     </div></div> <!-- /.section, /#content -->
     <?php if ($page['sidebar_second']): ?>
       <div id="sidebar-second" class="int-grid4"><div class="section">
-                           <?php print $my_files_path.'CUSTOM VARIABLE' ?>
         <?php print render($page['sidebar_second']); ?>
       </div></div> <!-- /.section, /#sidebar-second -->
     <?php endif; ?>

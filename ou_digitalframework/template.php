@@ -1,6 +1,7 @@
 <?php
 
 function ou_digital_futures_breadcrumb($variables) {
+//customise the appearance of the breadcrumb to add jywing classes
    if (count($variables['breadcrumb']) > 0) {
      $lastitem = sizeof($variables['breadcrumb']);
      $title = drupal_get_title();
@@ -23,8 +24,29 @@ function ou_digital_futures_breadcrumb($variables) {
    }
  }
 
- function ou_digital_futures_preprocess_html(&$variables) {
-   if (!empty($variables['page']['sidebar_second'])) {
-    $variables['my_files_path'] = 'This is a test';
-    }
+
+
+  function ou_digital_futures_preprocess_page(&$variables) {
+ //change the class of the main content column depending on whether sidebar_second or sidebar_first is enabled, classes implement grid system based on 12 columns
+
+   if((!empty($variables['page']['sidebar_second']))&&(!empty($variables['page']['sidebar_first']))){
+     $variables['main_grid_int'] = "4";
+     }
+   elseif((!empty($variables['page']['sidebar_second']))||(!empty($variables['page']['sidebar_first']))){
+     $variables['main_grid_int'] = "8";
+     }
+    else{
+       $variables['main_grid_int'] = "12";
+     }
+   }
+
+function ou_digital_futures_menu_link(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
   }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
