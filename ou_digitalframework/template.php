@@ -40,6 +40,7 @@ function ou_digital_futures_breadcrumb($variables) {
      }
    }
 
+<<<<<<< HEAD
 function ou_digital_futures_links__system_main_menu($variables) {
   $html = "  <ul class='int-container int-nav-prim-list'>\n";
 
@@ -52,3 +53,8 @@ function ou_digital_futures_links__system_main_menu($variables) {
 
   return $html;
 }
+=======
+/*function ou_digital_futures_menu_link(array $variables) {
+  return print $variables['element'];
+}*/
+>>>>>>> 86d2cc30c4d61e7c7548d218bb8e589115aba626

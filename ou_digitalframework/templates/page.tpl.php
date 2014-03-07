@@ -80,20 +80,28 @@
 ?>
 
 <div id="int-site"><div id="page">
-<div class="section clearfix">
+
+  <div class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
+
 
 <div id="int-site" class="<?php print theme_get_setting('ou_df_colour_scheme'); ?>"><div id="page">
-<?php include base_path() . path_to_theme() . theme_get_setting('ou_df_path_to_header'); ?>
+<?php include path_to_theme() . theme_get_setting('ou_df_path_to_header'); ?>
+
+  <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
 
 
-
-<nav role="navigation">
-<div class="int-nav-primary">
-
-
+  <main id="int-content">
+    <div class="int-container">
+  	<div class="int-row">
       <?php if ($main_menu): ?>
-        <div id="main-menu">
-          <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu')));?>
+        <div id="main-menu" class="navigation int-nav-secondary">
+          <?php print theme('links__system_main_menu', array(
+            'links' => $main_menu,
+            'attributes' => array(
+              'id' => 'main-menu-links',
+              'class' => array('links', 'clearfix','int-container','int-nav-prim-list'),
+            ),
+          )); ?>
         </div> <!-- /#main-menu -->
       <?php endif; ?>
 
@@ -111,9 +119,10 @@
               'class' => array('element-invisible'),
             ),
           )); ?>
-
+        </div> <!-- /#secondary-menu -->
       <?php endif; ?>
-</nav></div><!--/.int-nav-primary-->
+
+    </div></div> <!-- /.section, /#header -->
 
     <?php if ($messages): ?>
       <div id="messages"><div class="section clearfix">
@@ -138,7 +147,7 @@
       <hr />
   	</div></div><!-- /.int-courses-hero /.interaction-->
 
-  <main id="int-content">
+
   <div class="int-container">
   <div class="int-row">
 
@@ -189,7 +198,7 @@
   <div id="footer-wrapper"><div class="section">
 
 
-<?php include base_path() . path_to_theme() . theme_get_setting('ou_df_path_to_footer') ; ?>
+<?php include path_to_theme() . theme_get_setting('ou_df_path_to_footer') ; ?>
 
 
   </div></div> <!-- /.section, /#footer-wrapper -->
