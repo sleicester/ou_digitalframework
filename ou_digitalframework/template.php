@@ -20,7 +20,7 @@ function ou_digital_futures_breadcrumb($variables) {
    return $crumbs;
    }
    else {
-     return t("Home");
+     return "<dl class='breadcrumb'><dd><span>".t("Home")."</span></dd></dl>";
    }
  }
 
