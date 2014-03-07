@@ -97,22 +97,7 @@
         </div> <!-- /#main-menu -->
       <?php endif; ?>
 
-      <?php if ($secondary_menu): ?>
-        <div id="secondary-menu" class="navigation">
-          <?php print theme('links__system_secondary_menu', array(
-            'links' => $secondary_menu,
-            'attributes' => array(
-              'id' => 'secondary-menu-links',
-              'class' => array('links', 'inline', 'clearfix'),
-            ),
-            'heading' => array(
-              'text' => t('Secondary menu'),
-              'level' => 'h2',
-              'class' => array('element-invisible'),
-            ),
-          )); ?>
-        </div> <!-- /#secondary-menu -->
-      <?php endif; ?>
+
 
 </div> <!-- /.section, /#header -->
     <div class="int-container">
@@ -126,19 +111,23 @@
 
 
   <main id="int-content">
-    <div class="int-courses-hero">
-    <div class="interaction">
-      <div class="int-container">
+     <?php if ($breadcrumb): ?>
+       <div class="int-container">
+  	  	 <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+ 	   </div><!--/.int-container -->
+     <?php endif; ?>
 
-         <?php if ($breadcrumb): ?>
-	  	 <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-         <?php endif; ?>
-    	 <?php if ($page['hero']): ?>
+
+  <?php if ($page['hero']): ?>
+ 	<div class="int-courses-hero">
+     <div class="interaction">
+      <div class="int-container">
          <?php print render($page['hero']); ?>
-         <?php endif; ?>
       </div><!-- /.int-container-->
       <hr />
   	</div></div><!-- /.int-courses-hero /.interaction-->
+  	<?php endif; ?>
+
 
 
   <div class="int-container">
@@ -183,6 +172,24 @@
         <?php print render($page['sidebar_second']); ?>
       </div></div> <!-- /.section, /#sidebar-second -->
     <?php endif; ?>
+
+          <?php if ($secondary_menu): ?>
+            <div id="secondary-menu" class="navigation">
+              <?php print theme('links__system_secondary_menu', array(
+                'links' => $secondary_menu,
+                'attributes' => array(
+                  'id' => 'secondary-menu-links',
+                  'class' => array('links', 'inline', 'clearfix'),
+                ),
+                'heading' => array(
+                  'text' => t('Secondary menu'),
+                  'level' => 'h2',
+                  'class' => array('element-invisible'),
+                ),
+              )); ?>
+            </div> <!-- /#secondary-menu -->
+      <?php endif; ?>
+
   </div></div> <!--/.int-row /.int-container -->
 
 
@@ -190,6 +197,12 @@
 
   <div id="footer-wrapper"><div class="section">
 
+
+    <?php if ($page['footer']): ?>
+      <div id="footer" class="clearfix">
+        <?php print render($page['footer']); ?>
+      </div> <!-- /#footer -->
+    <?php endif; ?>
 
 <?php include path_to_theme() . theme_get_setting('ou_df_path_to_footer') ; ?>
 
