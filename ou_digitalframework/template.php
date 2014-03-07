@@ -40,6 +40,15 @@ function ou_digital_futures_breadcrumb($variables) {
      }
    }
 
-function ou_digital_futures_menu_link(array $variables) {
-  return print_r($variables['element']);
+function ou_digital_futures_links__system_main_menu($variables) {
+  $html = "  <ul class='int-container int-nav-prim-list'>\n";
+
+  foreach ($variables['links'] as $link) {
+    $html .= "<li class='int-nav-prim-item'><a href='".$link['href']."'><span>".$link['title']."</span></a></li>";
+  }
+
+  $html .= "  </ul>\n";
+  $html .= "</div>\n";
+
+  return $html;
 }
