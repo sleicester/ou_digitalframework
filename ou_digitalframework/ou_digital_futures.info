@@ -5,6 +5,7 @@ core = 7.x
 stylesheets[all][] = css/framework/screen.css
 stylesheets[all][] = css/custom/style.css
 stylesheets[all][] = css/ckeditor-styles.css
+
 regions[header] = Header
 regions[navigation] = Navigation
 regions[content] = Content
@@ -16,10 +17,8 @@ regions[page_top] = Page top
 regions[page_bottom] = Page bottom
 regions[highlighted] = Highlighted
 
-
 regions[content] = Content
 regions[sidebar_first] = Sidebar First
 regions[sidebar_second] = Sidebar Second
-
 
 regions[footer] = Footer
