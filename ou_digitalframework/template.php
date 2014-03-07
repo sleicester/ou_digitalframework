@@ -9,7 +9,7 @@ function ou_digital_futures_breadcrumb($variables) {
      $a=1;
      foreach($variables['breadcrumb'] as $value) {
          if ($a!=$lastitem){
-          $crumbs .= '<span>'. $value . ' ' . '</span><i class="int-icon int-icon-chevron-right"></i>';
+          $crumbs .= '<span>'. $value . ' ' . '</span> &nbsp; &gt; &nbsp;';
           $a++;
          }
          else {
