@@ -16,7 +16,7 @@ function ou_digital_futures_breadcrumb($variables) {
              $crumbs .= '<span>'.$value.'<span>';
          }
      }
-     $crumbs .= '</dd></dl>';
+     $crumbs .= '&nbsp; &gt; &nbsp;'.$title.'</dd></dl>';
    return $crumbs;
    }
    else {
