@@ -87,21 +87,13 @@
 <div id="int-site" class="<?php print theme_get_setting('ou_df_colour_scheme'); ?>"><div id="page">
 <?php include path_to_theme() . theme_get_setting('ou_df_path_to_header'); ?>
 
-  <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
 
 
-  <main id="int-content">
-    <div class="int-container">
-  	<div class="int-row">
+
+
       <?php if ($main_menu): ?>
-        <div id="main-menu" class="navigation int-nav-secondary">
-          <?php print theme('links__system_main_menu', array(
-            'links' => $main_menu,
-            'attributes' => array(
-              'id' => 'main-menu-links',
-              'class' => array('links', 'clearfix','int-container','int-nav-prim-list'),
-            ),
-          )); ?>
+        <div id="main-menu" class="int-nav-primary">
+          <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu')));?>
         </div> <!-- /#main-menu -->
       <?php endif; ?>
 
@@ -122,8 +114,9 @@
         </div> <!-- /#secondary-menu -->
       <?php endif; ?>
 
-    </div></div> <!-- /.section, /#header -->
-
+</div> <!-- /.section, /#header -->
+    <div class="int-container">
+  	<div class="int-row">
     <?php if ($messages): ?>
       <div id="messages"><div class="section clearfix">
         <?php print $messages; ?>
@@ -132,7 +125,7 @@
   </div></div><!--/.int-container /.int-row -->
 
 
-
+  <main id="int-content">
     <div class="int-courses-hero">
     <div class="interaction">
       <div class="int-container">
