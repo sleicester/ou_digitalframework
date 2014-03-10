@@ -60,9 +60,3 @@ function ou_digital_futures_links__system_main_menu($variables) {
   return $html;
 }
 
-//hide the pag
-function MYTHEME_preprocess_page(&$variables) {
-    if (!empty($variables['node']) && $variables['node']->type == 'concert') {
-         hide($variables['title']);
-      }
-}
