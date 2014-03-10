@@ -54,6 +54,17 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Call to Action Header'	, element : 'span' },
 
 
+            { name : 'Align Right',
+			 element : 'div',
+			 attributes : {
+			 'class' : 'align-right' }
+ 			},
+
+            { name : 'Align Left',
+			 element : 'div',
+			 attributes : {
+			 'class' : 'align-left' }
+ 			},
 
     ]);
 }

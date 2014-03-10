@@ -28,3 +28,21 @@ div.call-to-action span {
   font-size: 1.75em;
   display:block;
 }
+
+div.align-right img{
+    margin-top: 1em;
+    border: 1px solid #ADD0E1;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    float: right;
+    margin-left: 10px;
+}
+
+div.align-left img{
+    margin-top: 1em;
+    border: 1px solid #ADD0E1;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    float: left;
+    margin-right: 10px;
+}
