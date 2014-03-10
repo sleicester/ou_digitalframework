@@ -37,6 +37,10 @@ function ou_digital_futures_preprocess_page(&$variables) {
     else{
        $variables['main_grid_int'] = "12";
      }
+
+      if ((!empty($variables['node'])) && ($variables['node']->type == 'panel')) {
+           $variables['title']="";
+      }
    }
 
 
