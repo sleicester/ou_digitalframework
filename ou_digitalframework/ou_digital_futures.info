@@ -8,6 +8,9 @@ stylesheets[all][] = css/custom/style.css
 stylesheets[all][] = css/ckeditor-styles.css
 stylesheets[all][] = css/framework/font-awesome.css
 
+scripts[] = js/df-accordion.js
+scripts[] = js/jquery-ui-1.10.4.custom.min.js
+
 regions[header] = Header
 regions[navigation] = Navigation
 regions[content] = Content
