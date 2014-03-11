@@ -1,0 +1,21 @@
+CSS log
+
+css_additional.css
+
+Drupal implements the cite tag as a child of a p tag.  Jwing has styled the cite tag as a direct child of the blockquote tag.  Need to amend the font-size for Drupal.
+
+cite{
+  font-size: 0.715em !important;
+}
+
+
+
+
+screen.css
+
+reference the correct folder for the background image for drupal
+
+blockquote:before,
+blockquote:after{
+  background: url(../../images/blockquote.png);
+  }

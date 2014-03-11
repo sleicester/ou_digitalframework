@@ -329,10 +329,13 @@ blockquote:after, blockquote .after {
 aside blockquote {
     margin: 0;
 }
+
+/*change font-size from original jwing spec as in drupal cite inherits font styling from parent class which in the ckeditor is p*/
 cite {
-    font-size: 0.875em;
-    font-style: normal;
+  font-size: 0.715em !important;
+  font-style: normal;
 }
+
 hr {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
