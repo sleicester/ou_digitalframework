@@ -23,3 +23,20 @@ content: none;
     padding: none;
 }
 
+.df-grey-header {
+    background-color: #F8F8FF;
+    background-image: url("../../images/oulogo-56.jpg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #808080;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-top: 20px;
+    min-height: 120px;
+    padding: 30px;
+    width: 80%;
+}
+
+.df-header-nav {
+	float: right;
+}
