@@ -2,8 +2,8 @@ name = Open University Digital Futures
 description = The Open University Digital Futures Theme
 core = 7.x
 
-stylesheets[all][] = css/framework/screen.css
 stylesheets[all][] = css/framework/screen_additional.css
+stylesheets[all][] = css/framework/screen.css
 stylesheets[all][] = css/custom/style.css
 stylesheets[all][] = css/ckeditor-styles.css
 stylesheets[all][] = css/framework/font-awesome.css
