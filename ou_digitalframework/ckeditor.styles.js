@@ -81,5 +81,5 @@ if(typeof(CKEDITOR) !== 'undefined') {
     }
 },
 
-    ]);
+  ]);
 }
