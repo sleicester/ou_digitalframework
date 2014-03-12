@@ -52,6 +52,9 @@ if(typeof(CKEDITOR) !== 'undefined') {
 
             { name : 'Preformatted',
 			 element : 'pre'},
+			 
+			{ name : 'icon',
+			 element : 'i'},
 
             { name : 'Citation',
 			 element : 'cite',
