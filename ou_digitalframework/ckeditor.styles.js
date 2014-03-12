@@ -47,6 +47,9 @@ if(typeof(CKEDITOR) !== 'undefined') {
 			 'class' : 'call-to-action' }
  			},
 
+            { name : 'Highlight',
+			 element : 'mark'},
+
             { name : 'Citation',
 			 element : 'cite',
  			},
