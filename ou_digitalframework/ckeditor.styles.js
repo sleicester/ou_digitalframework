@@ -54,6 +54,10 @@ if(typeof(CKEDITOR) !== 'undefined') {
 			 element : 'cite',
  			},
 
+ 			{ name : 'Inline quotation',
+			  element : 'q',
+ 			},
+
             { name : 'Call to Action Header'	, element : 'span' },
 
 
