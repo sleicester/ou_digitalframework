@@ -61,10 +61,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
 			  element : 'q',
  			},
 
- 			{ name : 'Inline quotation',
-			  element : 'q',
- 			},
-
             { name : 'Call to Action Header'	, element : 'span' },
 
 
