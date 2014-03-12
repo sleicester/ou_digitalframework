@@ -50,8 +50,15 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Highlight',
 			 element : 'mark'},
 
+            { name : 'Preformatted',
+			 element : 'pre'},
+
             { name : 'Citation',
 			 element : 'cite',
+ 			},
+
+ 			{ name : 'Inline quotation',
+			  element : 'q',
  			},
 
  			{ name : 'Inline quotation',
