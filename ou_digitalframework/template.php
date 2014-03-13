@@ -41,6 +41,21 @@ function ou_digital_futures_preprocess_page(&$variables) {
       if ((!empty($variables['node'])) && ($variables['node']->type == 'panel')) {
            $variables['title']="";
       }
+
+   // Switching layout based on a selector in the content page
+   // Add a single suggestion for nodes that have an "Alternative layout" selected.
+
+   if ($variables['node']->type == 'digital_futures_article') {
+    if (!empty($variables['node']->field_select_layout[$variables['node']->language][0]['value'])) {
+       $selected_layout = $variables['node']->field_select_layout[$variables['node']->language][0]['value'];
+       switch ($selected_layout) {
+         case "alternative":
+         // looks for page--alternative1.tpl.php in your theme directory
+         $variables['theme_hook_suggestions'][] = 'page__alternative1';
+         break;
+       }
+     }
+   }
    }
 
 
@@ -80,25 +95,8 @@ function ou_digital_futures_menu_link(array $variables) {
 }
 
 
-// Switching layout based on a selector in the content page
 
-  // Add a single suggestion for nodes that have an "Alternative layout" selected.
-  function ou_digital_futures_preprocess_node( & $variables)  {
-  if (isset($variables['type']) && $variables['type'] == 'digital_futures_article') {
-    $node = node_load($variables['nid']);
-      
-      if (isset($node->field_select_layout[$node->language][0]['value'])) {
-        $selected_layout = $node->field_select_layout[$node->language][0]['value'];
-        switch ($selected_layout) {
-          case "alternative":
-          // looks for node--promoted.tpl.php in your theme directory
-          $variables['theme_hook_suggestion'] = 'node__alternative1';
-          break;
-
-        }
-      }
-    }
-  }
+  
   
 
 
