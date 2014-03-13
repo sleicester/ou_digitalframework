@@ -71,10 +71,9 @@ function ou_digital_futures_menu_link(array $variables) {
   $sub_menu = '';
 
   if ($element['#below']) {
-    // Wrap in dropdown-menu.
-    unset($element['#below']['#theme_wrappers']);
-    $sub_menu = '<ul class="menu submenu">' . drupal_render($element['#below']) . '</ul>';
+    $sub_menu = drupal_render($element['#below']);
   }
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+  return '<li' . drupal_attributes($element['#attributes']) . '><span class="int-icon-btn int-accordion-closed"><i class="int-icon int-icon-chevron-right"></i></span>' . $output . $sub_menu . "</li>\n";
 }
+

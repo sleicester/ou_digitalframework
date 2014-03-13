@@ -34,9 +34,10 @@
       <?php print $content['field_career'][0]['#markup'] ?>
     <?php endif; ?>
 
+    <?php if (isset($content['field_contact'])): ?>
       <h3><?php print $content['field_contact']['#title'] ?></h3>
       <?php print $content['field_contact'][0]['#markup'] ?>
-
+    <?php endif; ?>
     </div>
 
   </div>

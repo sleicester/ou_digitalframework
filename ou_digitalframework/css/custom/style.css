@@ -1,17 +1,49 @@
 ul.menu  {
-    border-color: #A6D0FF;
-    border-style: solid;
-    border-width: 5px;
-    padding: 10px;
-   
-    
-	
+    padding: 4px 10px;
+    margin-left: 0;
 }
 
 ul.menu li {
 	list-style: none outside none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	color: #880088;
+	cursor: pointer;
+	padding: 0.75em 1em 0.75em 20px;
+position: relative;
+background-color: #fff;
+margin: 4px 0;
 }
 
+.int-icon-chevron-right:before {
+    content: ""\f054"";
+}
+
+.active-trail .int-icon-chevron-right:before {
+    content: "\f078";
+}
+
+.int-icon-btn {
+  margin-right: 10px;
+}
+
+.active-trail .int-icon-btn{
+background: #880088;
+text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
+}
+
+.active-trail .int-icon-btn i {
+ color: #ffc23d;
+}
+
+li.expanded ul span {
+display: none;
+}
+
+li.expanded > ul li {
+    padding: 0 50px;
+}
 
 ul.menu li:before {
 content: none;
@@ -55,3 +87,10 @@ content: none;
   padding: 0.5em;
   margin-left: 1em;
 }
+
+/*styles for side navigation*/
+
+.menu-block-wrapper {
+background-color: #0b55a8;
+}
+
