@@ -4542,3 +4542,6 @@ header[role="banner"] .ou-logo {
     float: right;
     width: auto;
 }
+.alternative-layout {
+	background-color:pink;
+}
