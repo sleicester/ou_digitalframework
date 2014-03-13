@@ -40,3 +40,18 @@ content: none;
 .df-header-nav {
 	float: right;
 }
+
+/*styles for profile pages*/
+
+@media (min-width: 768px) {
+.profile-image{
+  float: right;
+ }
+}
+
+.profile-image img {
+  border: 1px solid #ADD0E1;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  margin-left: 1em;
+}
