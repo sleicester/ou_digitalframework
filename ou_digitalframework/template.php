@@ -78,3 +78,26 @@ function ou_digital_futures_menu_link(array $variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+
+// Switching layout based on a selector in the content page
+
+// Add a single suggestion for nodes that have an "Alternative layout" selected.
+  function ou_digital_futures_preprocess_node( & $variables)  {
+    if ($variables['type'] == 'digital_futures_article') {
+      $node = node_load($variables['nid']);
+
+      if ($node->field_select_layout[$node->language][0]['value']) {
+        $selected_layout = $node->field_select_layout[$node->language][0]['value'];
+        switch ($selected_layout) {
+          case "alternative":
+          // looks for node--promoted.tpl.php in your theme directory
+          $variables['theme_hook_suggestion'] = 'node__alternative1';
+          break;
+        }
+      }
+    }
+  }
+
+
+
