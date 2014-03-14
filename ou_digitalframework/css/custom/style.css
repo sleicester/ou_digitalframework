@@ -103,4 +103,8 @@ background-color: #0b55a8;
 .alternative-layout {
 	background-color:pink;
 }
->>>>>>> dd2d2c5870435cf21b24c34e7f669ad4e9c742b7
+/* Styles for webform elements specified classes in template.php */
+.ou_webform_radio_set {
+	}
+.ou_webform_radio_single {
+}
