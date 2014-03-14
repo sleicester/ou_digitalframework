@@ -124,7 +124,7 @@
       <div class="int-container">
          <?php print render($page['hero']); ?>
       </div><!-- /.int-container-->
-      <hr />
+      <br />
   	</div></div><!-- /.int-courses-hero /.interaction-->
   	<?php endif; ?>
 

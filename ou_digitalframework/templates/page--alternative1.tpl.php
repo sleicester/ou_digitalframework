@@ -81,7 +81,7 @@
 
 <div id="int-site"><div id="page">
 
-  <div class="alternative-layout <?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
+  <div class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
 
 
 <div id="int-site" class="<?php print theme_get_setting('ou_df_colour_scheme'); ?>"><div id="page">
@@ -140,7 +140,7 @@
       </div></div> <!-- /.section, /#sidebar-first -->
     <?php endif; ?>
 
-    <div id="content" class="int-grid<?php print $main_grid_int?>"><div class="section">
+    <div id="content" class="int-grid12"><div class="section">
 
 
 	      <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
@@ -168,9 +168,9 @@
 
     </div></div> <!-- /.section, /#content -->
     <?php if ($page['sidebar_second']): ?>
-      <div id="sidebar-second" class="int-grid4"><div class="section">
-        <?php print render($page['sidebar_second']); ?>
-      </div></div> <!-- /.section, /#sidebar-second -->
+      <!--<div id="sidebar-second" class="int-grid4"><div class="section">-->
+        <?php // print render($page['sidebar_second']); ?>
+      <!--</div></div> --> <!-- /.section, /#sidebar-second -->
     <?php endif; ?>
 
           <?php if ($secondary_menu): ?>
