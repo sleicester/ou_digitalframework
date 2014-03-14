@@ -52,7 +52,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
 
             { name : 'Preformatted',
 			 element : 'pre'},
-			 
+
 			{ name : 'icon',
 			 element : 'i'},
 
@@ -84,6 +84,15 @@ if(typeof(CKEDITOR) !== 'undefined') {
     {
         'class' : 'align-right',
         'align' : 'right'
+    }
+},
+
+{
+    name : 'Introductory Text',
+    element : 'p',
+    attributes :
+    {
+        'class' : 'int-intro-text',
     }
 },
 

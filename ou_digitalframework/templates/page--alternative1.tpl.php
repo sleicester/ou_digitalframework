@@ -111,6 +111,12 @@
 
 
   <main id="int-content">
+
+
+  <?php if ($page['hero']): ?>
+ 	<div class="int-courses-hero">
+     <div class="interaction">
+      <div class="int-container">
      <?php if ($breadcrumb): ?>
        <div class="int-container">
   	  	 <div id="breadcrumb"><?php print $breadcrumb; ?></div>
@@ -118,77 +124,70 @@
      <?php endif; ?>
 
 
-  <?php if ($page['hero']): ?>
- 	<div class="int-courses-hero">
-     <div class="interaction">
-      <div class="int-container">
          <?php print render($page['hero']); ?>
       </div><!-- /.int-container-->
-      <hr />
+      <br />
   	</div></div><!-- /.int-courses-hero /.interaction-->
   	<?php endif; ?>
 
 
 
+
+<?php if ($page['highlighted']): ?>
+  <div class="int-promo">
+  		<div class="int-container">
+  			<div class="int-notice int-notice-icon int-notice-icon-academic">
+  				 <div id="highlighted"><?php print render($page['highlighted']); ?></div>
+
+  			</div>
+  		</div>
+	</div>
+<?php endif; ?>
+
   <div class="int-container">
+
+     <div id="content"><div class="section">
+
+
+  	      <a id="main-content"></a>
+  	      <?php print render($title_prefix); ?>
+  	      <?php if ($title): ?>
+  	        <h1 class="title" id="page-title">
+  	          <?php print $title; ?>
+  	        </h1>
+  	      <?php endif; ?>
+  	      <?php print render($title_suffix); ?>
+  	      <?php if ($tabs): ?>
+  	        <div class="tabs">
+  	          <?php print render($tabs); ?>
+  	        </div>
+  	      <?php endif; ?>
+  	      <?php print render($page['help']); ?>
+  	      <?php if ($action_links): ?>
+  	        <ul class="action-links">
+  	          <?php print render($action_links); ?>
+  	        </ul>
+  	      <?php endif; ?>
+  	      <?php print render($page['content']); ?>
+  	      <?php print $feed_icons; ?>
+
+    </div></div> <!-- /.section, /#content -->
+<hr class="int-divider int-divider-sub int-divider-lrg int-divider-arrow">
   <div class="int-row">
-
-
     <?php if ($page['sidebar_first']): ?>
-      <div id="sidebar-first" class="int-grid4"><div class="section">
+      <div id="sidebar-first" class="int-grid6"><div class="section">
         <?php print render($page['sidebar_first']); ?>
       </div></div> <!-- /.section, /#sidebar-first -->
     <?php endif; ?>
 
-    <div id="content" class="int-grid12"><div class="section">
 
-
-	      <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
-	      <a id="main-content"></a>
-	      <?php print render($title_prefix); ?>
-	      <?php if ($title): ?>
-	        <h1 class="title" id="page-title">
-	          <?php print $title; ?>
-	        </h1>
-	      <?php endif; ?>
-	      <?php print render($title_suffix); ?>
-	      <?php if ($tabs): ?>
-	        <div class="tabs">
-	          <?php print render($tabs); ?>
-	        </div>
-	      <?php endif; ?>
-	      <?php print render($page['help']); ?>
-	      <?php if ($action_links): ?>
-	        <ul class="action-links">
-	          <?php print render($action_links); ?>
-	        </ul>
-	      <?php endif; ?>
-	      <?php print render($page['content']); ?>
-	      <?php print $feed_icons; ?>
-
-    </div></div> <!-- /.section, /#content -->
     <?php if ($page['sidebar_second']): ?>
-      <!--<div id="sidebar-second" class="int-grid4"><div class="section">-->
-        <?php // print render($page['sidebar_second']); ?>
-      <!--</div></div> --> <!-- /.section, /#sidebar-second -->
+      <div id="sidebar-second" class="int-grid6"><div class="section">
+        <?php print render($page['sidebar_second']); ?>
+      </div></div> <!-- /.section, /#sidebar-second -->
     <?php endif; ?>
 
-          <?php if ($secondary_menu): ?>
-            <div id="secondary-menu" class="navigation">
-              <?php print theme('links__system_secondary_menu', array(
-                'links' => $secondary_menu,
-                'attributes' => array(
-                  'id' => 'secondary-menu-links',
-                  'class' => array('links', 'inline', 'clearfix'),
-                ),
-                'heading' => array(
-                  'text' => t('Secondary menu'),
-                  'level' => 'h2',
-                  'class' => array('element-invisible'),
-                ),
-              )); ?>
-            </div> <!-- /#secondary-menu -->
-      <?php endif; ?>
+
 
   </div></div> <!--/.int-row /.int-container -->
 
