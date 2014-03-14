@@ -41,6 +41,21 @@ function ou_digital_futures_preprocess_page(&$variables) {
       if ((!empty($variables['node'])) && ($variables['node']->type == 'panel')) {
            $variables['title']="";
       }
+
+   // Switching layout based on a selector in the content page
+   // Add a single suggestion for nodes that have an "Alternative layout" selected.
+
+   if (isset($variables['node']->type) && $variables['node']->type == 'digital_futures_article') {
+    if (!empty($variables['node']->field_select_layout[$variables['node']->language][0]['value'])) {
+       $selected_layout = $variables['node']->field_select_layout[$variables['node']->language][0]['value'];
+       switch ($selected_layout) {
+         case "alternative":
+         // looks for page--alternative1.tpl.php in your theme directory
+         $variables['theme_hook_suggestions'][] = 'page__alternative1';
+         break;
+       }
+     }
+   }
    }
 
 

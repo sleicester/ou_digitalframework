@@ -87,6 +87,7 @@ content: none;
   padding: 0.5em;
   margin-left: 1em;
 }
+<<<<<<< HEAD
 
 /*styles for side navigation*/
 
@@ -94,3 +95,8 @@ content: none;
 background-color: #0b55a8;
 }
 
+=======
+.alternative-layout {
+	background-color:pink;
+}
+>>>>>>> dd2d2c5870435cf21b24c34e7f669ad4e9c742b7
