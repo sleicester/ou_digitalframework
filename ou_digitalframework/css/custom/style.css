@@ -145,3 +145,6 @@ input[type="checkbox"] + label:before {
 input[type="checkbox"]:checked + label:before {
     background-position: 0 -300px;
 }
+
+.js #int-content .btn-top {
+    bottom: 0; 
