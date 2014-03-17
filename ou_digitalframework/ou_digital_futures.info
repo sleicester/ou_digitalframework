@@ -8,8 +8,19 @@ stylesheets[all][] = css/custom/style.css
 stylesheets[all][] = css/ckeditor-styles.css
 stylesheets[all][] = ../libraries/font-awesome-4.0.3/css/font-awesome.min.css
 
-# scripts[] = Jwing/assets/js/vendor/jquery-ui-1.10.3.custom.min.js
-# scripts[] = js/df-accordion.js
+scripts[] = Jwing/assets/js/vendor/jquery.placeholder.js
+scripts[] = Jwing/assets/js/vendor/jquery.smartresize.js
+scripts[] = Jwing/assets/js/vendor/cookies.js
+scripts[] = Jwing/assets/js/vendor/jquery-accessibleMegaMenu.js
+
+scripts[] = Jwing/assets/js/helpers.js
+scripts[] = Jwing/assets/js/modules/navigation.js
+scripts[] = Jwing/assets/js/modules/ui-widgets.js
+scripts[] = Jwing/assets/js/modules/course-details.js
+# scripts[] = Jwing/assets/js/back-to-top.js
+# scripts[] = Jwing/assets/js/modal.js
+scripts[] = Jwing/assets/js/main.js
+
 
 
 regions[header] = Header
