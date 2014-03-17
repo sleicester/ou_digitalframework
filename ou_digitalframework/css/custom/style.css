@@ -1,31 +1,31 @@
 .menu-block-wrapper{
-background: #0b55a8;
+  background: #0b55a8;
 }
 
 ul.menu  {
-    padding: 4px 10px;
-    margin-left: 0;
+  padding: 4px 10px;
+  margin-left: 0;
 }
 
 ul.menu li {
-	list-style: none outside none;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	color: #880088;
-	cursor: pointer;
-	padding: 0.75em 1em 0.75em 20px;
-position: relative;
-background-color: #fff;
-margin: 4px 0;
+  list-style: none outside none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #880088;
+  cursor: pointer;
+  padding: 0.75em 1em 0.75em 20px;
+  position: relative;
+  background-color: #fff;
+  margin: 4px 0;
 }
 
 .int-icon-chevron-right:before {
-    content: ""\f054"";
+  content: ""\f054"";
 }
 
 .active-trail .int-icon-chevron-right:before {
-    content: "\f078";
+  content: "\f078";
 }
 
 .int-icon-btn {
@@ -33,56 +33,56 @@ margin: 4px 0;
 }
 
 .active-trail .int-icon-btn{
-background: #880088;
-text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
+  background: #880088;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
 }
 
 .active-trail .int-icon-btn i {
- color: #ffc23d;
+  color: #ffc23d;
 }
 
 li.expanded ul span {
-display: none;
+  display: none;
 }
 
 li.expanded > ul li {
-    padding: 0 50px;
+  padding: 0 50px;
 }
 
 ul.menu li:before {
-content: none;
+  content: none;
 }
 .expanded > ul.menu {
-	border-color: none;
-    border-style: none;
-    border-width: none;
-    padding: none;
+  border-color: none;
+  border-style: none;
+  border-width: none;
+  padding: none;
 }
 
 .df-grey-header {
-    background-color: #F8F8FF;
-    background-image: url("../../images/oulogo-56.jpg");
-    background-position: left center;
-    background-repeat: no-repeat;
-    border-bottom: 1px solid #808080;
-    margin-bottom: 20px;
-    margin-left: 10%;
-    margin-top: 20px;
-    min-height: 120px;
-    padding: 30px;
-    width: 80%;
+  background-color: #F8F8FF;
+  background-image: url("../../images/oulogo-56.jpg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #808080;
+  margin-bottom: 20px;
+  margin-left: 10%;
+  margin-top: 20px;
+  min-height: 120px;
+  padding: 30px;
+  width: 80%;
 }
 
 .df-header-nav {
-	float: right;
+  float: right;
 }
 
 /*styles for profile pages*/
 
 @media (min-width: 768px) {
-.profile-image{
-  float: right;
- }
+  .profile-image{
+    float: right;
+  }
 }
 
 .profile-image img {
@@ -91,20 +91,57 @@ content: none;
   padding: 0.5em;
   margin-left: 1em;
 }
-<<<<<<< HEAD
-
 /*styles for side navigation*/
 
 .menu-block-wrapper {
-background-color: #0b55a8;
+  background-color: #0b55a8;
 }
 
 =======
 .alternative-layout {
-	background-color:pink;
+  background-color: pink;
 }
 /* Styles for webform elements specified classes in template.php */
 .ou_webform_radio_set {
-	}
+}
 .ou_webform_radio_single {
+
+}
+
+/* This section override styling for Forms elements - these dont seem to be included in the code release of CSS that we have
+when this code is available we should be able to remove this section*/
+
+input[type="radio"] + label:before {
+  background: url("../../Jwing/assets/img/form-sprites.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  content: "";
+  display: inline-block;
+  height: 32px;
+  margin: -2px 8px 0 -32px;
+  vertical-align: middle;
+  width: 32px;
+}
+input[type="radio"]:checked + label:before, input.checked[type="radio"] + label:before {
+  background-position: 0 -200px;
+}
+
+input[type="radio"] + label:before {
+  background-position: 0 -150px;
+}
+
+input[type="checkbox"] + label:before {
+  background: url("../../Jwing/assets/img/form-sprites.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  content: "";
+  display: inline-block;
+  height: 32px;
+  margin: -2px 8px 0 -32px;
+  vertical-align: middle;
+  width: 32px;
+}
+
+input[type="checkbox"] + label:before {
+  background-position: 0 -250px;
+}
+
+input[type="checkbox"]:checked + label:before {
+    background-position: 0 -300px;
 }

@@ -130,7 +130,7 @@ function  ou_digital_futures_radio($variables) {
 
   // Set custom classes.
   // Use $element to target specific fields.
-  $element['#attributes']['class'][] = 'ou_webform_radio_single';
+  $element['#attributes']['class'][] = 'int-row ou_webform_radio_single';
 
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
