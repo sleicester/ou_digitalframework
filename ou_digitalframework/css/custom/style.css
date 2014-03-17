@@ -1,10 +1,12 @@
 .menu-block-wrapper{
 background: #0b55a8;
+    border-radius: 4px;
 }
 
 ul.menu  {
-    padding: 4px 10px;
+    padding: 1px 4px;
     margin-left: 0;
+
 }
 
 ul.menu li {
@@ -14,7 +16,7 @@ ul.menu li {
 	border-radius: 4px;
 	color: #880088;
 	cursor: pointer;
-	padding: 0.75em 1em 0.75em 20px;
+	padding: 0.5em 1em 0.5em 20px;
 position: relative;
 background-color: #fff;
 margin: 4px 0;
@@ -30,6 +32,8 @@ margin: 4px 0;
 
 .int-icon-btn {
   margin-right: 10px;
+  padding-top: 3px;
+  margin-top: -12px;
 }
 
 .active-trail .int-icon-btn{
