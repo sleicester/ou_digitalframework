@@ -89,3 +89,45 @@ function ou_digital_futures_menu_link(array $variables) {
   return '<li' . drupal_attributes($element['#attributes']) . '><span class="int-icon-btn int-accordion-closed"><i class="int-icon int-icon-chevron-right"></i></span>' . $output . $sub_menu . "</li>\n";
 }
 
+/**
+ * Theme a set of radio buttons.
+ */
+function ou_digital_futures_radios($variables) {
+  $element = $variables['element'];
+  $attributes = array();
+
+  $attributes['class'] = 'ou_webform_radio_set';
+  if (!empty($element['#attributes']['class'])) {
+    $attributes['class'] .= ' ' . implode(' ', $element['#attributes']['class']);
+  }
+
+
+  // Add custom classes.
+  // To target specific elements you can use the $element variable.
+  // You can target the label using:
+  // .your-custom-class label
+  //  $attributes['class'] .= 'ou_webform_radio';
+
+  return '<div' . drupal_attributes($attributes) . '>' . (!empty($element['#children']) ? $element['#children'] : '') . '</div>';
+}
+
+
+/**
+ * Theme a single radio button.
+ */
+function  ou_digital_futures_radio($variables) {
+  $element = $variables['element'];
+  $element['#attributes']['type'] = 'radio';
+  element_set_attributes($element, array('id', 'name','#return_value' => 'value'));
+
+  if (isset($element['#return_value']) && $element['#value'] !== FALSE && $element['#value'] == $element['#return_value']) {
+    $element['#attributes']['checked'] = 'checked';
+  }
+  _form_set_class($element, array('form-radio'));
+
+  // Set custom classes.
+  // Use $element to target specific fields.
+  $element['#attributes']['class'][] = 'int-row ou_webform_radio_single';
+
+  return '<input' . drupal_attributes($element['#attributes']) . ' />';
+}
