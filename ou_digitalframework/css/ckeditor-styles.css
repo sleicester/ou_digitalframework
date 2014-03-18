@@ -29,6 +29,8 @@ div.call-to-action span {
   display:block;
 }
 
+
+
 img.align-right{
     margin-top: 1em;
     border: 1px solid #ADD0E1;
@@ -38,6 +40,8 @@ img.align-right{
     margin-left: 10px;
 }
 
+
+
 img.align-left{
     margin-top: 1em;
     border: 1px solid #ADD0E1;
@@ -45,4 +49,15 @@ img.align-left{
     padding: 0.5em;
     float: left;
     margin-right: 10px;
+}
+
+img.centre-image {
+  border: 1px solid #ADD0E1;
+  padding: 0.5em;
+  display: block;
+  margin: 0 auto;
+}
+
+.region-sidebar-second img.align-left, .region-sidebar-second img.align-right{
+    margin-top: 0em;
 }

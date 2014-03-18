@@ -88,6 +88,16 @@ if(typeof(CKEDITOR) !== 'undefined') {
 },
 
 {
+    name : 'Centre Image',
+    element : 'img',
+    attributes :
+    {
+        'class' : 'centre-image',
+        'align' : 'center'
+    }
+},
+
+{
     name : 'Introductory Text',
     element : 'p',
     attributes :
