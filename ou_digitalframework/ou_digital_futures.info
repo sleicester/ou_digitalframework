@@ -8,9 +8,6 @@ stylesheets[all][] = css/custom/style.css
 stylesheets[all][] = css/ckeditor-styles.css
 stylesheets[all][] = ../libraries/font-awesome-4.0.3/css/font-awesome.min.css
 
-# scripts[] = Jwing/assets/js/vendor/jquery-ui-1.10.3.custom.min.js
-# scripts[] = js/df-accordion.js
-
 
 regions[header] = Header
 regions[navigation] = Navigation
