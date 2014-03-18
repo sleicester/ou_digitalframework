@@ -110,20 +110,27 @@
 
 
 
+<!-- if the hero unit has been set display the breadcrumb within the hero unit-->
+
   		<?php if ($page['hero']): ?>
  		<div class="int-courses-hero">
     		<div class="interaction">
       			<div class="int-container">
       			    <?php if ($breadcrumb): ?>
-				     	<div class="int-container">
 				  	  		<div id="breadcrumb"><?php print $breadcrumb; ?></div>
-				 	   	</div><!--/.int-container -->
      				<?php endif; ?>
       			  	<?php print render($page['hero']); ?>
       			</div><!-- /.int-container-->
       			<br />
   			</div></div><!-- /.int-courses-hero /.interaction-->
-  		<?php endif; ?>
+  		<?php else: ?>
+  			<?php if ($breadcrumb): ?>
+		     	<div class="int-container">
+		  	  		<div id="breadcrumb"><?php print $breadcrumb; ?></div>
+		 	   	</div><!--/.int-container -->
+					 <?php endif; ?>
+		 <?php endif; ?>
+
 
 		<?php if ($page['highlighted']): ?>
  		<div class="int-promo">
@@ -137,55 +144,48 @@
 
 
 		<div class="int-container">
-  			<div class="int-row">
+ 			<div id="content" class="int-grid alt-layout"><div class="section">
+				<?php if ($page['sidebar_second']): ?>
+      			<div id="sidebar-second" class="int-grid4"><div class="section">
+        			<?php print render($page['sidebar_second']); ?>
+      			</div></div> <!-- /.section, /#sidebar-second -->
+    			<?php endif; ?>
 
-    			<div id="content"><div class="section">
+	      		<a id="main-content"></a>
 
-	      			<a id="main-content"></a>
+	      		<?php print render($title_prefix); ?>
+	      		<?php if ($title): ?>
+	        	<h1 class="title" id="page-title"><?php print $title; ?></h1>
+	      		<?php endif; ?>
 
-	      			<?php print render($title_prefix); ?>
-	      			<?php if ($title): ?>
-	        		<h1 class="title" id="page-title"><?php print $title; ?></h1>
-	      			<?php endif; ?>
-	      			<?php print render($title_suffix); ?>
+	      		<?php print render($title_suffix); ?>
 
-	      			<?php if ($tabs): ?>
-	      		 	<div class="tabs">
-	          			<?php print render($tabs); ?>
-	        		</div><!-- /.tabs-->
-	      			<?php endif; ?>
+	      		<?php if ($tabs): ?>
+	      		 <div class="tabs">
+	          		<?php print render($tabs); ?>
+	        	</div><!-- /.tabs-->
+	      		<?php endif; ?>
 
-	      			<?php print render($page['help']); ?>
-	      			<?php if ($action_links): ?>
-	      	  			<ul class="action-links"><?php print render($action_links); ?></ul>
-	      			<?php endif; ?>
+	      		<?php print render($page['help']); ?>
 
-	      			<?php print render($page['content']); ?>
+	      		<?php if ($action_links): ?>
+	      	  	<ul class="action-links"><?php print render($action_links); ?></ul>
+	      		<?php endif; ?>
 
-	      			<?php print $feed_icons; ?>
+	      		<?php print render($page['content']); ?>
 
-    			</div></div></div> <!-- /.section, /#content /.int-row-->
+	      		<?php print $feed_icons; ?>
 
- 				<hr class="int-divider int-divider-sub int-divider-lrg int-divider-arrow">
-
- 				<div class="int-row">
-
-					<?php if ($page['sidebar_first']): ?>
- 			   			<div id="sidebar-first" class="int-grid6"><div class="section">
- 		       			<?php print render($page['sidebar_first']); ?>
- 		     			</div></div> <!-- /.section, /#sidebar-first -->
- 		   			<?php endif; ?>
+			</div><!-- /.section -->
 
 
- 	  				<?php if ($page['sidebar_second']): ?>
- 		     			<div id="sidebar-second" class="int-grid6"><div class="section">
- 			       			<?php print render($page['sidebar_second']); ?>
- 		     			</div></div> <!-- /.section, /#sidebar-second -->
- 		   			<?php endif; ?>
+			<?php if ($page['sidebar_first']): ?>
+ 				<div id="sidebar-first" class="int-grid"><div class="section">
+ 		       		<?php print render($page['sidebar_first']); ?>
+ 		     	</div></div> <!-- /.section, /#sidebar-first -->
+ 		   	<?php endif; ?>
 
-
-
-  				</div></div> <!--/.int-row /.int-container -->
+		</div></div> <!--/.content /.int-container -->
   	</main>
 
   	<footer role="contentinfo"><div class="section">

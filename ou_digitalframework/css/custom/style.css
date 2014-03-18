@@ -148,3 +148,10 @@ input[type="checkbox"]:checked + label:before {
 
 .js #int-content .btn-top {
     bottom: 0; 
+   }
+   
+.alt-layout .int-grid4 {
+float: right;
+margin-left: 2%;
+margin-right: 0;
+}
