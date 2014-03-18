@@ -21,7 +21,7 @@ ul.menu li {
 }
 
 .int-icon-chevron-right:before {
-  content: ""\f054"";
+  content: "\f054";
 }
 
 .active-trail .int-icon-chevron-right:before {
