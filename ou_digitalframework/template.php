@@ -53,11 +53,6 @@ function ou_digital_futures_preprocess_page(&$variables) {
        }
      }
    }
-   
-   // Add in some external JavaScript
-	// The font not available currently
-   drupal_add_js('//use.typekit.net/asz8vbz.js', 'external');
-   drupal_add_js('try{Typekit.load();}catch(e){}', 'inline');
    }
 
 

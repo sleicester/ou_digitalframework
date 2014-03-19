@@ -107,39 +107,39 @@
   	<?php endif; ?>
 
 	<main id="int-content">
-     	<?php if ($breadcrumb): ?>
-     	<div class="int-container">
-  	  		<div id="breadcrumb"><?php print $breadcrumb; ?></div>
- 	   	</div><!--/.int-container -->
-     	<?php endif; ?>
+ 		<?php if ($page['hero']): ?>
+  		<div class="int-courses-hero">
+     		<div class="interaction">
+       			<div class="int-container">
+       			    <?php if ($breadcrumb): ?>
+ 				  	  		<div id="breadcrumb"><?php print $breadcrumb; ?></div>
+      				<?php endif; ?>
+       			  	<?php print render($page['hero']); ?>
+       			</div><!-- /.int-container-->
+       			<br />
+   			</div></div><!-- /.int-courses-hero /.interaction-->
+   		<?php else: ?>
+   			<?php if ($breadcrumb): ?>
+ 		     	<div class="int-container">
+ 		  	  		<div id="breadcrumb"><?php print $breadcrumb; ?></div>
+ 		 	   	</div><!--/.int-container -->
+ 					 <?php endif; ?>
+		 <?php endif; ?>
 
-
-  		<?php if ($page['hero']): ?>
- 		<div class="int-courses-hero">
-    		<div class="interaction">
-      			<div class="int-container">
-      			   <?php print render($page['hero']); ?>
-      			</div><!-- /.int-container-->
-      			<br />
-  			</div></div><!-- /.int-courses-hero /.interaction-->
-  		<?php endif; ?>
-
-
+		<?php if ($page['highlighted']): ?>
+ 		<div class="int-promo">
+  			<div class="int-container">
+  				<!--<div class="int-notice int-notice-icon int-notice-icon-academic">-->
+  					 <div id="highlighted"><?php print render($page['highlighted']); ?></div>
+				<!--</div>-->
+  			</div>
+		</div>
+		<?php endif; ?>
 
 		<div class="int-container">
   			<div class="int-row">
-				<?php if ($page['sidebar_first']): ?>
-    			<div id="sidebar-first" class="int-grid4"><div class="section">
-        			<?php print render($page['sidebar_first']); ?>
-      			</div></div> <!-- /.section, /#sidebar-first -->
-    			<?php endif; ?>
 
-    			<div id="content" class="int-grid<?php print $main_grid_int?>"><div class="section">
-
-					<?php if ($page['highlighted']): ?>
-					<div id="highlighted"><?php print render($page['highlighted']); ?></div>
-					<?php endif; ?>
-
+    			<div id="content"><div class="section">
 	      			<a id="main-content"></a>
 
 	      			<?php print render($title_prefix); ?>
@@ -165,15 +165,17 @@
 
     			</div></div> <!-- /.section, /#content -->
 
-   				<?php if ($page['sidebar_second']): ?>
-      			<div id="sidebar-second" class="int-grid4"><div class="section">
-        			<?php print render($page['sidebar_second']); ?>
-      			</div></div> <!-- /.section, /#sidebar-second -->
-    			<?php endif; ?>
-
-
-
   		</div></div> <!--/.int-row /.int-container -->
+
+  		<?php if ($page['highlighted-bottom']): ?>
+ 		<div class="int-promo">
+  			<div class="int-container">
+  				<!--<div class="int-notice int-notice-icon int-notice-icon-academic">-->
+  					 <div id="highlighted-bottom"><?php print render($page['highlighted-bottom']); ?></div>
+				<!--</div>-->
+  			</div>
+		</div>
+		<?php endif; ?>
   	</main>
 
   	<footer role="contentinfo"><div class="section">

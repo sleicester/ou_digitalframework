@@ -135,9 +135,9 @@
 		<?php if ($page['highlighted']): ?>
  		<div class="int-promo">
   			<div class="int-container">
-  				<div class="int-notice int-notice-icon int-notice-icon-academic">
+  				<!--<div class="int-notice int-notice-icon int-notice-icon-academic">-->
   					 <div id="highlighted"><?php print render($page['highlighted']); ?></div>
-				</div>
+				<!--</div>-->
   			</div>
 		</div>
 		<?php endif; ?>

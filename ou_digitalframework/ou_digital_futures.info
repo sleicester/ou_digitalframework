@@ -8,6 +8,7 @@ stylesheets[all][] = css/custom/style.css
 stylesheets[all][] = css/ckeditor-styles.css
 stylesheets[all][] = ../libraries/font-awesome-4.0.3/css/font-awesome.min.css
 
+scripts[] = js/selectmenu.js
 
 regions[header] = Header
 regions[navigation] = Navigation
@@ -19,9 +20,8 @@ regions[help] = Help
 regions[page_top] = Page top
 regions[page_bottom] = Page bottom
 regions[highlighted] = Highlighted
-
+regions[highlighted-bottom] = Highlighted Bottom
 regions[content] = Content
-regions[sidebar_first] = Sidebar First
-regions[sidebar_second] = Sidebar Second
+
 
 regions[footer] = Footer
