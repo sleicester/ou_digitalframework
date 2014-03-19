@@ -20,14 +20,17 @@
   
       $form['ou_theme_settings']['ou_df_colour_scheme'] = array(
     '#type' => 'select',
-    '#title' => t('Required colour scheme'),
+    '#title' => t('Required site colour scheme'),
     '#options' => array(
-       'red' => t('Red'),
-       'green' => t('Green'),
-       'blue' => t('Blue'),
+       'ou-df-ia-courses' => t('Course'),
+       'ou-df-ia-postgraduate' => t('Postgraduate'),
+       'ou-df-ia-research' => t('Research'),
+       'ou-df-ia-employers' => t('Employers'),
+       'ou-df-ia-news' => t('News'),
+       'ou-df-ia-about' => t('About'),
      ),
     '#default_value' => theme_get_setting('ou_df_colour_scheme'),
-    '#description' => t("Select the colour scheme for this site"),    
+    '#description' => t("Select the site scheme for this site"),    
 
   );
 }
