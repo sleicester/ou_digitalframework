@@ -4,7 +4,7 @@ window.onload = function(){
 	selectmenu.onchange=function(){ //run some code when "onchange" event fires
 	var page=this.options[this.selectedIndex] //this refers to "selectmenu"
  	if (page.value!=""){
-  			window.open(page.value, "", "") //open target site (based on option's value attr) in new window
+  			window.location = page.value //open target site (based on option's value attr) in new window
  		}
 	}
 

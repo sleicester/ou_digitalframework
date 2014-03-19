@@ -72,12 +72,10 @@ function ou_digital_futures_links__system_main_menu($variables) {
   return $html;
 }
 
+function ou_digital_futures_menu_tree($variables) {
+  return '<select id="selectmenu"><option value="">Select...</option>' . $variables['tree'] . '</select>';
+}
 
-
-
-/**
- * Implements theme_menu_link() - add a class to the sub menu
- */
 function ou_digital_futures_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
@@ -86,8 +84,25 @@ function ou_digital_futures_menu_link(array $variables) {
     $sub_menu = drupal_render($element['#below']);
   }
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  return '<li' . drupal_attributes($element['#attributes']) . '><span class="int-icon-btn int-accordion-closed"><i class="int-icon int-icon-chevron-right"></i></span>' . $output . $sub_menu . "</li>\n";
+  return '<option value="'.url($element['#href']).'">' .$element['#title']. "</option>\n";
 }
+
+
+
+/**
+ * Implements theme_menu_link() - add a class to the sub menu - side menu - no longer required
+
+*function ou_digital_futures_menu_link(array $variables) {
+*  $element = $variables['element'];
+*  $sub_menu = '';
+*
+*  if ($element['#below']) {
+*    $sub_menu = drupal_render($element['#below']);
+*  }
+*  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+*  return '<li' . drupal_attributes($element['#attributes']) . '><span class="int-icon-btn *int-accordion-closed"><i class="int-icon int-icon-chevron-right"></i></span>' . $output . *$sub_menu . "</li>\n";
+*}
+*/
 
 /**
  * Theme a set of radio buttons.
