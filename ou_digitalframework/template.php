@@ -42,7 +42,7 @@ function ou_digital_futures_preprocess_page(&$variables) {
    // Switching layout based on a selector in the content page
    // Add a single suggestion for nodes that have an "Alternative layout" selected.
 
-   if (isset($variables['node']->type) && $variables['node']->type == 'digital_futures_article') {
+/*   if (isset($variables['node']->type) && $variables['node']->type == 'digital_futures_article') {
     if (!empty($variables['node']->field_select_layout[$variables['node']->language][0]['value'])) {
        $selected_layout = $variables['node']->field_select_layout[$variables['node']->language][0]['value'];
        switch ($selected_layout) {
@@ -52,7 +52,7 @@ function ou_digital_futures_preprocess_page(&$variables) {
          break;
        }
      }
-   }
+   }*/
    }
 
 
