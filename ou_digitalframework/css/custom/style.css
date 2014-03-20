@@ -167,3 +167,12 @@ margin-top: 1em;
 .region-sidebar-second .block-block h2{
 text-align: center;
 }
+
+select {
+background: #ffffff url(../../images/form-sprites-new.png) no-repeat right -6px;
+padding-right: 60px;
+}
+
+blockquote {
+    display: inline-block;
+}

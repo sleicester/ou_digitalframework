@@ -61,3 +61,9 @@ img.centre-image {
 .region-sidebar-second img.align-left, .region-sidebar-second img.align-right{
     margin-top: 0em;
 }
+
+.int-intro-text {
+  color: #0B55A8;
+  font-family: "CaratReg","Book Antiqua",Georgia,serif;
+  font-size: 1.25em;
+}
