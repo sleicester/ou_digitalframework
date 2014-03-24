@@ -8,6 +8,7 @@
 
 input, textarea {
 	.placeholder(@input-placeholder-color);
+    &.placeholder { color: @input-placeholder-color; }
 }
 
 input[type="text"], 
@@ -26,4 +27,7 @@ textarea {
 		outline: 0;
 		border-color: @input-focus-color;
 	}
+    &:disabled, &.disabled { 
+        border-color: @input-placeholder-color;
+    }
 }

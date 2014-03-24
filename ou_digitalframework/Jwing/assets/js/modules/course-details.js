@@ -6,6 +6,7 @@ OUApp.Modules.course_details = {
         
         stickyNav: function () {
             var scrollTop = $(window).scrollTop(); // check how far the window has scrolled
+            //console.log('scroll: ' + scrollTop + ' : ' + this.stickyNavTop);
             if (scrollTop > this.stickyNavTop) { // check if sticky item is passed top of screen
                 $('.int-sticky-inpage').addClass('int-sticky');
             } else {
@@ -17,6 +18,7 @@ OUApp.Modules.course_details = {
             if ($('.int-sticky-inpage').length > 0) {
                 $('.int-sticky-inpage').removeClass('int-sticky'); // put sticky back in original position
                 this.stickyNavTop = $('.int-sticky-inpage').offset().top; // get top value of sticky item
+                //console.log('position: ' + this.stickyNavTop)
                 this.stickyNav();
             }
         },
@@ -34,12 +36,51 @@ OUApp.Modules.course_details = {
             });
         },
         
+        setStudyPlanPanelHeight: function() {
+            var studyPlanTabs = $('#int-study-plan-tabs'),
+                tabHeight = studyPlanTabs.height(),
+                headHeight = studyPlanTabs.find('nav').height(),
+                winHeight = $(window).height() -30,
+                targetTab = studyPlanTabs.find('.ui-tabs-active a').attr('href');
+                
+            if(tabHeight > winHeight) {
+                $(targetTab).css('height', (winHeight - headHeight) + 'px');
+            }
+            
+        },
+        
         enableTabs: function () {
+            var that = this,
             // enable tabs - jquery UI control
-            $("#int-course-detail-tabs").tabs({
+                courseTabs = $("#int-course-detail-tabs"),
+                studyPlanTabs = $('#int-study-plan-tabs');
+            
+            courseTabs.tabs({
                 activate: function (event, ui) {
                     // scroll page to top of tabs when a new tab is activated
-                    $(window).scrollTop($("#int-course-detail-tabs").offset().top);
+                    OUApp.Helpers.scrollPageTo('#int-course-detail-tabs');
+                }
+            });
+            
+            studyPlanTabs.tabs({
+                activate: function (event, ui) {
+                    that.setStudyPlanPanelHeight();
+                    OUApp.Modules.modal.positionModal('#int-study-plan');
+                }
+            });
+            
+            this.positionStickyNav();
+            
+            // enable other tab initializing links
+            $('.loadTab').on('click', function (e) {
+                e.preventDefault();
+                var tab = $(this).attr('href'), // get target tabs
+                    tabIndex = $('section', courseTabs).index($(tab)), // get tab index
+                    activeTab = courseTabs.tabs("option", "active"); // get active tab index
+                if(tabIndex !== activeTab) {
+                    courseTabs.tabs( "option", "active", tabIndex ); // activate tab
+                } else {
+                    OUApp.Helpers.scrollPageTo('#int-course-detail-tabs');      
                 }
             });
         },
@@ -52,31 +93,55 @@ OUApp.Modules.course_details = {
     
     courseForms: {
         
-        feesFundingItems: ['study', 'degree', 'income', 'employed'],
+        feesFundingItems: ['credits', 'degree', 'income', 'employed'], // array of form items
         
-        enableButton: function (btn) {
-            //console.log('enable button' + btn);
-            $('#' + btn).removeAttr('disabled').removeClass('int-button-disabled');
+        hideFeesOption: function () {
+            $('.int-fees-option').removeClass('int-fees-option-active');
         },
         
-        checkFeesFundingForm: function () {
-            var i;
+        showFeesOption: function () {
+            this.hideFeesOption();
+            $('#int-fees-option1').addClass('int-fees-option-active');
+            OUApp.Helpers.scrollPageTo('#int-fees-option1');
+        },
+        
+        setButtonState: function (btn, enabled) {
+            var that = this,
+                btn = $('#' + btn);
+            
+            if (enabled) {
+                btn.removeAttr('disabled').removeClass('int-button-disabled');
+                btn.on('click', function () {
+                    that.showFeesOption();
+                });
+            } else {
+                btn.attr('disabled', true);
+            }
+        },
+        // validate form items
+        checkFeesFundingForm: function () { 
+            var i,
+                valid = true;
             for (i = 0; i < this.feesFundingItems.length; i = i + 1) {
-                //console.log(this.feesFundingItems[i] + ' : ' + $('input[name=' + this.feesFundingItems[i] + ']:checked').length);
-                if ($('input[name=' + this.feesFundingItems[i] + ']:checked').length < 1) {
-                    return false;
+                if (this.feesFundingItems[i] === "credits") { // credits is a selectbox
+                    if ($('#' + this.feesFundingItems[i]).val() === "") {
+                        valid = false;
+                    }
+                } else {
+                    if ($('input[name=' + this.feesFundingItems[i] + ']:checked').length < 1) {
+                        valid = false;
+                    }
                 }
             }
-            this.enableButton('int-btn-feesFunding');
+            this.setButtonState('int-btn-feesFunding', valid);
         },
-        
-        enableFeesFundingForm: function () {
+        // validate form every time an item changes
+        enableFeesFundingForm: function () { 
             var that = this;
-            //console.log('enable form');
-            $('#int-fees-funding-form input[type=radio]').on('change', function () {
-                //console.log('change');
+            $('#int-fees-funding-form input[type=radio], #int-fees-funding-form select').on('change', function () {
                 that.checkFeesFundingForm();
             });
+            this.setButtonState('int-btn-feesFunding', false);
         },
         
         init: function () {

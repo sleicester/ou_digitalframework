@@ -9,12 +9,6 @@
 @button-hover-bg: 			@purple;
 @button-hover-color: 		@gold;
 @button-active-bg: 			@dark-purple;
-
-@button-top-bg: 			@light-blue;
-@button-top-color: 			@mid-blue;
-@button-top-hover-bg: 	    @dark-blue;
-@button-top-hover-color:    @white;
-
 @button-disabled-bg:        @light-blue;
 
 
@@ -31,7 +25,7 @@ button, input[type=button], input[type=submit], .int-button, a.int-button {
 	padding: 0.6em 0.8em;
 	display:inline-block;
 	margin-bottom:0.875em;
-	border:0;
+	border:1px solid @button-bg;
 	&:hover, &:focus {
 		background: @button-hover-bg;
 		color: @button-hover-color;
@@ -45,29 +39,9 @@ button, input[type=button], input[type=submit], .int-button, a.int-button {
 
 .int-button-disabled, .int-button-disabled:hover, .int-button-disabled:focus  {
     background: @button-disabled-bg;
+    border-color: @button-disabled-bg;
     opacity:0.5;
-    color: @button-color;
+    color: #07376d;
     cursor:default;
     outline:0;
-}
-
-.btn-top {
-	clear: both;
-	text-align:right;
-	a {
-		.transition();
-		display:inline-block;
-		margin:0 auto;
-		font-size: @sml-text-size;
-		font-weight: 300;
-		color: @button-top-color;
-		background: @button-top-bg;
-		padding: 0.8em;
-		text-decoration: none;
-		&:hover, &:focus {
-			background: @button-top-hover-bg;
-			color: @button-top-hover-color;
-			border-color: @gold;
-		}
-	}
 }

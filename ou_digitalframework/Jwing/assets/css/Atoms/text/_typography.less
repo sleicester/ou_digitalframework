@@ -3,11 +3,11 @@
 // 
 // =============================================================================
 
-@bg-color: 				@white;
+@bg-color: 			@white;
 @bg-color-alt: 		@mid-blue;
-@text-color: 			@black;
-@text-color-alt:  @white;
-@link-color: 			@purple;
+@text-color: 		@black;
+@text-color-alt:    @white;
+@link-color:        @purple;
 @link-color-alt: 	@gold;
 @error-color: 		@red;
 @valid-color: 		@green;
@@ -18,6 +18,7 @@
 body { 
 	color: @text-color; 
 	text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 	font-weight: 300;
 }
 
@@ -40,15 +41,30 @@ a {
 .interaction {
 	background: @bg-color-alt;
 	color:@text-color-alt;
-	padding: 2px 0 2px 0;
-	p, ul, ol, dl, label, h1, h2, h3, h4, h5, h6 {
+	p, ul, ol, dl, dd, label, h1, h2, h3, h4, h5, h6 {
 		color: @text-color-alt;
 	}
 	a {
 		color: @link-color-alt;
 	}
+    h1, h2, h3, h4, h5, h6 {
+        a:hover, a:focus {
+            color:@white;
+        }
+    }
 	hr {
 		border-color: #206dc3;
 		color: #206dc3;
 	}
+}
+
+.int-promo {
+	background: @light-grey-blue;
+	margin-bottom: 2em;
+}
+
+aside {
+    p, ul, ol, dl {
+        font-size: @sml-text-size;   
+    }
 }

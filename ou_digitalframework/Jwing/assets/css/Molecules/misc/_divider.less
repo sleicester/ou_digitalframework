@@ -19,10 +19,10 @@
 		display:inline-block;
 		width: 0;
 		height: 0;
-		
-		border-top: 20px solid @light-blue;
-		border-left: 20px solid transparent;
-		border-right: 20px solid transparent;
+		position:absolute;
+        left: 50%;
+        margin-left:-10px;
+        .triangle(down, 20px, @light-blue);
 	}
 	
 	&.int-divider-lrg 
@@ -33,15 +33,16 @@
 			border-top-width: 30px;
 			border-left-width: 30px;
 			border-right-width: 30px;
+            margin-left:-20px !important;
 		}
 	}
-	
-	&.int-divider-sub {
-		border-bottom-color:@light-grey-blue;
-		
-		&.int-divider-arrow:after {
-			border-top-color: @light-grey-blue;
-		}
-	}
+    
+    &.int-divider-sub {
+        border-color: @divider-sub-bg !important;  
+        &:after {
+            border-top-color: @divider-sub-bg !important;   
+        }
+    }
+
 }
 

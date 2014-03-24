@@ -7,13 +7,13 @@
 
 // Blockquote
 blockquote {
-	padding: 3em 0 1.5em;
-	position: relative;
+	padding: 2em 0 1.25em;
+    position: relative;
 	p {
 		font-family: @quotation-font-family;
 		font-size: @lrg-text-size;
 	}
-	&:before, &:after {
+	&:before, .before, &:after, .after {
 		content:'';
 		display:block;
 		position:absolute;
@@ -21,14 +21,18 @@ blockquote {
 		height:30px;
 		background:url(../img/blockquote.png);
 	}
-	&:before {
+	&:before, .before {
 		top:0;
 	}
-	&:after {
+	&:after, .after {
 		bottom:0;
 		right:0;
 		background-position:bottom left;
 	}
+}
+
+aside blockquote {
+    margin:0;   
 }
 
 // citation

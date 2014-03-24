@@ -34,7 +34,7 @@ OUApp.Modules.navigation = {
     },
 
     primaryNav: {
-
+        
         enablePrimaryNav: function () {
             $("nav[role=navigation] .int-nav-primary").accessibleMegaMenu({
             /* prefix for generated unique id attributes, which are required 
@@ -56,16 +56,49 @@ OUApp.Modules.navigation = {
                 if ($(this).find('.int-nav-sub-menu').length > 0) { // if nav item has a sub menu
                     // add sub menu toggle nav items
                     $(this).append('<a href="#" class="int-showSubMenu"><i class="int-icon int-icon-chevron-right"></i></a>');
+                    // back back to main link
                     $(this).find('.int-nav-sub-menu .int-container').prepend('<a href="#" class="int-backToMainMenu"><span><i class="int-icon int-icon-chevron-left"></i> Back to Main menu</span></a>');
                 }
             });
+            
+            $('.int-nav-alt-primary').clone().appendTo('#int-nav-mob'); // copy primary nav and insert it into mob nav div
+            
+            // add sub menu div's for alt mobile nav
+            $('.int-nav-alt-mob .int-nav-alt-primary > ul > li > ul')
+                .wrap('<div class="int-nav-sub-menu"><div class="int-container"></div></div>')
+                .find('ul') // add sub sub menu divs
+                    .wrap('<div class="int-nav-sub-sub-menu"><div class="int-container"></div></div>');
+            
+            // loop throughtop level nav item
+            $('.int-nav-alt-mob .int-nav-alt-primary > ul > li').each(function () {
+                if ($(this).find('.int-nav-sub-menu').length > 0) { // if nav item has a sub menu
+                    // add sub menu toggle nav items
+                    $(this).append('<a href="#" class="int-showSubMenu"><i class="int-icon int-icon-chevron-right"></i></a>');
+                    // add back to main link
+                    $(this).find('.int-nav-sub-menu > .int-container').prepend('<a href="#" class="int-backToMainMenu"><span><i class="int-icon int-icon-chevron-left"></i> Back to Main menu</span></a>');
+                    
+                    // loop through sub nav item
+                    $(this).find('.int-nav-sub-menu > .int-container > ul > li').each(function () {
+                        var prevNav = $(this).find(' > a').text();
+                        console.log(prevNav);
+                        if($(this).find('.int-nav-sub-sub-menu').length > 0) { // in nav item has a sub sub menu
+                            // add sub menu toggle nav items
+                            $(this).append('<a href="#" class="int-showSubSubMenu"><i class="int-icon int-icon-chevron-right"></i></a>');
+                            
+                            $(this).find('.int-nav-sub-sub-menu > .int-container').prepend('<a href="#" class="int-backToSubMenu"><span><i class="int-icon int-icon-chevron-left"></i> Back to ' + prevNav + '</span></a>');
+                        
+                        }
+                    });
+                }
+            });
+            
             OUApp.Modules.navigation.enableMenuToggle('int-nav-toggle', 'int-nav-mob');
             // hide nav menu when overlay is clicked
             $('.int-nav-mob-overlay').on('click', function (e) {
                 e.preventDefault();
                 OUApp.Modules.navigation.toggleMenu('int-nav-mob');
             });
-            $('.int-showSubMenu').on('click', function (e) {
+            $('.int-showSubMenu, .int-showSubSubMenu').on('click', function (e) {
                 e.preventDefault();
                 $(this).parent().addClass('int-nav-active');
             });
@@ -73,18 +106,62 @@ OUApp.Modules.navigation = {
                 e.preventDefault();
                 $('#int-nav-mob .int-nav-active').removeClass('int-nav-active');
             });
+            $('.int-backToSubMenu').on('click', function (e) {
+                e.preventDefault();
+                $(this).closest('li').removeClass('int-nav-active');
+            });
+        },
+        
+        sfHover: function () {
+            var sfEls = document.getElementById("int-nav-alt-primary").getElementsByTagName("LI");
+            for (var i=0; i<sfEls.length; i++) {
+                sfEls[i].onmouseover=function() {
+                    this.className+=(this.className.length>0? " ": "") + "sfhover";
+                }
+                sfEls[i].onmouseout=function() {
+                    this.className=this.className.replace(new RegExp("( ?|^)sfhover\\b"), "");
+                }
+            }
+        },
+        mcAccessible: function () {
+            var mcEls = document.getElementById("int-nav-alt-primary").getElementsByTagName("A");
+            for (var i=0; i<mcEls.length; i++) {
+                mcEls[i].onfocus=function() {
+                    this.className+=(this.className.length>0? " ": "") + "sffocus"; //a:focus
+                    this.parentNode.className+=(this.parentNode.className.length>0? " ": "") + "sfhover"; //li < a:focus
+                    if(this.parentNode.parentNode.parentNode.nodeName == "LI") {
+                        this.parentNode.parentNode.parentNode.className+=(this.parentNode.parentNode.parentNode.className.length>0? " ": "") + "sfhover"; //li < ul < li < a:focus
+                        if(this.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "LI") {
+                            this.parentNode.parentNode.parentNode.parentNode.parentNode.className+=(this.parentNode.parentNode.parentNode.parentNode.parentNode.className.length>0? " ": "") + "sfhover"; //li < ul < li < ul < li < a:focus
+                        }
+                    }
+                }
+                mcEls[i].onblur=function() {
+                    this.className=this.className.replace(new RegExp("( ?|^)sffocus\\b"), "");
+                    this.parentNode.className=this.parentNode.className.replace(new RegExp("( ?|^)sfhover\\b"), "");
+                    if(this.parentNode.parentNode.parentNode.nodeName == "LI") {
+                        this.parentNode.parentNode.parentNode.className=this.parentNode.parentNode.parentNode.className.replace(new RegExp("( ?|^)sfhover\\b"), "");
+                        if(this.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "LI") {
+                            this.parentNode.parentNode.parentNode.parentNode.parentNode.className=this.parentNode.parentNode.parentNode.parentNode.parentNode.className.replace(new RegExp("( ?|^)sfhover\\b"), "");
+                        }
+                    }
+                }
+            }
         },
 
         init: function () {
             this.enableMobileNav();
             this.enablePrimaryNav();
+            if($('#int-nav-alt-primary').length > 0) { this.mcAccessible(); }
         }
 
     },
 
     init: function () {
+        if (!OUApp.Helpers.isIE7()) {
+            this.primaryNav.init();
+        }
         this.metaNav.init();
-        this.primaryNav.init();
     }
 
 };

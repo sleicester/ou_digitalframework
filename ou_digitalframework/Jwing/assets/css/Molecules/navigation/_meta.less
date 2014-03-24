@@ -27,21 +27,33 @@
 			margin-left:1px;
 			text-align:center;
 			position:static;
+            padding:0;
 			> a {
+                .transition();
 				display:block;
 				width:44px;
 				height:44px;
 				background: @meta-nav-link-bg;
 				color: @meta-nav-link-color;
-				.int-icon { margin-top:15px; }
+                text-decoration: none;
+				.int-icon { 
+                    margin-top:15px; 
+                    .transition(); 
+                }
 				&.int-nav-meta-focus {
 					outline: 1px dotted @mid-blue;
 					color: @dark-blue;
+                    i { .scale(1.1); }
 				}
+                &:hover {
+                    color: @dark-blue;
+                    i { .scale(1.1); }
+                }
 				&.int-nav-meta-open {
 					background: @meta-nav-link-active-bg;
 					color: @meta-nav-link-active-color;
 					&.int-nav-meta-focus { color:@gold; }
+                    i { .scale(1.1); }
 				}
 			}
 			// Search nav item
@@ -50,10 +62,18 @@
 				> a {
 					background: @meta-search-link-bg;
 					color: @meta-search-link-color;
-					&.int-nav-meta-focus { color: @dark-blue; }
+					&.int-nav-meta-focus { 
+                        color: @dark-blue;
+                        i { .scale(1.1); } 
+                    }
+                    &:hover { 
+                        color: @dark-blue; 
+                        i { .scale(1.1); }
+                    }
 					&.int-nav-meta-open {
 						background: @meta-nav-link-active-bg;
 						color: @meta-nav-link-active-color;
+                        i { .scale(1.1); }
 						&.int-nav-meta-focus { color:@gold; }
 					}
 				}
@@ -105,7 +125,14 @@
         padding-top:12px;
 		width:18%;
 		float:left;
-		button { border-radius: 0px 4px 4px 0px; }
+		button { 
+            border-radius: 0px 4px 4px 0px; 
+            padding:0.51em 0.8em;
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+                padding:0.53em 0.8em;
+            }
+            margin-left:-2px;
+        }
 	}
 }
 
@@ -141,6 +168,8 @@
     }
     li { 
         display:inline-block;
+        *display: inline;
+        zoom: 1;
         padding:10px 5px 0 0;
     }
     
@@ -157,8 +186,9 @@
             text-align:center;
             padding-top:9px;
             float:left;
+            text-decoration: none;
             i { 
-                font-size:1.8em; 
+                font-size:1.8em;
             }
         }
         
@@ -166,6 +196,8 @@
             display:none;
             @media (min-width: @screen-sm) {
                 display:inline-block;
+                *display: inline;
+                zoom: 1;
                 padding: 12px 10px 12px 8px;
             }
         }
@@ -182,6 +214,8 @@
     }
 
 }
+
+.generatedcontent .int-meta-social ul li { padding-left:0; }
 
 .int-meta-contact {
 	.int-contact-item {

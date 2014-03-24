@@ -1,3 +1,44 @@
+var ou_cookiesbar = {
+    
+    addCookie: function () {
+        Cookies.set('ou_cookie_policy', true);
+    },
+
+    removeCookie: function () {
+        Cookies.expire('ou_cookie_policy');
+    },
+
+    deactivateBar: function () {
+        this.addCookie();
+        setTimeout(function () { 
+            document.getElementById('int-cookies-bar').className = "int-cookies-bar";
+        }, 250); 
+    },
+
+    activateBar: function () {
+        setTimeout(function () {
+            document.getElementById('int-cookies-bar').className = "int-cookies-bar int-active";
+        }, 300);
+        
+    },
+
+    init: function () {
+        var that = this;
+        if (!Cookies.get('ou_cookie_policy')) {
+            if(document.getElementById('int-cookies-bar')) {
+                this.activateBar();
+                document.getElementById('int-cookies-bar-button').onclick = function(event) {
+                    that.deactivateBar();
+                    return false;
+                }
+            }
+           
+        }
+    }
+
+};
+ 
+
 /*!
  * Cookies.js - 0.3.1
  * Wednesday, April 24 2013 @ 2:28 AM EST
@@ -137,4 +178,7 @@
     } else {
         window.Cookies = Cookies;
     }
+    
+    ou_cookiesbar.init();
+    
 })();

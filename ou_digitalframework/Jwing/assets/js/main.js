@@ -4,4 +4,6 @@
 
 *******************************************/
 
-$(OUApp.init);
+$(window).load( function() {
+    $(OUApp.init);
+});

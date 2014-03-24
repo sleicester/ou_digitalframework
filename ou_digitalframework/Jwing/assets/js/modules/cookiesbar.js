@@ -10,14 +10,18 @@ OUApp.Modules.cookiesbar = {
     
     deactivateBar: function () {
         this.addCookie();
-        jQuery('#int-cookies-bar').animate({
+        $('#int-cookies-bar').animate({
             "max-height": "0"
-        }, 300, function () { setTimeout(function () { jQuery(this).removeClass('int-active'); }, 250); });
+        }, 300, function () { 
+            setTimeout(function () { 
+                $(this).removeClass('int-active'); 
+            }, 250); 
+        });
     },
     
     activateBar: function () {
         setTimeout(function () {
-            jQuery('#int-cookies-bar').addClass("int-active");
+            $('#int-cookies-bar').addClass("int-active");
         }, 300);
     },
     
@@ -25,7 +29,7 @@ OUApp.Modules.cookiesbar = {
         var that = this;
         if (!Cookies.get('ou_cookie_policy')) {
             this.activateBar();
-            jQuery('#int-cookies-bar .int-button').on('click', function (e) {
+            $('#int-cookies-bar .int-button').on('click', function (e) {
                 e.preventDefault();
                 that.deactivateBar();
             });

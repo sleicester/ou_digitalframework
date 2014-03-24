@@ -8,7 +8,6 @@
 @striped-bg: 	        @light-grey-blue;
 
 table {
-	border-collapse: separate;
 	border: none;
 	font-size: @sml-text-size;
 	margin-bottom: 1em;
@@ -17,6 +16,7 @@ table {
 		background: #ddd;
 		padding:0.5em;
 		font-weight:600;
+        font-size: @lrg-text-size;
 	}
 	td, th {
 		padding: 0.875em 1.5em 0.75em 1.5em ;
@@ -51,6 +51,8 @@ table {
             .rounded(12px);
             background: @light-grey-blue;
             color:@mid-blue;
+            margin-bottom:-17px;
+            border-bottom:16px solid @light-blue;
         }
         thead {
             tr:last-child th {

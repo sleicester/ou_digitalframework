@@ -4,13 +4,18 @@
 // =============================================================================
 
 .int-cookies-bar {
+    display:none;
     .transition(0.5s);
     overflow:hidden;
     max-height:0px;
     height:0;
+    position:relative;
+    top:-100px;
     &.int-active {
         max-height:16em;  
         height:auto;
+        display:block;
+        top:0;
     }
     .int-button {
         float:right;
