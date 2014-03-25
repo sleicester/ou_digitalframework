@@ -1,7 +1,10 @@
 <?php
 
+
+/*
+**Theme the appearance of the breadcrumb to add jywing classes
+*/
 function ou_digital_futures_breadcrumb($variables) {
-//customise the appearance of the breadcrumb to add jywing classes
    if (count($variables['breadcrumb']) > 0) {
      $lastitem = sizeof($variables['breadcrumb']);
      $title = drupal_get_title();
@@ -22,87 +25,76 @@ function ou_digital_futures_breadcrumb($variables) {
  }
 
 
- //change the class of the main content column depending on whether sidebar_second or sidebar_first is enabled, classes implement grid system based on 12 columns
-
+/*
+**Hide the <h1> title when node type is a panel
+*/
 function ou_digital_futures_preprocess_page(&$variables) {
-   if((!empty($variables['page']['sidebar_second']))&&(!empty($variables['page']['sidebar_first']))){
-     $variables['main_grid_int'] = "4";
-     }
-   elseif((!empty($variables['page']['sidebar_second']))||(!empty($variables['page']['sidebar_first']))){
-     $variables['main_grid_int'] = "8";
-     }
-    else{
-       $variables['main_grid_int'] = "12";
-     }
 
       if ((!empty($variables['node'])) && ($variables['node']->type == 'panel')) {
            $variables['title']="";
       }
-
-   // Switching layout based on a selector in the content page
-   // Add a single suggestion for nodes that have an "Alternative layout" selected.
-
-/*   if (isset($variables['node']->type) && $variables['node']->type == 'digital_futures_article') {
-    if (!empty($variables['node']->field_select_layout[$variables['node']->language][0]['value'])) {
-       $selected_layout = $variables['node']->field_select_layout[$variables['node']->language][0]['value'];
-       switch ($selected_layout) {
-         case "alternative":
-         // looks for page--alternative1.tpl.php in your theme directory
-         $variables['theme_hook_suggestions'][] = 'page__alternative1';
-         break;
-       }
-     }
-   }*/
-   }
+ }
 
 
-
- //change the html of the main menu to reflect the jwing design, each menu item to be output as <li><a href><span>Menu Title
-
-function ou_digital_futures_links__system_main_menu($variables) {
-
-  $html = "  <ul class='int-container int-nav-prim-list'>\n";
-
-   foreach ($variables['links'] as $link) {
-     $html .= "<li>".t('<a href="@link"><span>@title</span></a>', array('@link' => url($link['href']), '@title' => $link['title']))."</li>";
-   }
-
-  $html .= "  </ul>\n";
-
-  return $html;
+/*
+**Add jwyng wrapper classes -int-secondlevel/int-thirdlevel classes
+*/
+function ou_digital_futures_preprocess_menu_block_wrapper(&$variables) {
+  if($variables['config']['level']==1){
+  $variables['classes_array'][] = 'int-secondlevel-nav int-nav-level';
+  }
+  elseif($variables['config']['level']==2){
+  $variables['classes_array'][] = 'int-thirdlevel-nav int-nav-level';
+  }
 }
 
-function ou_digital_futures_menu_tree($variables) {
-  return '<select id="selectmenu"><option value="">Select...</option>' . $variables['tree'] . '</select>';
+/*
+**Add jwyng ul class int-container
+*/
+function ou_digital_futures_menu_tree__menu_block__main_menu($variables){
+	return '<ul class="int-container" >' . $variables['tree'] . '</ul>';
 }
 
-function ou_digital_futures_menu_link(array $variables) {
+/*
+**Add jwyng int-hasChildren and chevron icon to all list items that have the drupal
+**class has-children, add <span> tags between the href tag and title text
+**eg <li><a href=""><span>Menu item</span></a></li>
+*/
+
+function ou_digital_futures_menu_link__menu_block__main_menu($variables) {
   $element = $variables['element'];
   $sub_menu = '';
 
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
   }
+
+  //add span class between href and title text, render span tags as html
+  $element['#title'] = '<span>' . check_plain($element['#title']) . '</span>';
+
+  $element['#localized_options'] += array('html'=> TRUE);
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  return '<option value="'.url($element['#href']).'">' .$element['#title']. "</option>\n";
+
+  //if the li has a class of active trail or active add the jwying class int-nav-active
+  foreach($element['#attributes']['class'] as $value){
+	if(($value == 'active-trail')|| ($value == 'active')){
+  	   $element['#attributes']['class'][] = 'int-nav-active';
+  	   break;
+  	   }
+	}
+  //if the li has a class of has-children add the jwying class int-hasChildren and the jwyng chevron icon and return amended li
+  foreach($element['#attributes']['class'] as $value){
+  	if($value == 'has-children'){
+  	   $element['#attributes']['class'][] = 'int-hasChildren';
+	   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . '<a class="int-nav-trigger" href="#"><span><i class="int-icon int-icon-chevron-down"></i><i class="int-icon int-icon-chevron-up"></i></span></a></li>';
+  	   }
+	}
+
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>";
+
 }
 
-
-
-/**
- * Implements theme_menu_link() - add a class to the sub menu - side menu - no longer required
-
-*function ou_digital_futures_menu_link(array $variables) {
-*  $element = $variables['element'];
-*  $sub_menu = '';
-*
-*  if ($element['#below']) {
-*    $sub_menu = drupal_render($element['#below']);
-*  }
-*  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-*  return '<li' . drupal_attributes($element['#attributes']) . '><span class="int-icon-btn *int-accordion-closed"><i class="int-icon int-icon-chevron-right"></i></span>' . $output . *$sub_menu . "</li>\n";
-*}
-*/
 
 /**
  * Theme a set of radio buttons.

@@ -66,6 +66,7 @@
  * - $page['header']: Items for the header region.
  * - $page['hero']: Items for the featured region.
  * - $page['highlighted']: Items for the highlighted content region.
+ * - $page['highlighted']: Items for the highlighted content region.
  * - $page['help']: Dynamic help text, mostly for admin pages.
  * - $page['content']: The main content of the current page.
  * - $page['sidebar_first']: Items for the first sidebar.
@@ -86,65 +87,72 @@
 
 
 <div id="int-site" class="<?php print theme_get_setting('ou_df_colour_scheme'); ?>">
-	 <header role="banner">
-		<?php include path_to_theme() . theme_get_setting('ou_df_path_to_header'); ?>
+
+	<?php include path_to_theme() . theme_get_setting('ou_df_path_to_header'); ?>
 
 		<?php if ($main_menu): ?>
-        <div id="main-menu" class="int-nav-primary">
-          	<?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu')));?>
-        </div> <!-- /#main-menu -->
+			<nav role="navigation">
+				<div class="int-primary">
+        			<div id="main-menu">
+						<?php if ($page['navigation']): ?>
+							<?php print render($page['navigation']); ?>
+          				<?php endif; ?>
+
+        			</div> <!-- /#main-menu -->
+        		</div><!-- /.int-primary -->
+			</nav>
     	<?php endif; ?>
-    </header>
 
 
     <?php if ($messages): ?>
-    <div class="int-container">
-  	<div class="int-row">
-      <div id="messages"><div class="section clearfix">
-        <?php print $messages; ?>
-      </div></div> <!-- /.section, /#messages -->
-	</div></div><!--/.int-container /.int-row -->
+    	<div class="int-container">
+  			<div class="int-row">
+      			<div id="messages"><div class="section clearfix">
+        			<?php print $messages; ?>
+      			</div></div> <!-- /.section, /#messages -->
+			</div><!-- /.int-row -->
+		</div><!--/.int-container  -->
   	<?php endif; ?>
 
 	<main id="int-content">
  		<?php if ($page['hero']): ?>
-  		<div class="int-courses-hero">
-     		<div class="interaction">
-       			<div class="int-container">
-       			    <?php if ($breadcrumb): ?>
+  			<div class="int-courses-hero">
+     			<div class="interaction">
+       				<div class="int-container">
+       			    	<?php if ($breadcrumb): ?>
  				  	  		<div id="breadcrumb"><?php print $breadcrumb; ?></div>
-      				<?php endif; ?>
-       			  	<?php print render($page['hero']); ?>
-       			</div><!-- /.int-container-->
-       			<br />
-   			</div></div><!-- /.int-courses-hero /.interaction-->
+      					<?php endif; ?>
+       			  		<?php print render($page['hero']); ?>
+       				</div><!-- /.int-container-->
+       				<br />
+   				</div><!--  /.interaction-->
+   			</div><!-- /.int-courses-hero -->
    		<?php else: ?>
    			<?php if ($breadcrumb): ?>
  		     	<div class="int-container">
  		  	  		<div id="breadcrumb"><?php print $breadcrumb; ?></div>
  		 	   	</div><!--/.int-container -->
- 					 <?php endif; ?>
+ 			<?php endif; ?>
 		 <?php endif; ?>
 
 		<?php if ($page['highlighted']): ?>
- 		<div class="int-promo">
-  			<div class="int-container">
-  				<!--<div class="int-notice int-notice-icon int-notice-icon-academic">-->
-  					 <div id="highlighted"><?php print render($page['highlighted']); ?></div>
-				<!--</div>-->
-  			</div>
-		</div>
+	 		<div class="int-promo">
+ 	 			<div class="int-container">
+	  				<!--<div class="int-notice int-notice-icon int-notice-icon-academic">-->
+ 	 					 <div id="highlighted"><?php print render($page['highlighted']); ?></div>
+					<!--</div>-->
+				</div><!-- /.int-container-->
+			</div><!-- /.int-promo-->
 		<?php endif; ?>
 
 		<div class="int-container">
   			<div class="int-row">
-
     			<div id="content"><div class="section">
 	      			<a id="main-content"></a>
 
-	      			<?php print render($title_prefix); ?>
+					<?php print render($title_prefix); ?>
 	      			<?php if ($title): ?>
-	        		<h1 class="title" id="page-title"><?php print $title; ?></h1>
+	        			<h1 class="title" id="page-title"><?php print $title; ?></h1>
 	      			<?php endif; ?>
 	      			<?php print render($title_suffix); ?>
 
@@ -164,8 +172,8 @@
 	      			<?php print $feed_icons; ?>
 
     			</div></div> <!-- /.section, /#content -->
-
-  		</div></div> <!--/.int-row /.int-container -->
+  			</div><!--/.int-row  -->
+  		</div> <!-- /.int-container -->
 
   		<?php if ($page['highlighted-bottom']): ?>
  		<div class="int-promo">
@@ -173,8 +181,8 @@
   				<!--<div class="int-notice int-notice-icon int-notice-icon-academic">-->
   					 <div id="highlighted-bottom"><?php print render($page['highlighted-bottom']); ?></div>
 				<!--</div>-->
-  			</div>
-		</div>
+  			</div><!--/.int-container-->
+		</div><!--/.int-promo-->
 		<?php endif; ?>
   	</main>
 
@@ -190,4 +198,4 @@
 
 	</div></footer> <!-- /.section, /footer -->
 
-</div>
+</div><!-- /.int-site -->
