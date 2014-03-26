@@ -3,6 +3,7 @@ description = The Open University Digital Futures Theme
 core = 7.x
 
 stylesheets[all][] = css/framework/screen_additional.css
+stylesheets[all][] = css/custom/header.css
 stylesheets[all][] = Jwing/assets/css/screen.css
 stylesheets[all][] = css/custom/style.css
 stylesheets[all][] = css/ckeditor-styles.css

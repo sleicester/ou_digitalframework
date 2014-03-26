@@ -96,6 +96,16 @@
         			<div id="main-menu">
 						<?php if ($page['navigation']): ?>
 							<?php print render($page['navigation']); ?>
+							<div id="int-nav-mobile" class="int-nav-alt-mob">
+							 <div class="int-nav-mob-overlay"></div>
+							                <div class="int-nav-alt-primary"></div>
+							                <a href="#" id="int-nav-toggle" class="int-nav-toggle">
+							                    <i class="int-icon int-icon-bars int-icon-lg"></i>
+							                    <i class="int-icon int-icon-times int-icon-lg"></i>
+							                </a>
+							            </div>
+
+
           				<?php endif; ?>
 
         			</div> <!-- /#main-menu -->
