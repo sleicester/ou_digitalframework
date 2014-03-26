@@ -9,7 +9,8 @@ stylesheets[all][] = css/custom/style.css
 stylesheets[all][] = css/ckeditor-styles.css
 stylesheets[all][] = ../libraries/font-awesome-4.0.3/css/font-awesome.min.css
 
-scripts[] = js/selectmenu.js
+
+
 
 regions[header] = Header
 regions[navigation] = Navigation
