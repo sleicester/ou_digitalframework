@@ -177,12 +177,12 @@ if ($block->delta == theme_get_setting('ou_df_siblings_block_id') && isset($nid)
         // Close final DIV
       }
     }
-    $block_output .= '</div></div>';
-    $content = $block_output;
+   $block_output .= '</div></div>';
+   $content = $block_output;
   }
   // No items to render
-  // There are no matching nodes so return an empty block
-  //   $block->subject = '';
+  $block->subject = '';
+  $content = '';
 }
 
 elseif ($block->delta == theme_get_setting('ou_df_children_block_id') && isset($nid)) {
@@ -272,7 +272,6 @@ elseif ($block->delta == theme_get_setting('ou_df_children_block_id') && isset($
 
   foreach ($arrayOfAllMenuItems as $key=>$value) {
     if ($value['plid'] == $mlid) {
-
       $nodes_list[] = $value['nid'];
     }
   }
@@ -305,14 +304,12 @@ elseif ($block->delta == theme_get_setting('ou_df_children_block_id') && isset($
         }
         $block_output .= '</ul>';
       }
-
       $block_output .= '</div>';
     }
-
     $block_output .= '</div>';
     $content = $block_output;
   }
-
+  
   else {
     // There are no matching nodes so return an empty block
     $block->subject = '';
@@ -338,7 +335,3 @@ elseif ($block->delta == theme_get_setting('ou_df_children_block_id') && isset($
 
   </div>
 </div>
-
-
-
-
