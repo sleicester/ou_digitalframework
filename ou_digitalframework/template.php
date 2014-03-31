@@ -4,6 +4,9 @@
 function ou_digital_futures_preprocess_html(&$variables) {
   drupal_add_css('http://www-dev.open.ac.uk/oudigital/eep/assets/css/screen.css', array('type' => 'external'));
   drupal_add_css('http://www-dev.open.ac.uk/oudigital/headers-footers/assets/css/header.css', array('type' => 'external'));
+  
+  // add new classes to body from theme settings
+  $variables['classes_array'][] = theme_get_setting('ou_df_colour_scheme');      
 }
 
 /*
@@ -27,14 +30,6 @@ function ou_digital_futures_breadcrumb($variables) {
      $crumbs .= '&nbsp; <i class="int-icon int-icon-chevron-right"></i>  &nbsp;'.$title.'</dd></dl>';
    return $crumbs;
    }
- }
-
-/*
-**Hide the <h1> title when node type is a panel
-*/
-function ou_digital_futures_preprocess_html(&$variables) {
-        // Add a new body class from Themesettings
-        $variables['classes_array'][] = theme_get_setting('ou_df_colour_scheme');      
  }
 
 /*
