@@ -51,9 +51,6 @@
 if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
   $node = node_load(arg(1));
   $nid  = arg(1);
-}
-
-
 
   if ($block->delta == theme_get_setting('ou_df_siblings_block_id')) {
 
@@ -137,7 +134,8 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
     // Detect the Parent ID for this node PLID
     foreach ($arrayOfAllMenuItems as $key=>$value) {
-      if ($value['nid'] == $nid && $value['nid'] != '' && $value['nid'] != 'home' ) {
+        
+      if (isset($value['nid']) && $value['nid'] == $nid && $value['nid'] != '' && $value['nid'] != 'home' ) {
         $mlid = (isset($value['mlid']) ? $value['mlid'] : '');
         $plid = (isset($value['plid']) ? $value['plid'] : '');
       }
@@ -319,6 +317,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
       $content = '';
     }
 
+  }
   }
 
 ?>
