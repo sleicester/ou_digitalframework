@@ -24,6 +24,15 @@ function ou_digital_futures_breadcrumb($variables) {
    }
  }
 
+/*
+**Hide the <h1> title when node type is a panel
+*/
+function ou_digital_futures_preprocess_html(&$variables) {
+        // Add a new body class from Themesettings
+        $variables['classes_array'][] = theme_get_setting('ou_df_colour_scheme');      
+ }
+
+
 
 /*
 **Hide the <h1> title when node type is a panel

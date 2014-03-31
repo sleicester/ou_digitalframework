@@ -179,3 +179,7 @@ blockquote {
     display: inline-block;
 }
 
+.ou-video-embed {
+    width:368px;
+    height: 207px;
+}

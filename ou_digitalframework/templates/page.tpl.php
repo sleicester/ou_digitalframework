@@ -86,7 +86,7 @@
 
 
 
-<div id="int-site" class="<?php print theme_get_setting('ou_df_colour_scheme'); ?>">
+<div id="int-site" >
 
 	<?php include path_to_theme() . theme_get_setting('ou_df_path_to_header'); ?>
 

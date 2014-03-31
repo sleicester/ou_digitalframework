@@ -272,7 +272,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
     }
 
     foreach ($arrayOfAllMenuItems as $key=>$value) {
-      if ($value['plid'] == $mlid) {
+      if (isset($value['plid']) && $value['plid'] == $mlid) {
         $nodes_list[] = $value['nid'];
       }
     }
