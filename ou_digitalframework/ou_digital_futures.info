@@ -4,10 +4,11 @@ core = 7.x
 
 
 stylesheets[all][] = css/framework/screen_additional.css
+stylesheets[all][] = css/custom/header.css
 stylesheets[all][] = Jwing/assets/css/screen.css
 stylesheets[all][] = css/custom/style.css
 stylesheets[all][] = css/ckeditor-styles.css
-stylesheets[all][] = ../libraries/font-awesome-4.0.3/css/font-awesome.min.css
+stylesheets[all][] = ../../libraries/font-awesome-4.0.3/css/font-awesome.min.css
 
 
 
