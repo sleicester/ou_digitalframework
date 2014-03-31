@@ -1,6 +1,11 @@
 <?php
 
 
+function ou_digital_futures_preprocess_html(&$variables) {
+  drupal_add_css('http://www-dev.open.ac.uk/oudigital/eep/assets/css/screen.css', array('type' => 'external'));
+  drupal_add_css('http://www-dev.open.ac.uk/oudigital/headers-footers/assets/css/header.css', array('type' => 'external'));
+}
+
 /*
 **Theme the appearance of the breadcrumb to add jywing classes
 */
@@ -31,6 +36,8 @@ function ou_digital_futures_preprocess_html(&$variables) {
         // Add a new body class from Themesettings
         $variables['classes_array'][] = theme_get_setting('ou_df_colour_scheme');      
  }
+
+
 
 
 
