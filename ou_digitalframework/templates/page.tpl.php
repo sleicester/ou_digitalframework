@@ -81,18 +81,12 @@
  */
 ?>
 
-
-
-<<<<<<< HEAD
    	<?php
         $_sitemenutree = '';
         $blockname = module_invoke('menu_block', 'block_view', '1');
         $_sitemenutree .= render($blockname['content']);
         print $_sitemenutree;
     ?>
-=======
-
-
 
 <div id="int-site" >
 
@@ -123,9 +117,6 @@
         		</div><!-- /.int-primary -->
 			</nav>
     	<?php endif; ?>
->>>>>>> debc00e8bddc14f5f04a25d7c1469733492a215f
-
-
     <?php if ($messages): ?>
     	<div class="int-container">
   			<div class="int-row">
