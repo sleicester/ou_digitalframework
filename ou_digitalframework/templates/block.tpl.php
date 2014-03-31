@@ -54,7 +54,6 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
   if ($block->delta == theme_get_setting('ou_df_siblings_block_id')) {
 
-
     function get_array_columns_siblings($array, $columns)
     {
       // Function to split array into columns
@@ -78,6 +77,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
         $chunked[] = array_splice($array,0,$map);
       }
       return $chunked;
+
     }//end get_array_columns
 
     // Set up some variables
@@ -114,13 +114,11 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
         foreach ($levelTwoValue['below'] as $levelThreeKey=>$levelThreeValue) {
 
-
           $arrayOfAllMenuItems[$levelThreeKey]['nid'] = str_replace('node/','',$levelThreeValue['link']['link_path']);
           $arrayOfAllMenuItems[$levelThreeKey]['mlid'] = $levelThreeValue['link']['mlid'];
           $arrayOfAllMenuItems[$levelThreeKey]['plid'] = $levelThreeValue['link']['plid'];
 
           foreach ($levelThreeValue['below'] as $levelFourKey=>$levelFourValue) {
-
 
             $arrayOfAllMenuItems[$levelFourKey]['nid'] = str_replace('node/','',$levelFourValue['link']['link_path']);
             $arrayOfAllMenuItems[$levelFourKey]['mlid'] = $levelFourValue['link']['mlid'];
@@ -130,11 +128,9 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
       }
     }
 
-
-
     // Detect the Parent ID for this node PLID
     foreach ($arrayOfAllMenuItems as $key=>$value) {
-        
+
       if (isset($value['nid']) && $value['nid'] == $nid && $value['nid'] != '' && $value['nid'] != 'home' ) {
         $mlid = (isset($value['mlid']) ? $value['mlid'] : '');
         $plid = (isset($value['plid']) ? $value['plid'] : '');
@@ -181,9 +177,13 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
       $block_output .= '</div></div>';
       $content = $block_output;
     }
-    // No items to render
-    $block->subject = '';
-    $content = '';
+    else {
+      // No items to render
+
+      $block->subject = '';
+      $content = '';
+    }
+
   }
 
   elseif ($block->delta == theme_get_setting('ou_df_children_block_id') && isset($nid)) {
@@ -318,7 +318,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
     }
 
   }
-  }
+}
 
 ?>
 
