@@ -2,11 +2,12 @@ name = Open University Digital Futures
 description = The Open University Digital Futures Theme
 core = 7.x
 
-
 stylesheets[all][] = css/framework/screen_additional.css
+stylesheets[all][] = css/custom/header.css
 stylesheets[all][] = Jwing/assets/css/screen.css
 stylesheets[all][] = css/custom/style.css
 stylesheets[all][] = css/ckeditor-styles.css
+<<<<<<< HEAD
 stylesheets[all][] = ../libraries/font-awesome-4.0.3/css/font-awesome.min.css
 stylesheets[all][] = css/custom/header.css
 
@@ -14,11 +15,13 @@ stylesheets[all][] = css/custom/header.css
 
 
 
+=======
+stylesheets[all][] = ../../libraries/font-awesome-4.0.3/css/font-awesome.min.css
+>>>>>>> a9d88ae892ece500e3591297630c26eba2e9017f
 
 regions[header] = Header
 regions[navigation] = Navigation
 regions[content] = Content
-
 regions[hero] = Hero
 regions[header] = Header
 regions[help] = Help
@@ -27,6 +30,4 @@ regions[page_bottom] = Page bottom
 regions[highlighted] = Highlighted
 regions[highlighted-bottom] = Highlighted Bottom
 regions[content] = Content
-
-
 regions[footer] = Footer
