@@ -62,7 +62,7 @@
   <?php
   $filepath = '/'.path_to_theme().'/';
   print $filepath.theme_get_setting('ou_df_path_to_header');
-  include $filepath.theme_get_setting('ou_df_path_to_header'); ?>
+  require $filepath.theme_get_setting('ou_df_path_to_header'); ?>
 
   <?php print $page_top; ?>
   <?php print $page; ?>
