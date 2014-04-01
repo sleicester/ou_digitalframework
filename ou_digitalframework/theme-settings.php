@@ -30,7 +30,7 @@
        'ou-df-ia-about' => t('About'),
      ),
     '#default_value' => theme_get_setting('ou_df_colour_scheme'),
-    '#description' => t("Select the site scheme for this site"),    
+    '#description' => t("Select the required site Architecture"),    
 
   );
 
