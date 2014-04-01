@@ -61,6 +61,7 @@
 
   <?php
   $filepath = '/'.path_to_theme();
+  print $filepath.theme_get_setting('ou_df_path_to_header');
   include $filepath.theme_get_setting('ou_df_path_to_header'); ?>
 
   <?php print $page_top; ?>
@@ -69,13 +70,15 @@
 
   <?php include $filepath.theme_get_setting('ou_df_path_to_footer') ; ?>
 </div>
+
   <script src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/vendor/jquery-1.10.2.min.js"></script>
+  <script> var $j = jQuery.noConflict();</script>
   <script src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/modules/global.primarynavigation_1.js"></script>
 
 
     <script type="text/javascript">
         //Function that has to be called on the page to initialise the nav
-        (function($, window){
+        (function($j, window){
 
             window.OU.PrimaryNavigation = new window.OU.DigitalFramework.Global.PrimaryNavigation({
                 activeItem: true //Set to true to initialise the nav item using js
@@ -85,6 +88,9 @@
     </script>
 
      <script type="text/javascript">if (typeof window.ou_init=='function')ou_init();</script>
+  	<script>jQuery.noConflict(true);</script>
+
+
 
 
 </body>
