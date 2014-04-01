@@ -88,7 +88,7 @@
         $_sitemenutree = '';
         $blockname = module_invoke('menu_block', 'block_view', '1');
         $_sitemenutree .= render($blockname['content']);
-        print $_sitemenutree;
+       // print $_sitemenutree;
     ?>
 
 
