@@ -66,11 +66,10 @@
  * - $page['header']: Items for the header region.
  * - $page['hero']: Items for the featured region.
  * - $page['highlighted']: Items for the highlighted content region.
- * - $page['highlighted']: Items for the highlighted content region.
  * - $page['help']: Dynamic help text, mostly for admin pages.
  * - $page['content']: The main content of the current page.
  * - $page['sidebar_first']: Items for the first sidebar.
- * - $page['sidebar_second']: Items for the first sidebar.
+  * - $page['sidebar_second']: Items for the second sidebar.
  * - $page['footer']: Items for the footer region.
  *
  * @see template_preprocess()
@@ -80,96 +79,113 @@
  * @see html.tpl.php
  */
 ?>
-    <?php 
-        $_sitemenutree = '';
-        $blockname = module_invoke('menu_block', 'block_view', '1');
-        // if(render($blockname['subject'])){
-        //   //$_sitemenutree .= '<h3>' . render($blockname['subject']) . '</h3>';
-        // }
-        $_sitemenutree .= render($blockname['content']);
-        print $_sitemenutree;
-    ?>
+
+
+
+
+
+
+<div id="int-site" class="<?php print theme_get_setting('ou_df_colour_scheme'); ?>">
+	 <header role="banner">
+		<?php include path_to_theme() . theme_get_setting('ou_df_path_to_header'); ?>
+
+		<?php if ($main_menu): ?>
+        <div id="main-menu" class="int-nav-primary">
+          	<?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu')));?>
+        </div> <!-- /#main-menu -->
+    	<?php endif; ?>
+    </header>
+
 
     <?php if ($messages): ?>
-    	<div class="int-container">
-  			<div class="int-row">
-      			<div id="messages"><div class="section clearfix">
-        			<?php print $messages; ?>
-      			</div></div> <!-- /.section, /#messages -->
-			</div><!-- /.int-row -->
-		</div><!--/.int-container  -->
+    <div class="int-container">
+  	<div class="int-row">
+      <div id="messages"><div class="section clearfix">
+        <?php print $messages; ?>
+      </div></div> <!-- /.section, /#messages -->
+	</div></div><!--/.int-container /.int-row -->
   	<?php endif; ?>
 
 	<main id="int-content">
- 		<?php if ($page['hero']): ?>
-  			<div class="int-courses-hero">
-     			<div class="interaction">
-       				<div class="int-container">
-       			    	<?php if ($breadcrumb): ?>
- 				  	  		<div id="breadcrumb"><?php print $breadcrumb; ?></div>
-      					<?php endif; ?>
-       			  		<?php print render($page['hero']); ?>
-       				</div><!-- /.int-container-->
-       				<br />
-   				</div><!--  /.interaction-->
-   			</div><!-- /.int-courses-hero -->
-   		<?php else: ?>
-   			<?php if ($breadcrumb): ?>
- 		     	<div class="int-container">
- 		  	  		<div id="breadcrumb"><?php print $breadcrumb; ?></div>
- 		 	   	</div><!--/.int-container -->
- 			<?php endif; ?>
+
+
+
+<!-- if the hero unit has been set display the breadcrumb within the hero unit-->
+
+  		<?php if ($page['hero']): ?>
+ 		<div class="int-courses-hero">
+    		<div class="interaction">
+      			<div class="int-container">
+      			    <?php if ($breadcrumb): ?>
+				  	  		<div id="breadcrumb"><?php print $breadcrumb; ?></div>
+     				<?php endif; ?>
+      			  	<?php print render($page['hero']); ?>
+      			</div><!-- /.int-container-->
+      			<br />
+  			</div></div><!-- /.int-courses-hero /.interaction-->
+  		<?php else: ?>
+  			<?php if ($breadcrumb): ?>
+		     	<div class="int-container">
+		  	  		<div id="breadcrumb"><?php print $breadcrumb; ?></div>
+		 	   	</div><!--/.int-container -->
+					 <?php endif; ?>
 		 <?php endif; ?>
 
+
 		<?php if ($page['highlighted']): ?>
-	 		<div class="int-promo">
- 	 			<div class="int-container">
-	  				<!--<div class="int-notice int-notice-icon int-notice-icon-academic">-->
- 	 					 <div id="highlighted"><?php print render($page['highlighted']); ?></div>
-					<!--</div>-->
-				</div><!-- /.int-container-->
-			</div><!-- /.int-promo-->
-		<?php endif; ?>
-
-		<div class="int-container">
-  			<div class="int-row">
-    			<div id="content"><div class="section">
-	      			<a id="main-content"></a>
-
-					<?php print render($title_prefix); ?>
-	      			<?php if ($title): ?>
-	        			<h1 class="title" id="page-title"><?php print $title; ?></h1>
-	      			<?php endif; ?>
-	      			<?php print render($title_suffix); ?>
-
-	      			<?php if ($tabs): ?>
-	      		 	<div class="tabs">
-	          			<?php print render($tabs); ?>
-	        		</div><!-- /.tabs-->
-	      			<?php endif; ?>
-
-	      			<?php print render($page['help']); ?>
-	      			<?php if ($action_links): ?>
-	      	  			<ul class="action-links"><?php print render($action_links); ?></ul>
-	      			<?php endif; ?>
-
-	      			<?php print render($page['content']); ?>
-
-	      			<?php print $feed_icons; ?>
-
-    			</div></div> <!-- /.section, /#content -->
-  			</div><!--/.int-row  -->
-  		</div> <!-- /.int-container -->
-
-  		<?php if ($page['highlighted-bottom']): ?>
  		<div class="int-promo">
   			<div class="int-container">
   				<!--<div class="int-notice int-notice-icon int-notice-icon-academic">-->
-  					 <div id="highlighted-bottom"><?php print render($page['highlighted-bottom']); ?></div>
+  					 <div id="highlighted"><?php print render($page['highlighted']); ?></div>
 				<!--</div>-->
-  			</div><!--/.int-container-->
-		</div><!--/.int-promo-->
+  			</div>
+		</div>
 		<?php endif; ?>
+
+
+		<div class="int-container">
+ 			<div id="content" class="int-grid alt-layout"><div class="section">
+				<?php if ($page['sidebar_second']): ?>
+      			<div id="sidebar-second" class="int-grid4"><div class="section">
+        			<?php print render($page['sidebar_second']); ?>
+      			</div></div> <!-- /.section, /#sidebar-second -->
+    			<?php endif; ?>
+
+	      		<a id="main-content"></a>
+
+	      		<?php print render($title_prefix); ?>
+	      		<?php if ($title): ?>
+	        	<h1 class="title" id="page-title"><?php print $title; ?></h1>
+	      		<?php endif; ?>
+
+	      		<?php print render($title_suffix); ?>
+
+	      		<?php if ($tabs): ?>
+	      		 <div class="tabs">
+	          		<?php print render($tabs); ?>
+	        	</div><!-- /.tabs-->
+	      		<?php endif; ?>
+
+	      		<?php print render($page['help']); ?>
+
+	      		<?php if ($action_links): ?>
+	      	  	<ul class="action-links"><?php print render($action_links); ?></ul>
+	      		<?php endif; ?>
+
+	      		<?php print render($page['content']); ?>
+
+	      		<?php print $feed_icons; ?>
+
+			</div><!-- /.section -->
+
+
+			<?php if ($page['sidebar_first']): ?>
+ 				<div id="sidebar-first" class="int-grid"><div class="section">
+ 		       		<?php print render($page['sidebar_first']); ?>
+ 		     	</div></div> <!-- /.section, /#sidebar-first -->
+ 		   	<?php endif; ?>
+
+		</div></div> <!--/.content /.int-container -->
   	</main>
 
   	<footer role="contentinfo"><div class="section">
@@ -180,8 +196,8 @@
       	</div> <!-- /#footer -->
    		<?php endif; ?>
 
-		
+		<?php include path_to_theme() . theme_get_setting('ou_df_path_to_footer') ; ?>
 
 	</div></footer> <!-- /.section, /footer -->
 
-<!-- </div> --><!-- /.int-site -->
+</div>

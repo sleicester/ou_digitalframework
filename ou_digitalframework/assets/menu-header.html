@@ -1,0 +1,278 @@
+<script>
+var TopNav_jQ = jQuery.noConflict(true);
+TopNav_jQ(thTopNavInit);
+</script>
+window.thTopNavInit = function( $ ) { 
+
+
+
+<link rel="stylesheet" type="text/css" href="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/css/ou-df-header.css" media="screen, projection" />
+<script type="text/javascript" src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/ou-df-header.js"></script>
+
+<script type="text/javascript">if (typeof window.ou_sitestat=='function')ou_sitestat();</script>
+<script type="text/javascript" src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/ou-cookie-policy.js"></script>
+
+      <!--<link rel="stylesheet" href="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/css/global.css">-->
+
+	  <link rel="stylesheet" href="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/css/header.css">
+      <link rel="stylesheet" href="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/css/footer.css">
+
+      
+      <!--[if lt IE 8]>
+            <link  rel="stylesheet" href="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/css/ie.css">
+      <![endif]-->
+
+      <!--[if IE 7]>
+            <link  rel="stylesheet" href="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/fonts/fontawesome/css/font-awesome-ie7.css">
+      <![endif]-->
+
+
+
+<!-- <div id="int-site"> -->
+        <div id="int-ouHeader" role="banner">
+            <!--Header -->
+            <div id="int-header">
+                <a href="#int-content" class="btn-skip">
+                    <i class="int-icon int-icon-chevron-down"></i>
+                    <span> Skip to content</span>
+                </a>
+                <a class="int-ouLogo" href="http://www.open.ac.uk/">
+                    <img src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/img/ou-logo.png" alt="The Open University" />
+                </a>
+                <div role="navigation" id="int-serviceLinks" class="int-serviceLinks sg-responsive int-container">
+                    <ul>
+                        <li class="ou-role-signin" id="ou-signin1">
+                            <a href="https://msds.open.ac.uk/signon/sams001.aspx" id="ou-signin2">Sign in</a> <span>|</span>
+                        </li>
+                        <li>
+                            <a href="#">My account</a> <span></span>
+                        </li>
+                        <li id="ou-signout" class="ou-role-signout">
+                            <a href="https://msds.open.ac.uk/signon/samsoff.aspx" id="ou-signout2">Sign out</a> <span>|</span>
+                        </li>
+                        <li>
+                            <a href="http://www.open.ac.uk/contact">Contact us</a> <span>|</span>
+                        </li>
+                        <li id="ou-studenthome" class="ou-role-studenthome">
+                            <a href="http://www.open.ac.uk/students/" id="ou-studenthome2">Current students</a>
+                        </li>
+                        <li class="int-headerSearch">
+                            <div class="int-inputAppend">
+                                <label for="headerSearch" class="int-hide">Search</label>
+                                <input id="headerSearch" type="search" placeholder="Search..."/>
+                                <a id="headerSearchButton" href="#" onclick="javascript:ou_search();" class="int-button" role="button">Search</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="int-mob-menu-toggle">
+                        <span>Menu title</span>
+                        <i class="int-icon int-icon-chevron-down"></i>
+                        <i class="int-icon int-icon-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <!--end of Header -->
+
+            <!-- Minimum -->
+            <!-- <div role="navigation" id="ou-global-primary-navigation">
+                <div class="int-primary">
+                    <div class="int-toplevel-nav int-nav-level">
+                        <ul class="int-container">
+                            <li class="ou-df-ia-home int-home"><a href="#"><span>Home</span></a></li>
+                            <li class="ou-df-ia-courses"><a href="/courses"><span>Courses</span></a></li>
+                            <li class="ou-df-ia-postgraduate"><a href="/postgraduate"><span>Postgraduate</span></a></li>
+                            <li class="ou-df-ia-research"><a href="http://www.open.ac.uk/research/main/"><span>Research</span></a></li>
+                            <li class="ou-df-ia-about"><a href="http://www.open.ac.uk/about/main/"><span>About</span></a></li>
+                            <li class="ou-df-ia-news"><a href="http://www.open.ac.uk/news"><span>News &amp; media</span></a></li>
+                            <li class="ou-df-ia-employers"><a href="http://www.open.ac.uk/employers"><span>Employers</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="int-secondlevel-nav int-nav-level">
+
+                    </div>
+                    <div class="int-thirdlevel-nav int-nav-level">
+
+                    </div>
+                </div>
+            </div> -->
+            <!-- END Minimum -->
+
+<!-- Minimum -->
+            <div role="navigation" id="ou-global-primary-navigation">
+                <div class="int-primary">
+                    <div class="int-toplevel-nav int-nav-level">
+                        <ul class="int-container">
+                            <li class="ou-df-ia-home int-home"><a href="#"><span>Home</span></a></li>
+                            <li class="ou-df-ia-courses"><a href="/courses"><span>Courses</span></a></li>
+                            <li class="ou-df-ia-postgraduate"><a href="/postgraduate"><span>Postgraduate</span></a></li>
+                            <li class="ou-df-ia-research"><a href="http://www.open.ac.uk/research/main/"><span>Research</span></a></li>
+                            <li class="ou-df-ia-about"><a href="http://www.open.ac.uk/about/main/"><span>About</span></a>
+
+
+
+<ul class="int-container"><li class="first expanded menu-mlid-699"><a href="/la845-targetedservices/mission"><span>Mission</span></a><ul class="int-container"><li class="first last leaf menu-mlid-901"><a href="/la845-targetedservices/mission/annual-reports"><span>Annual Reports</span></a></li></ul></li><li class="expanded menu-mlid-774"><a href="/la845-targetedservices/strategy"><span>Strategy</span></a><ul class="int-container"><li class="first expanded menu-mlid-724"><a href="/la845-targetedservices/strategy/teaching-and-learning-ou"><span>Teaching &amp; learning at the OU</span></a><ul class="int-container"><li class="first last leaf menu-mlid-738"><a href="/la845-targetedservices/strategy/teaching-learning-ou/external-examining"><span>External examining</span></a></li></ul></li><li class="leaf menu-mlid-727"><a href="/la845-targetedservices/strategy/partnerships"><span>Partnerships</span></a></li><li class="leaf menu-mlid-726"><a href="/la845-targetedservices/strategy/ou-story"><span>The OU story</span></a></li><li class="last leaf menu-mlid-725"><a href="/la845-targetedservices/strategy/facts-and-figures"><span>Facts &amp; figures</span></a></li></ul></li><li class="expanded menu-mlid-776"><a href="/la845-targetedservices/faculties-centres"><span>Faculties &amp; centres</span></a><ul class="int-container"><li class="first leaf menu-mlid-728"><a href="/la845-targetedservices/faculties-centres/faculties-and-research-centres"><span>Faculties &amp; research centres</span></a></li><li class="leaf menu-mlid-730"><a href="/la845-targetedservices/faculties-centres/ou-outside-uk"><span>The OU outside the UK</span></a></li><li class="leaf menu-mlid-703"><a href="/la845-targetedservices/faculties-centres/milton-keynes-campus"><span>Milton Keynes Campus</span></a></li><li class="last expanded menu-mlid-698"><a href="/la845-targetedservices/faculties-and-centres/styles-examples"><span>Styles Examples</span></a><ul class="int-container"><li class="first expanded menu-mlid-704"><a href="/la845-targetedservices/styles-examples/accordion"><span>Accordion</span></a><ul class="int-container"><li class="first last leaf menu-mlid-717"><a href="/la845-targetedservices/accordion/fourth-level"><span>Fourth level</span></a></li></ul></li><li class="leaf menu-mlid-705"><a href="/la845-targetedservices/styles-examples/block-quotations"><span>Block Quotations</span></a></li><li class="leaf menu-mlid-898"><a href="/la845-targetedservices/styles-examples/blocks-and-mini-panel-page"><span>Blocks and Mini Panel Page</span></a></li><li class="leaf menu-mlid-708"><a href="/la845-targetedservices/styles-examples/buttons"><span>Buttons</span></a></li><li class="leaf menu-mlid-768"><a href="/la845-targetedservices/styles-examples/form"><span>Form</span></a></li><li class="leaf menu-mlid-706"><a href="/la845-targetedservices/styles-examples/headings-and-paragraph"><span>Headings and Paragraph</span></a></li><li class="leaf menu-mlid-903"><a href="/la845-targetedservices/faculties-centres/styles-examples/image-crop-test"><span>Image Crop test</span></a></li><li class="leaf menu-mlid-709"><a href="/la845-targetedservices/styles-examples/line-styles-and-hr"><span>In-line styles</span></a></li><li class="leaf menu-mlid-707"><a href="/la845-targetedservices/styles-examples/lists-definitions"><span>Lists</span></a></li><li class="leaf menu-mlid-899"><a href="/la845-targetedservices/styles-examples/lists"><span>Lists</span></a></li><li class="leaf menu-mlid-900"><a href="/la845-targetedservices/styles-examples/mosaic-demonstration"><span>Mosaic Demonstration</span></a></li><li class="leaf menu-mlid-897"><a href="/la845-targetedservices/styles-examples/optional-blocks"><span>Optional blocks</span></a></li><li class="leaf menu-mlid-734"><a href="/la845-targetedservices/styles-examples/screen-width-blue-banner"><span>Page with Blue Banner</span></a></li><li class="leaf menu-mlid-731"><a href="/la845-targetedservices/styles-examples/tables"><span>Tables</span></a></li><li class="last leaf menu-mlid-718"><a href="/la845-targetedservices/styles-examples/various-set-layouts"><span>Various set layouts</span></a></li></ul></li></ul></li><li class="expanded menu-mlid-702"><a href="/la845-targetedservices/vice-chancellor"><span>Vice-Chancellor</span></a><ul class="int-container"><li class="first leaf menu-mlid-732"><a href="/la845-targetedservices/vice-chancellor/career"><span>Career</span></a></li><li class="leaf menu-mlid-733"><a href="/la845-targetedservices/vice-chancellor/speeches-and-statements"><span>Speeches &amp; statements</span></a></li><li class="leaf menu-mlid-736"><a href="/la845-targetedservices/vice-chancellor/vcs-desk"><span>From the VC's desk</span></a></li><li class="last leaf menu-mlid-737"><a href="/la845-targetedservices/vice-chancellor/office-contacts"><span>Office contacts</span></a></li></ul></li><li class="expanded menu-mlid-775"><a href="/la845-targetedservices/management"><span>Management</span></a><ul class="int-container"><li class="first leaf menu-mlid-778"><a href="/la845-targetedservices/management/formal-governance-structure"><span>Formal governance structure</span></a></li><li class="expanded menu-mlid-735"><a href="/la845-targetedservices/management/executive-team"><span>Executive team</span></a><ul class="int-container"><li class="first leaf menu-mlid-779"><a href="/la845-targetedservices/management/executive-team/chancellor-and-pro-chancellor"><span>Chancellor &amp; Pro-chancellor</span></a></li><li class="leaf menu-mlid-740"><a href="/la845-targetedservices/management/executive-team/chief-information-officer"><span>Chief Information Officer</span></a></li><li class="leaf menu-mlid-739"><a href="/la845-targetedservices/management/executive-team/commercial-director"><span>Commercial Director</span></a></li><li class="leaf menu-mlid-741"><a href="/la845-targetedservices/management/executive-team/director-development"><span>Director of Development</span></a></li><li class="leaf menu-mlid-795"><a href="/la845-targetedservices/management/executive-team/director-students"><span>Director, Students</span></a></li><li class="leaf menu-mlid-796"><a href="/la845-targetedservices/management/executive-team/finance-director"><span>Finance Director</span></a></li><li class="leaf menu-mlid-797"><a href="/la845-targetedservices/management/executive-team/pro-vice-chancellor-academic"><span>Pro Vice-Chancellor (Academic)</span></a></li><li class="leaf menu-mlid-798"><a href="/la845-targetedservices/management/executive-team/pro-vice-chancellor-learning-and-teaching"><span>Pro Vice-Chancellor (Learning and Teaching)</span></a></li><li class="leaf menu-mlid-799"><a href="/la845-targetedservices/management/executive-team/pro-vice-chancellor-research-scholarship-and-quality"><span>Pro Vice-Chancellor (Research, Scholarship &amp; Quality)</span></a></li><li class="last leaf menu-mlid-800"><a href="/la845-targetedservices/management/executive-team/university-secretary"><span>University Secretary</span></a></li></ul></li><li class="last expanded menu-mlid-780"><a href="/la845-targetedservices/management/policies-and-statements"><span>Policies &amp; statements</span></a><ul class="int-container"><li class="first leaf menu-mlid-793"><a href="/la845-targetedservices/management/policies-statements/conditions-use-open-university-websites"><span>Conditions of use of OU websites</span></a></li><li class="expanded menu-mlid-786"><a href="/la845-targetedservices/management/policies-statements/cookie-use-ou-website"><span>Cookie use on the OU website</span></a><ul class="int-container"><li class="first last leaf menu-mlid-787"><a href="/la845-targetedservices/management/policies-statements/cookie-use-ou-website/cookies-you-may-see-if-you-browse-our-site"><span>Cookies you may see if you browse our site</span></a></li></ul></li><li class="leaf menu-mlid-783"><a href="/la845-targetedservices/management/policies-statements/copyright-ou-websites"><span>Copyright of OU websites</span></a></li><li class="leaf menu-mlid-784"><a href="/la845-targetedservices/management/policies-statements/copyright-openlearn"><span>Copyright of OpenLearn</span></a></li><li class="leaf menu-mlid-782"><a href="/la845-targetedservices/management/policies-statements/quality-and-standards-fact-sheets"><span>Quality and standards fact sheets</span></a></li><li class="leaf menu-mlid-781"><a href="/la845-targetedservices/management/policies-statements/statement-equality-and-diversity"><span>Statement on equality and diversity</span></a></li><li class="expanded menu-mlid-789"><a href="/la845-targetedservices/management/policies-statements/website-accessibility-open-university"><span>Website accessibility at the OU</span></a><ul class="int-container"><li class="first last collapsed menu-mlid-790"><a href="/la845-targetedservices/management/policies-statements/website-accessibility-ou/how-access-pdfs-screen-reader"><span>How to access pdfs with a screen reader</span></a></li></ul></li><li class="leaf menu-mlid-792"><a href="/la845-targetedservices/management/policies-statements/website-accessibility-openlearn"><span>Website accessibility at OpenLearn</span></a></li><li class="leaf menu-mlid-785"><a href="/la845-targetedservices/management/policies-statements/website-privacy-ou"><span>Website privacy at the OU</span></a></li><li class="last leaf menu-mlid-788"><a href="/la845-targetedservices/management/policies-statements/website-privacy-openlearn"><span>Website privacy at OpenLearn</span></a></li></ul></li></ul></li><li class="leaf menu-mlid-747"><a href="/la845-targetedservices/jobs"><span>Jobs</span></a></li><li class="last leaf menu-mlid-794"><a href="http://www.bbc.co.uk/education" title=""><span>Press room</span></a></li></ul>
+
+
+                            </li>
+                            <li class="ou-df-ia-news"><a href="http://www.open.ac.uk/news"><span>News &amp; media</span></a></li>
+                            <li class="ou-df-ia-employers"><a href="http://www.open.ac.uk/employers"><span>Employers</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="int-secondlevel-nav int-nav-level">
+
+                    </div>
+                    <div class="int-thirdlevel-nav int-nav-level">
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- END Minimum -->
+            <!-- Minimum -->
+            <!-- <div role="navigation" id="ou-global-primary-navigation">
+                <div class="int-primary">
+                    <div class="int-toplevel-nav int-nav-level">
+                        <ul class="int-container">
+                            <li class="int-home"><a href="#"><span>Home</span></a></li>
+                            <li><a href="/courses"><span>Courses</span></a></li>
+                            <li><a href="/postgraduate"><span>Postgraduate</span></a></li>
+                            <li><a href="http://www.open.ac.uk/research/main/"><span>Research</span></a></li>
+                            <li><a href="http://www.open.ac.uk/about/main/"><span>About</span></a>
+
+
+                                <ul>
+                                    <li><a href="/mission" title="">Mission</a>
+                                        <ul>
+                                            <li><a href="/mission/annual-reports">Annual Reports</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/strategy" title="">Strategy</a>
+                                        <ul>
+                                            <li>
+                                                <a href="/ou-explained/teaching-and-learning-ou" title="">Teaching &amp; learning at the OU</a>
+                                                <ul>
+                                                    <li ><a href="/teaching-and-learning-ou/external-examining">External examining</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="/ou-explained/partnerships">Partnerships</a></li>
+                                            <li><a href="/strategy/ou-story">The OU story</a></li>
+                                            <li><a href="/strategy/facts-and-figures">Facts &amp; figures</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/faculties-centres" title="">Faculties &amp; centres</a>
+                                            <ul>
+                                                <li><a href="/faculties-and-centres/faculties-and-research-centres">Faculties and research centres</a></li>
+                                                <li><a href="/faculties-and-centres/national-centres">National centres</a></li>
+                                                <li><a href="/faculties-and-centres/ou-outside-uk">The OU outside the UK</a></li>
+                                                <li><a href="/faculties-and-centres/milton-keynes-campus">Milton Keynes Campus</a></li>
+                                                <li><a href="/faculties-and-centres/styles-examples" title="">Styles Examples</a>
+                                                    <ul>
+                                                        <li><a href="/styles-examples/accordion" title="">Accordion</a>
+                                                            <ul>
+                                                                <li><a href="/accordion/fourth-level">Fourth level</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="/styles-examples/block-quotations">Block Quotations</a></li>
+                                                        <li><a href="/styles-examples/blocks-and-mini-panel-page">Blocks and Mini Panel Page</a></li>
+                                                        <li><a href="/styles-examples/buttons">Buttons</a></li>
+                                                        <li><a href="/styles-examples/form">Form</a></li>
+                                                        <li><a href="/styles-examples/headings-and-paragraph">Headings and Paragraph</a></li>
+                                                        <li><a href="/styles-examples/line-styles-and-hr">In-line styles</a></li>
+                                                        <li><a href="/styles-examples/lists-definitions">Lists</a></li>
+                                                        <li><a href="/styles-examples/lists">Lists</a></li>
+                                                        <li><a href="/styles-examples/mosaic-demonstration">Mosaic Demonstration</a></li>
+                                                        <li><a href="/styles-examples/optional-blocks">Optional blocks</a></li>
+                                                        <li><a href="/styles-examples/screen-width-blue-banner">Page with Blue Banner</a></li>
+                                                        <li><a href="/styles-examples/tables">Tables</a></li>
+                                                        <li><a href="/styles-examples/various-set-layouts">Various set layouts</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="/vice-chancellor" title="" class="active">Vice-Chancellor</a>
+                                            <ul>
+                                                <li><a href="/vice-chancellor/career">Career</a></li>
+                                                <li><a href="/vice-chancellor/speeches-and-statements">Speeches and statements</a></li>
+                                                <li><a href="/vice-chancellor/vcs-desk">From the VC&#039;s desk</a></li>
+                                                <li><a href="/vice-chancellor/office-contacts">Office contacts</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="/management" title="">Management</a>
+                                            <ul>
+                                                <li><a href="/organisation-and-management/chancellor-and-pro-chancellor">Chancellor and Pro-chancellor</a></li>
+                                            <li><a href="/organisation-and-management/formal-governance-structure">Formal governance structure</a></li>
+                                            <li><a href="/vice-chancellor/executive-team" title="">Executive team</a>
+                                                <ul>
+                                                    <li><a href="/executive-team/chief-information-officer">Chief information officer</a></li>
+                                                    <li><a href="/executive-team/commercial-director">Commercial director</a></li>
+                                                    <li><a href="/executive-team/director-development">Director of development</a></li>
+                                                    <li><a href="/executive-team/director-students">Director, Students</a></li>
+                                                    <li><a href="/executive-team/finance-director">Finance director</a></li>
+                                                    <li><a href="/executive-team/pro-vice-chancellor-academic">Pro Vice-Chancellor (Academic)</a></li>
+                                                    <li><a href="/executive-team/pro-vice-chancellor-learning-and-teaching">Pro Vice-Chancellor (Learning and Teaching)</a></li>
+                                                    <li><a href="/executive-team/pro-vice-chancellor-research-scholarship-and-quality">Pro Vice-Chancellor (Research, Scholarship and quality)</a></li>
+                                                    <li><a href="/executive-team/university-secretary">University secretary</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="/organisation-and-management/policies-and-statements" title="">Policies and statements</a>
+                                                <ul>
+                                                    <li><a href="/policies-and-statements/conditions-use-open-university-websites">Conditions of use of Open University websites</a></li>
+                                                    <li><a href="/policies-and-statements/cookie-use-ou-website">Cookie use on the OU website</a></li>
+                                                    <li><a href="/policies-and-statements/copyright-ou-websites">Copyright of OU websites</a></li>
+                                                    <li><a href="/policies-and-statements/copyright-openlearn-website">Copyright of the OpenLearn website</a></li>
+                                                    <li><a href="/policies-and-statements/quality-and-standards-fact-sheets">Quality and standards fact sheets</a></li>
+                                                    <li><a href="/policies-and-statements/statement-equality-and-diversity">Statement on equality and diversity</a></li>
+                                                    <li><a href="/policies-and-statements/website-accessibility-openlearn">Website accessibility at OpenLearn</a></li>
+                                                    <li><a href="/policies-and-statements/website-accessibility-open-university" title="">Website accessibility at the Open University</a>
+                                                        <ul>
+                                                            <li><a href="/website-accessibility-open-university/how-access-pdfs-screen-reader">How to access pdfs with a screen reader</a></li>
+                                                            <li><a href="/website-accessibility-open-university/how-make-pdfs-more-accessible">How to make pdfs more accessible</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="/policies-and-statements/website-privacy-openlearn">Website privacy at OpenLearn</a></li>
+                                                    <li><a href="/policies-and-statements/website-privacy-ou">Website privacy at the OU</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/jobs">Jobs</a></li>
+                                    <li><a href="http://www.bbc.co.uk/education" title="">Press room</a></li>
+                                    <li><a href="/test-0">Test</a></li>
+                                </ul>
+                            </li>
+
+
+
+
+                            <li><a href="http://www.open.ac.uk/news"><span>News &amp; media</span></a></li>
+                            <li><a href="http://www.open.ac.uk/employers"><span>Employers</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="int-secondlevel-nav int-nav-level">
+
+                    </div>
+                    <div class="int-thirdlevel-nav int-nav-level">
+
+                    </div>
+                </div>
+            </div> -->
+            <!-- END Minimum -->
+
+
+
+            <div id="int-nav-mobile" class="int-nav-alt-mob">
+                <div class="int-nav-mob-overlay"></div>
+                <div class="int-nav-alt-primary"></div>
+                <a href="#" id="int-nav-toggle" class="int-nav-toggle">
+                    <i class="int-icon int-icon-bars int-icon-lg"></i>
+                    <i class="int-icon int-icon-times int-icon-lg"></i>
+                </a>
+            </div>
+        </div>
+    <!-- </div> -->
+    <script src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/vendor/ddjquery.smartresize.js"></script>
+    <script src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/modules/global.primarynavigation_1.js"></script>

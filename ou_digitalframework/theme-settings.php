@@ -7,14 +7,14 @@
     '#type' => 'textfield',
     '#title' => t('Path to Header'),
     '#default_value' => theme_get_setting('ou_df_path_to_header'),
-    '#description' => t("The path to the OU Header to use for this site (e.g. include/header.html)"),    
+    '#description' => t("The path to the OU Header to use for this site (e.g. /include/header.html)"),    
 
   );
     $form['ou_theme_settings']['ou_df_path_to_footer'] = array(
     '#type' => 'textfield',
     '#title' => t('Path to Footer'),
     '#default_value' => theme_get_setting('ou_df_path_to_footer'),
-    '#description' => t("The path to the OU Footer to use for this site (e.g. include/footer.html)"),    
+    '#description' => t("The path to the OU Footer to use for this site (e.g. /include/footer.html)"),    
 
   );
   

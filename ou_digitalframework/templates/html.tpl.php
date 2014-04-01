@@ -52,33 +52,28 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
-<body class="<?php print $classes; ?> <?php print $attributes;?>">
+<body class="ou-df-ia-about cymraeg <?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
 
 <div id="int-site">
 
-  <?php
-  $filepath = '/'.path_to_theme().'/';
-  print $filepath.theme_get_setting('ou_df_path_to_header');
-  include $filepath.theme_get_setting('ou_df_path_to_header'); ?>
+  <?php include path_to_theme() . theme_get_setting('ou_df_path_to_header'); ?>
 
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
 
-  <?php include $filepath.theme_get_setting('ou_df_path_to_footer') ; ?>
+  <?php include path_to_theme() . theme_get_setting('ou_df_path_to_footer') ; ?>
 </div>
-
   <script src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/vendor/jquery-1.10.2.min.js"></script>
-  <script> var $j = jQuery.noConflict();</script>
   <script src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/modules/global.primarynavigation_1.js"></script>
-
+  
 
     <script type="text/javascript">
         //Function that has to be called on the page to initialise the nav
-        (function($j, window){
+        (function($, window){
 
             window.OU.PrimaryNavigation = new window.OU.DigitalFramework.Global.PrimaryNavigation({
                 activeItem: true //Set to true to initialise the nav item using js
@@ -88,9 +83,6 @@
     </script>
 
      <script type="text/javascript">if (typeof window.ou_init=='function')ou_init();</script>
-  	<script>jQuery.noConflict(true);</script>
-
-
 
 
 </body>

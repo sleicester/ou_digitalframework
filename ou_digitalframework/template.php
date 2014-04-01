@@ -1,14 +1,5 @@
 <?php
-
-function ou_digital_futures_preprocess_html(&$variables) {
-  drupal_add_css('http://www-dev.open.ac.uk/oudigital/eep/assets/css/screen.css', array('type' => 'external'));
-  drupal_add_css('http://www-dev.open.ac.uk/oudigital/headers-footers/assets/css/header.css', array('type' => 'external'));
-
-
-  // add new classes to body from theme settings
-  $variables['classes_array'][] = theme_get_setting('ou_df_colour_scheme');
-
-}
+drupal_theme_rebuild();
 
 /*
 **Theme the appearance of the breadcrumb to add jywing classes
@@ -73,29 +64,35 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables){
 }
 
 /*
-**Remove drupal classes
+**Add jwyng wrapper classes -int-secondlevel/int-thirdlevel classes
 */
 function ou_digital_futures_preprocess_menu_block_wrapper(&$variables) {
   $variables['classes_array'][] = '';
 }
 
+/*
+**Add jwyng ul class int-container
+*/
+// function ou_digital_futures_menu_tree__menu_block__main_menu($variables){
+// 	return '<ul>' . $variables['tree'] . '</ul>';
+// }
  function ou_digital_futures_menu_link__menu_block__main_menu($variables) {
   $element = $variables['element'];
   $sub_menu = '';
-
+ 
   if ($element['#below']) {
     unset($element['#below']['#theme_wrappers']);
     $sub_menu = '<ul>'.drupal_render($element['#below']).'</ul>';
   }
-
+ 
   //add span class between href and title text, render span tags as html
   $element['#title'] = '<span>' . check_plain($element['#title']) . '</span>';
-
+ 
   $element['#localized_options'] += array('html'=> TRUE);
-
+ 
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li>' . $output . $sub_menu . "</li>";
-
+ 
 }
 
 /**
