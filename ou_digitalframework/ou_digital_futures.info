@@ -7,17 +7,7 @@ stylesheets[all][] = css/custom/header.css
 stylesheets[all][] = Jwing/assets/css/screen.css
 stylesheets[all][] = css/custom/style.css
 stylesheets[all][] = css/ckeditor-styles.css
-<<<<<<< HEAD
-stylesheets[all][] = ../libraries/font-awesome-4.0.3/css/font-awesome.min.css
-stylesheets[all][] = css/custom/header.css
-
-
-
-
-
-=======
 stylesheets[all][] = ../../libraries/font-awesome-4.0.3/css/font-awesome.min.css
->>>>>>> a9d88ae892ece500e3591297630c26eba2e9017f
 
 regions[header] = Header
 regions[navigation] = Navigation
