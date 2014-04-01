@@ -20,7 +20,7 @@
   
       $form['ou_theme_settings']['ou_df_colour_scheme'] = array(
     '#type' => 'select',
-    '#title' => t('Required site colour scheme'),
+    '#title' => t('Required site architecture'),
     '#options' => array(
        'ou-df-ia-courses' => t('Course'),
        'ou-df-ia-postgraduate' => t('Postgraduate'),
@@ -30,7 +30,7 @@
        'ou-df-ia-about' => t('About'),
      ),
     '#default_value' => theme_get_setting('ou_df_colour_scheme'),
-    '#description' => t("Select the required site Architecture"),    
+    '#description' => t("Select the required site Architecture (Determines which Header Menu tab is highlighted)"),    
 
   );
 
