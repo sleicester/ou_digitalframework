@@ -30,7 +30,22 @@
        'ou-df-ia-about' => t('About'),
      ),
     '#default_value' => theme_get_setting('ou_df_colour_scheme'),
-    '#description' => t("Select the required site Architecture (Determines which Header Menu tab is highlighted)"),    
+    '#description' => t("Select the required site Architecture (Determines which Header Menu tab is highlighted)"),   
+      $form['ou_theme_settings']['ou_df_siblings_block_id'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Block ID to display as Siblings Menu Block'),
+    '#default_value' => theme_get_setting('ou_df_siblings_block_id'),
+    '#description' => t("The block ID that will be used for the Sibling menu block - (no content for this block is displayed)"),    
+
+  );
+  
+    $form['ou_theme_settings']['ou_df_children_block_id'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Block ID to display as Children Menu Block'),
+    '#default_value' => theme_get_setting('ou_df_children_block_id'),
+    '#description' => t("The block ID that will be used for the Children menu block - (no content for this block is displayed)"),    
+
+  ); 
 
   );
 
