@@ -60,9 +60,7 @@
 <div id="int-site">
 
 
-  <?php include '/var/www/html/includes/oudigital/ou_hdr_public.html'; ?>
-
-
+  <?php include theme_get_setting('ou_df_path_to_header'); ?>
 
 
   <?php print $page_top; ?>
