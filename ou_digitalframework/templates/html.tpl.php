@@ -59,13 +59,15 @@
 
 <div id="int-site">
 
-  <?php include path_to_theme() . theme_get_setting('ou_df_path_to_header'); ?>
+  <?php
+  $filepath = '/'.path_to_theme();
+  include $filepath.theme_get_setting('ou_df_path_to_header'); ?>
 
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
 
-  <?php include path_to_theme() . theme_get_setting('ou_df_path_to_footer') ; ?>
+  <?php include $filepath.theme_get_setting('ou_df_path_to_footer') ; ?>
 </div>
   <script src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/vendor/jquery-1.10.2.min.js"></script>
   <script src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/modules/global.primarynavigation_1.js"></script>
