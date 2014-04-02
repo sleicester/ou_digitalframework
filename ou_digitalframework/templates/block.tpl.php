@@ -327,7 +327,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
   <?php print render($title_prefix); ?>
   <?php
   if ($block->subject): ?>
-  <h2<?php class="int-container" print $title_attributes; ?>>
+  <h2  class="int-container" <?php print $title_attributes; ?>>
     <?php print $block->subject ?>
   </h2>
   <?php endif;?>
