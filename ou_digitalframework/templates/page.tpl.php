@@ -94,13 +94,13 @@
 
 
     <?php if ($messages): ?>
-    	<div class="int-container">
+
   			<div class="int-row">
       			<div id="messages"><div class="section clearfix">
         			<?php print $messages; ?>
       			</div></div> <!-- /.section, /#messages -->
 			</div><!-- /.int-row -->
-		</div><!--/.int-container  -->
+
   	<?php endif; ?>
 
 	<main id="int-content">

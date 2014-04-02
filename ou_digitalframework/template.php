@@ -42,6 +42,7 @@ function ou_digital_futures_preprocess_page(&$variables) {
       if ((!empty($variables['node'])) && ($variables['node']->type == 'panel')) {
            $variables['title']="";
       }
+
  }
 
 
