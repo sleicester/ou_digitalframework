@@ -85,7 +85,7 @@ function ou_digital_futures_preprocess_menu_block_wrapper(&$variables) {
 
   if ($element['#below']) {
     unset($element['#below']['#theme_wrappers']);
-    $sub_menu = '<ul>'.drupal_render($element['#below']).'</ul>';
+    $sub_menu = '<ul >'.drupal_render($element['#below']).'</ul>';
   }
 
   //add span class between href and title text, render span tags as html

@@ -126,15 +126,14 @@
 
 		<?php if ($page['highlighted']): ?>
 	 		<div class="int-promo">
- 	 			<div class="int-container">
+
 	  				<!--<div class="int-notice int-notice-icon int-notice-icon-academic">-->
  	 					 <div id="highlighted"><?php print render($page['highlighted']); ?></div>
 					<!--</div>-->
-				</div><!-- /.int-container-->
+
 			</div><!-- /.int-promo-->
 		<?php endif; ?>
 
-		<div class="int-container">
   			<div class="int-row">
     			<div id="content"><div class="section">
 	      			<a id="main-content"></a>
@@ -162,15 +161,14 @@
 
     			</div></div> <!-- /.section, /#content -->
   			</div><!--/.int-row  -->
-  		</div> <!-- /.int-container -->
 
   		<?php if ($page['highlighted-bottom']): ?>
  		<div class="int-promo">
-  			<div class="int-container">
+
   				<!--<div class="int-notice int-notice-icon int-notice-icon-academic">-->
   					 <div id="highlighted-bottom"><?php print render($page['highlighted-bottom']); ?></div>
 				<!--</div>-->
-  			</div><!--/.int-container-->
+
 		</div><!--/.int-promo-->
 		<?php endif; ?>
   	</main>
