@@ -307,7 +307,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
         }
         $block_output .= '</div>';
       }
-      $block_output .= '</div>';
+      $block_output .= '</div></div>';
       $content = $block_output;
     }
 
