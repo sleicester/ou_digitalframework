@@ -164,7 +164,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
           // Loop through the array
           foreach ($nodes as $key => $val) {
             $path = drupal_get_path_alias('node/'.$val->nid);
-            $block_output .= '<h3><a href="/'.$path.'">' . $val->title .'</a></h3>';
+            $block_output .= '<h3><a href="'.$path.'">' . $val->title .'</a></h3>';
             $block_output .= $val->body[$node->language][0]['summary'] ;
           }
 
@@ -300,7 +300,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
           foreach ($nodes as $key => $val) {
             $path = drupal_get_path_alias('node/'.$val->nid);
-            $block_output .= '<li><a class="'.$aClass.'" href="/'.$path.'"><span>'.$val->title.'</span>';
+            $block_output .= '<li><a class="'.$aClass.'" href="'.$path.'"><span>'.$val->title.'</span>';
             $block_output .= '<i class="int-icon int-icon-chevron-right" aria-hidden="true"></i></a></li>';
           }
           $block_output .= '</ul>';
