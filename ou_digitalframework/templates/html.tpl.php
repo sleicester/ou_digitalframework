@@ -75,7 +75,7 @@
   <script src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/modules/global.primarynavigation_1.js"></script>
 
 <script>
-    $("#ou-global-primary-navigation.ou-df-header-nav").remove();
+    $j("#ou-global-primary-navigation.ou-df-header-nav").remove();
   </script>
 
     <script type="text/javascript">
