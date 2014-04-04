@@ -82,7 +82,7 @@
 
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>>
+    <div class="int-container"><h2<?php print $title_attributes; ?>></div>
       <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
     </h2>
   <?php endif; ?>
