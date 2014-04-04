@@ -41,12 +41,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Superscript'		, element : 'sup' },
             */
 
-            { name : 'Call to Action',
-			 element : 'div',
-			 attributes : {
-			 'class' : 'call-to-action' }
- 			},
-
             { name : 'Highlight',
 			 element : 'mark'},
 
@@ -63,9 +57,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
  			{ name : 'Inline quotation',
 			  element : 'q',
  			},
-
-            { name : 'Call to Action Header'	, element : 'span' },
-
 
 {
     name : 'Image on Left',
