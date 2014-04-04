@@ -136,12 +136,19 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
         $plid = (isset($value['plid']) ? $value['plid'] : '');
       }
     }
-
-    foreach ($arrayOfAllMenuItems as $key=>$value) {
+ 
+ echo "<pre>";
+// print_r($arrayOfAllMenuItems);
+ echo "</pre>";
+ 
+ if (isset($plid)){
+         foreach ($arrayOfAllMenuItems as $key=>$value) {
       if ($value['plid'] == $plid) {
         $nodes_list[] = $value['nid'];
       }
     }
+ }
+
 
 
     if (!empty($nodes_list)) {
@@ -271,11 +278,14 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
       }
     }
 
-    foreach ($arrayOfAllMenuItems as $key=>$value) {
+    if(isset($mlid)){
+       foreach ($arrayOfAllMenuItems as $key=>$value) {
       if (isset($value['plid']) && $value['plid'] == $mlid) {
         $nodes_list[] = $value['nid'];
       }
+    } 
     }
+    
 
     if (!empty($nodes_list)) {
 
