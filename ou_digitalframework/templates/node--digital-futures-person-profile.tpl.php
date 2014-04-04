@@ -6,7 +6,7 @@
  *
  */
 ?>
-
+<div class="int-container">
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
 
@@ -59,4 +59,4 @@
 
   <?php print render($content['comments']); ?>
 
-</div>
+</div></div>

@@ -1,83 +1,4 @@
-html {
 
-/*.menu-block-wrapper{
-  background: #0b55a8;
-}
-
-ul.menu  {
-  padding: 4px 10px;
-  margin-left: 0;
-}
-
-ul.menu li {
-  list-style: none outside none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  color: #880088;
-  cursor: pointer;
-  padding: 0.75em 1em 0.75em 20px;
-  position: relative;
-  background-color: #fff;
-  margin: 4px 0;
-}
-
-.int-icon-chevron-right:before {
-  content: "\f054";
-}
-
-.active-trail .int-icon-chevron-right:before {
-  content: "\f078";
-}
-
-.int-icon-btn {
-  margin-right: 10px;
-}
-
-.active-trail .int-icon-btn{
-  background: #880088;
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
-}
-
-.active-trail .int-icon-btn i {
-  color: #ffc23d;
-}
-
-li.expanded ul span {
-  display: none;
-}
-
-li.expanded > ul li {
-  padding: 0 50px;
-}
-
-ul.menu li:before {
-  content: none;
-}
-.expanded > ul.menu {
-  border-color: none;
-  border-style: none;
-  border-width: none;
-  padding: none;
-}*/
-
-.df-grey-header {
-  background-color: #F8F8FF;
-  background-image: url("../../images/oulogo-56.jpg");
-  background-position: left center;
-  background-repeat: no-repeat;
-  border-bottom: 1px solid #808080;
-  margin-bottom: 20px;
-  margin-left: 10%;
-  margin-top: 20px;
-  min-height: 120px;
-  padding: 30px;
-  width: 80%;
-}
-
-.df-header-nav {
-  float: right;
-}
 
 /*styles for profile pages*/
 
@@ -93,16 +14,7 @@ ul.menu li:before {
   padding: 0.5em;
   margin-left: 1em;
 }
-/*styles for side navigation*/
 
-.menu-block-wrapper {
-  background-color: #0b55a8;
-}
-
-=======
-.alternative-layout {
-  background-color: pink;
-}
 /* Styles for webform elements specified classes in template.php */
 .ou_webform_radio_set {
 }
@@ -170,10 +82,7 @@ margin-top: 1em;
 text-align: center;
 }
 
-select {
-background: #ffffff url(../../images/form-sprites-new.png) no-repeat right -6px;
-padding-right: 60px;
-}
+
 
 blockquote {
     display: inline-block;
@@ -183,3 +92,4 @@ blockquote {
     width:368px;
     height: 207px;
 }
+
