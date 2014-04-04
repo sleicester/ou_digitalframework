@@ -137,24 +137,17 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
       }
     }
  
- echo "<pre>";
-// print_r($arrayOfAllMenuItems);
- echo "</pre>";
- 
  if (isset($plid)){
          foreach ($arrayOfAllMenuItems as $key=>$value) {
-      if ($value['plid'] == $plid) {
+      if ($value['plid'] == $plid && is_numeric($value['nid'])) {
         $nodes_list[] = $value['nid'];
       }
     }
  }
-
-
-
     if (!empty($nodes_list)) {
 
       $columnizedArray = get_array_columns_siblings($nodes_list,$numberOfColumns);
-
+        
       foreach ($columnizedArray as $columnkey => $columnval) {
         $block_output .= '<div class="'.$columnClass.'">';
 
