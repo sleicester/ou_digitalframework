@@ -74,6 +74,9 @@
   <script> var $j = jQuery.noConflict();</script>
   <script src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/modules/global.primarynavigation_1.js"></script>
 
+<script>
+    $("#ou-global-primary-navigation.ou-df-header-nav").remove();
+  </script>
 
     <script type="text/javascript">
         //Function that has to be called on the page to initialise the nav
