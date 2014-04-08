@@ -105,24 +105,14 @@
 
 	<main id="int-content">
  		<?php if ($page['hero']): ?>
-  			<div class="int-courses-hero">
-     			<div class="interaction">
-       				<div class="int-container">
-       			    	<?php if ($breadcrumb): ?>
- 				  	  		<div id="breadcrumb"><?php print $breadcrumb; ?></div>
-      					<?php endif; ?>
        			  		<?php print render($page['hero']); ?>
-       				</div><!-- /.int-container-->
-       				<br />
-   				</div><!--  /.interaction-->
-   			</div><!-- /.int-courses-hero -->
-   		<?php else: ?>
+   		<?php endif; ?>
    			<?php if ($breadcrumb): ?>
  		     	<div class="int-container">
  		  	  		<div id="breadcrumb"><?php print $breadcrumb; ?></div>
  		 	   	</div><!--/.int-container -->
  			<?php endif; ?>
-		 <?php endif; ?>
+
 
 		<?php if ($page['highlighted']): ?>
 	 		<div class="int-promo">
