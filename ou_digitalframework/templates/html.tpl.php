@@ -80,16 +80,16 @@
 
     <script type="text/javascript">
         //Function that has to be called on the page to initialise the nav
-       /* (function($j, window){
+       (function($j, window){
 
             window.OU.PrimaryNavigation = new window.OU.DigitalFramework.Global.PrimaryNavigation({
                 activeItem: true //Set to true to initialise the nav item using js
             });
 
-        })(jQuery, window);*/
+        })(jQuery, window);
     </script>
 
-     <script type="text/javascript">//if (typeof window.ou_init=='function')ou_init();</script>
+     <script type="text/javascript">if (typeof window.ou_init=='function')ou_init();</script>
   	<script>jQuery.noConflict(true);</script>
 
 
