@@ -1,7 +1,23 @@
+/*drupal specific styles*/
+
 img {
   border: 0 none;
   display: inline;
   margin: 1em 0;
+}
+
+blockquote {
+    display: inline-block;
+}
+
+.ou-video-embed {
+    width:368px;
+    height: 207px;
+}
+
+/*remove top breadcrumb on panel page*/
+.node-type-panel #breadcrumb {
+display: none;
 }
 
 /*styles for profile pages*/
@@ -27,7 +43,7 @@ img {
 }
 
 /* This section override styling for Forms elements - these dont seem to be included in the code release of CSS that we have
-when this code is available we should be able to remove this section*/
+when this code is available we should be able to remove this section
 
 input[type="radio"] + label:before {
   background: url("../../Jwing/assets/img/form-sprites.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -67,33 +83,9 @@ input[type="checkbox"]:checked + label:before {
 .js #int-content .btn-top {
     bottom: 0; 
    }
-   
-.alt-layout .int-grid4 {
-float: right;
-margin-left: 2%;
-margin-right: 0;
-}
-
-.region-sidebar-second .block-block{
-background-color: #e7eff7;
-overflow: hidden;
-border-bottom: 1px solid #a6d0ff;
-padding:1em;
-margin-top: 1em;
-}
-
-.region-sidebar-second .block-block h2{
-text-align: center;
-}
+*/
 
 
 
-blockquote {
-    display: inline-block;
-}
 
-.ou-video-embed {
-    width:368px;
-    height: 207px;
-}
 
