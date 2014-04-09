@@ -20,7 +20,7 @@
 
     	<?php if(($id + 1) % 3 == 0){  // if the feature is at the end of a row
 
-			if($id == ($row_length - 1)){
+			if(($id + 1) == ($row_length)){
 				print "<div class='int-grid4'>".$row."</div></div>"; //  if the feature is the very last feature, close the int-row div without opening a new int-row div
 				break;
 			}
@@ -32,7 +32,7 @@
 			print "<div class='int-grid4'>".$row."</div>"; //if the feature is not at the end of the row print out feature
 		}
 
-	if($id == ($row_length - 1)){
+	if(($id + 1) == $row_length){
 		print "</div>";  //if the feature is the very last feature close the int-row div
 	}
 	?>
