@@ -53,9 +53,6 @@
   <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?> <?php print $attributes;?>">
-  <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
-  </div>
 
 <div id="int-site">
 
