@@ -136,7 +136,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
         $plid = (isset($value['plid']) ? $value['plid'] : '');
       }
     }
- 
+
  if (isset($plid)){
          foreach ($arrayOfAllMenuItems as $key=>$value) {
       if ($value['plid'] == $plid && is_numeric($value['nid'])) {
@@ -147,7 +147,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
     if (!empty($nodes_list)) {
 
       $columnizedArray = get_array_columns_siblings($nodes_list,$numberOfColumns);
-        
+
       foreach ($columnizedArray as $columnkey => $columnval) {
         $block_output .= '<div class="'.$columnClass.'">';
 
@@ -276,9 +276,9 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
       if (isset($value['plid']) && $value['plid'] == $mlid) {
         $nodes_list[] = $value['nid'];
       }
-    } 
     }
-    
+    }
+
 
     if (!empty($nodes_list)) {
 
@@ -303,7 +303,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
           foreach ($nodes as $key => $val) {
             $path = base_path() . drupal_get_path_alias('node/'.$val->nid);
-            $block_output .= '<li><a class="'.$aClass.'" href="'.$path.'"><span>'.$val->title.'</span>';
+            $block_output .= '<li><a href="'.$path.'">'.$val->title;
             $block_output .= '<i class="int-icon int-icon-chevron-right" aria-hidden="true"></i></a></li>';
           }
           $block_output .= '</ul>';
