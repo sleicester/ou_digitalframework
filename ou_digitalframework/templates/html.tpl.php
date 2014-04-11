@@ -96,14 +96,14 @@
   <script>
   
     // Only hide if your CMS menu has been output correctly
-    $j("#ou-global-primary-navigation.ou-df-header-nav").remove();
+    $("#ou-global-primary-navigation.ou-df-header-nav").remove();
   </script>
   
   <script src="/oudigital/headerandfooter/assets/js/modules/ou-primary-navigation.js"></script>
   
  <script>
      //Function that has to be called on the page to initialise the nav
-      (function ($j, window) {
+      (function ($, window) {
           window.OU.PrimaryNavigation = new window.OU.DigitalFramework.Global.PrimaryNavigation({
               serviceLink: true,    //Set to false to switch off the service links toggle functionality and responsive styling i.e. if you are not using service links on the page. Default is true.
               activeItem: true      //Set to true to initialise the nav item using js, default is false
