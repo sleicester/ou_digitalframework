@@ -2,7 +2,7 @@
 
 function ou_digital_futures_preprocess_html(&$variables) {
   drupal_add_css('http://www-dev.open.ac.uk/oudigital/eep/assets/css/screen.css', array('type' => 'external'));
-  drupal_add_css('http://www-dev.open.ac.uk/oudigital/headers-footers/assets/css/header.css', array('type' => 'external'));
+  // drupal_add_css('http://www-dev.open.ac.uk/oudigital/headers-footers/assets/css/header.css', array('type' => 'external'));
 
 
   // add new classes to body from theme settings

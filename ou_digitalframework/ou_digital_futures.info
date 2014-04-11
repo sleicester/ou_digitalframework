@@ -6,8 +6,6 @@ stylesheets[all][] = css/custom/style.css
 stylesheets[all][] = css/ckeditor-styles.css
 stylesheets[all][] = ../../libraries/font-awesome-4.0.3/css/font-awesome.min.css
 
-# scripts[] = js/hide-header-menu.js
-
 regions[header] = Header
 regions[navigation] = Navigation
 regions[content] = Content
