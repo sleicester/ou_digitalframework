@@ -114,6 +114,6 @@
   </script>
   <script type="text/javascript">// if (typeof window.ou_init=='function')ou_init();</script>
   <!--  End -->
-<script> var $ = jQuery.noConflict();</script>
+<script> var jQuery = jQuery.noConflict();</script>
 </body>
 </html>
