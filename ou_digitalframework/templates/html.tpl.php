@@ -78,9 +78,7 @@
 
 <div id="int-site">
 
-
   <?php include theme_get_setting('ou_df_path_to_header'); ?>
-
 
   <?php print $page_top; ?>
   <?php print $page; ?>
@@ -89,15 +87,13 @@
   <?php include theme_get_setting('ou_df_path_to_footer') ; ?>
 </div>
 
-
     <!--Added SC from LA 11-4-14 -->
-<!--<script src="/oudigital/eep/assets/js/vendor/jquery-1.10.2.min.js"></script>
-  <script> var $j = jQuery.noConflict();</script>
+<script src="/oudigital/eep/assets/js/vendor/jquery-1.10.2.min.js"></script>
+  <script> var $j = $.noConflict();</script>
   <script src="/oudigital/eep/assets/js/vendor/jquery.placeholder.js"></script>
   <script src="/oudigital/eep/assets/js/vendor/jquery.smartresize.js"></script>
-  <script>-->
-  
-  
+  <script>
+   
   
     // Only hide if your CMS menu has been output correctly
     $j("#ou-global-primary-navigation.ou-df-header-nav").remove();
