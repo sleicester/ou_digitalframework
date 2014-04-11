@@ -90,11 +90,6 @@
 </div>
 
 
-
- <!-- <script src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/modules/global.primarynavigation_1.js"></script>-->
-
-
-
     <!--Added SC from LA 11-4-14 -->
 <script src="/oudigital/eep/assets/js/vendor/jquery-1.10.2.min.js"></script>
   <script> var $j = jQuery.noConflict();</script>
@@ -108,8 +103,8 @@
     $j("#ou-global-primary-navigation.ou-df-header-nav").remove();
   </script>
   <script src="/oudigital/headerandfooter/assets/js/modules/ou-primary-navigation.js"></script>
-  <script>
-      //Function that has to be called on the page to initialise the nav
+ <script>
+    /*  //Function that has to be called on the page to initialise the nav
       (function ($j, window) {
 
           window.OU.PrimaryNavigation = new window.OU.DigitalFramework.Global.PrimaryNavigation({
@@ -117,9 +112,9 @@
               activeItem: true      //Set to true to initialise the nav item using js, default is false
           });
 
-      })(jQuery, window);
+      })(jQuery, window);*/
   </script>
-  <script type="text/javascript">if (typeof window.ou_init=='function')ou_init();</script>
+  <script type="text/javascript">// if (typeof window.ou_init=='function')ou_init();</script>
   <!--  End -->
 
 </body>
