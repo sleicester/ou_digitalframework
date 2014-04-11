@@ -54,9 +54,9 @@
   
     <!-- SC added from LA 11-4-2014 -->
   
-  <!--<link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/header.css">
+  <link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/header.css">
   <link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/footer.css">
-  <link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/ou-df-header.css">-->
+  <link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/ou-df-header.css">
   
     <!--[if lt IE 9]>
     <link  rel="stylesheet" href="/oudigital/headerandfooter/assets/css/footer-ie.css">
