@@ -51,8 +51,32 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  
+    <!-- SC added from LA 11-4-2014 -->
+  
+  <link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/header.css">
+  <link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/footer.css">
+  <link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/ou-df-header.css">
+  
+    <!--[if lt IE 9]>
+    <link  rel="stylesheet" href="/oudigital/headerandfooter/assets/css/footer-ie.css">
+  <![endif]--> <!--media queries support on IE8 and lower -->
+    
+  <!--[if lt IE 8]>
+    <link  rel="stylesheet" href="/oudigital/eep/assets/css/ie.css">
+  <![endif]-->
+
+  <!--[if IE 7]>
+    <link  rel="stylesheet" href="/oudigital/eep/assets/fonts/fontawesome/css/font-awesome-ie7.css">
+  <![endif]-->
+  
+    <!--  End-->
+  
+  
+  
+  
 </head>
-<body class="<?php print $classes; ?> <?php print $attributes;?>">
+<body class="<?php print theme_get_setting('ou_df_nation'); ?> <?php print theme_get_setting('ou_df_lang'); ?> <?php print $classes; ?> " <?php print $attributes;?>>
 
 <div id="int-site">
 
@@ -67,30 +91,35 @@
   <?php include theme_get_setting('ou_df_path_to_footer') ; ?>
 </div>
 
-  <script src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/vendor/jquery-1.10.2.min.js"></script>
-  <script> var $j = jQuery.noConflict();</script>
-  <script src="http://www-dev.open.ac.uk/oudigital/headers-footers/assets/js/modules/global.primarynavigation_1.js"></script>
+    <!--Added SC from LA 11-4-14 -->
 
-<script>
-    $j("#ou-global-primary-navigation.ou-df-header-nav").remove();
+  <script src="/oudigital/eep/assets/js/vendor/jquery-1.10.2.min.js"></script>
+  <script src="/oudigital/eep/assets/js/vendor/jquery.placeholder.js"></script>
+  <script src="/oudigital/eep/assets/js/vendor/jquery.smartresize.js"></script>
+  <script>
+    // Only hide if your CMS menu has been output correctly
+    $("#ou-global-primary-navigation.ou-df-header-nav").remove();
+  </script>
+ 
+
+
+  <script src="/oudigital/headerandfooter/assets/js/modules/ou-primary-navigation.js"></script>
+  <script>
+      //Function that has to be called on the page to initialise the nav
+      (function ($, window) {
+
+          window.OU.PrimaryNavigation = new window.OU.DigitalFramework.Global.PrimaryNavigation({
+              serviceLink: true,    //Set to false to switch off the service links toggle functionality and responsive styling i.e. if you are not using service links on the page. Default is true.
+              activeItem: true      //Set to true to initialise the nav item using js, default is false
+          });
+
+      })(jQuery, window);
   </script>
 
-    <script type="text/javascript">
-        //Function that has to be called on the page to initialise the nav
-       (function($j, window){
-
-            window.OU.PrimaryNavigation = new window.OU.DigitalFramework.Global.PrimaryNavigation({
-                activeItem: true //Set to true to initialise the nav item using js
-            });
-
-        })(jQuery, window);
-    </script>
-
-     <script type="text/javascript">if (typeof window.ou_init=='function')ou_init();</script>
-  	<script>jQuery.noConflict(true);</script>
+  <script type="text/javascript">if (typeof window.ou_init=='function')ou_init();</script>
 
 
-
+  <!--  End -->
 
 </body>
 </html>
