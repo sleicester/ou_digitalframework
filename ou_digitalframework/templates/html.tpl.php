@@ -110,7 +110,7 @@
   <script src="/oudigital/headerandfooter/assets/js/modules/ou-primary-navigation.js"></script>
   <script>
       //Function that has to be called on the page to initialise the nav
-      (function (j$, window) {
+      (function ($j, window) {
 
           window.OU.PrimaryNavigation = new window.OU.DigitalFramework.Global.PrimaryNavigation({
               serviceLink: true,    //Set to false to switch off the service links toggle functionality and responsive styling i.e. if you are not using service links on the page. Default is true.
