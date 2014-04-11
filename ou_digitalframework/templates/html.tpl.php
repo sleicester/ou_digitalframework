@@ -105,7 +105,7 @@
   
   
     // Only hide if your CMS menu has been output correctly
-    $("#ou-global-primary-navigation.ou-df-header-nav").remove();
+    $j("#ou-global-primary-navigation.ou-df-header-nav").remove();
   </script>
   <script src="/oudigital/headerandfooter/assets/js/modules/ou-primary-navigation.js"></script>
   <script>
