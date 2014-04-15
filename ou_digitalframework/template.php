@@ -55,8 +55,10 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
     $classes = theme_get_setting('ou_df_lang'); //'cymraeg';
     //$classes = $variables['classes_array'];
     //print $classes;
-
-    if ($classes == 'i18n-cy') {
+    
+    // Switch using the current language
+        global $language_content; 
+    if ($language_content->language == 'cy') {
         // Welsh
         // Create an Array of the header menu options
         $headerLinksArray = array();
