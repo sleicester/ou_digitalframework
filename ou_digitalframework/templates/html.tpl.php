@@ -93,6 +93,9 @@
 <div id="int-site">
 
   <?php include theme_get_setting('ou_df_path_to_header'); ?>
+  <script>
+      doTranslation();
+  </script>
 
   <?php print $page_top; ?>
   <?php print $page; ?>
