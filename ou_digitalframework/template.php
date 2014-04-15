@@ -49,7 +49,6 @@ function ou_digital_futures_preprocess_page(&$variables) {
 
 function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
   {
-
     $block_output     = '';
     $insert_menu      = '';
 
@@ -57,7 +56,7 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
     //$classes = $variables['classes_array'];
     //print $classes;
 
-    if ($classes == 'cymraeg') {
+    if ($classes == 'i18n-cy') {
         // Welsh
         // Create an Array of the header menu options
         $headerLinksArray = array();

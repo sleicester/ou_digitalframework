@@ -36,7 +36,7 @@ function ou_digital_futures_form_system_theme_settings_alter( & $form, & $form_s
 
   );
 
-    $form['ou_theme_settings']['ou_df_lang'] = array(
+ /*   $form['ou_theme_settings']['ou_df_lang'] = array(
     '#type' => 'select',
     '#title' => t('Language'),
     '#options' => array(
@@ -46,7 +46,7 @@ function ou_digital_futures_form_system_theme_settings_alter( & $form, & $form_s
     '#default_value' => theme_get_setting('ou_df_lang'),
     '#description' => t("Select language  required"),    
 
-  );
+  );*/
 
 
   $form['ou_theme_settings']['ou_df_colour_scheme'] = array(
