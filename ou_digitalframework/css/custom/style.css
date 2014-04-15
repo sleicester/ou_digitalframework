@@ -42,6 +42,21 @@ display: none;
 
 }
 
+/*override oembed styles*/
+
+.oembed .oembed-title {
+  display: none;
+}
+
+.oembed {
+  background: none repeat scroll 0 0 #fff;
+  border: 0;
+  display: block;
+  color: #494949;
+  float: none;
+}
+
+
 /* This section override styling for Forms elements - these dont seem to be included in the code release of CSS that we have
 when this code is available we should be able to remove this section
 
