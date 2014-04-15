@@ -100,38 +100,45 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
     // Fetch the menu tree
     $menuTree = menu_tree_all_data('main-menu');
 
+
+
     foreach ($menuTree as $key=>$value) {
 
       $arrayOfAllMenuItems[$key]['nid'] = str_replace('node/','',$value['link']['link_path']);
       $arrayOfAllMenuItems[$key]['mlid'] = $value['link']['mlid'];
       $arrayOfAllMenuItems[$key]['plid'] = $value['link']['plid'];
+      $arrayOfAllMenuItems[$key]['hidden'] = $value['link']['hidden'];
 
       foreach ($value['below'] as $levelTwoKey=>$levelTwoValue) {
 
         $arrayOfAllMenuItems[$levelTwoKey]['nid'] = str_replace('node/','',$levelTwoValue['link']['link_path']);
         $arrayOfAllMenuItems[$levelTwoKey]['mlid'] = $levelTwoValue['link']['mlid'];
         $arrayOfAllMenuItems[$levelTwoKey]['plid'] = $levelTwoValue['link']['plid'];
-
+        $arrayOfAllMenuItems[$levelTwoKey]['hidden'] = $levelTwoValue['link']['hidden'];
+        
         foreach ($levelTwoValue['below'] as $levelThreeKey=>$levelThreeValue) {
 
           $arrayOfAllMenuItems[$levelThreeKey]['nid'] = str_replace('node/','',$levelThreeValue['link']['link_path']);
           $arrayOfAllMenuItems[$levelThreeKey]['mlid'] = $levelThreeValue['link']['mlid'];
           $arrayOfAllMenuItems[$levelThreeKey]['plid'] = $levelThreeValue['link']['plid'];
-
+          $arrayOfAllMenuItems[$levelThreeKey]['hidden'] = $levelThreeValue['link']['hidden'];
+          
           foreach ($levelThreeValue['below'] as $levelFourKey=>$levelFourValue) {
 
             $arrayOfAllMenuItems[$levelFourKey]['nid'] = str_replace('node/','',$levelFourValue['link']['link_path']);
             $arrayOfAllMenuItems[$levelFourKey]['mlid'] = $levelFourValue['link']['mlid'];
             $arrayOfAllMenuItems[$levelFourKey]['plid'] = $levelFourValue['link']['plid'];
+            $arrayOfAllMenuItems[$levelFourKey]['hidden'] = $levelFourValue['link']['hidden'];
           }
         }
       }
     }
 
+
     // Detect the Parent ID for this node PLID
     foreach ($arrayOfAllMenuItems as $key=>$value) {
 
-      if (isset($value['nid']) && $value['nid'] == $nid && $value['nid'] != '' && $value['nid'] != 'home' ) {
+      if (isset($value['nid']) && $value['nid'] == $nid && $value['nid'] != '' && $value['nid'] != 'home') {
         $mlid = (isset($value['mlid']) ? $value['mlid'] : '');
         $plid = (isset($value['plid']) ? $value['plid'] : '');
       }
@@ -139,8 +146,8 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
  if (isset($plid)){
          foreach ($arrayOfAllMenuItems as $key=>$value) {
-      if ($value['plid'] == $plid && is_numeric($value['nid'])) {
-        $nodes_list[] = $value['nid'];
+      if ($value['plid'] == $plid && is_numeric($value['nid']) && $value['hidden']=='0') {
+          $nodes_list[] = $value['nid'];
       }
     }
  }
@@ -163,9 +170,6 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
           // Loop through the array
           foreach ($nodes as $key => $val) {
-              echo "<pre>";
-              print_r($node->language);
-              echo "</pre>";
             $path = base_path() . drupal_get_path_alias('node/'.$val->nid);
             $block_output .= '<h3><a href="'.$path.'">' . $val->title .'</a></h3>';
             $block_output .= $val->body[$node->language][0]['summary'] ;
@@ -241,19 +245,22 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
       $arrayOfAllMenuItems[$key]['nid'] = str_replace('node/','',$value['link']['link_path']);
       $arrayOfAllMenuItems[$key]['mlid'] = $value['link']['mlid'];
       $arrayOfAllMenuItems[$key]['plid'] = $value['link']['plid'];
+      $arrayOfAllMenuItems[$key]['hidden'] = $value['link']['hidden'];
 
       foreach ($value['below'] as $levelTwoKey=>$levelTwoValue) {
 
         $arrayOfAllMenuItems[$levelTwoKey]['nid'] = str_replace('node/','',$levelTwoValue['link']['link_path']);
         $arrayOfAllMenuItems[$levelTwoKey]['mlid'] = $levelTwoValue['link']['mlid'];
         $arrayOfAllMenuItems[$levelTwoKey]['plid'] = $levelTwoValue['link']['plid'];
-
+        $arrayOfAllMenuItems[$levelTwoKey]['hidden'] = $levelTwoValue['link']['hidden'];
+        
         foreach ($levelTwoValue['below'] as $levelThreeKey=>$levelThreeValue) {
 
 
           $arrayOfAllMenuItems[$levelThreeKey]['nid'] = str_replace('node/','',$levelThreeValue['link']['link_path']);
           $arrayOfAllMenuItems[$levelThreeKey]['mlid'] = $levelThreeValue['link']['mlid'];
           $arrayOfAllMenuItems[$levelThreeKey]['plid'] = $levelThreeValue['link']['plid'];
+          $arrayOfAllMenuItems[$levelThreeKey]['hidden'] = $levelThreeValue['link']['hidden'];
 
           foreach ($levelThreeValue['below'] as $levelFourKey=>$levelFourValue) {
 
@@ -261,6 +268,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
             $arrayOfAllMenuItems[$levelFourKey]['nid'] = str_replace('node/','',$levelFourValue['link']['link_path']);
             $arrayOfAllMenuItems[$levelFourKey]['mlid'] = $levelFourValue['link']['mlid'];
             $arrayOfAllMenuItems[$levelFourKey]['plid'] = $levelFourValue['link']['plid'];
+            $arrayOfAllMenuItems[$levelFourKey]['hidden'] = $levelFourValue['link']['hidden'];
           }
         }
       }
@@ -268,7 +276,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
     // Detect the MLID ID for this node PLID
     foreach ($arrayOfAllMenuItems as $key=>$value) {
-      if ($value['nid'] == $nid && $value['nid'] != '' && $value['nid'] != 'home' ) {
+      if ($value['nid'] == $nid && $value['nid'] != '' && $value['nid'] != 'home') {
         $mlid = (isset($value['mlid']) ? $value['mlid'] : '');
         $plid = (isset($value['plid']) ? $value['plid'] : '');
       }
@@ -276,7 +284,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
     if(isset($mlid)){
        foreach ($arrayOfAllMenuItems as $key=>$value) {
-      if (isset($value['plid']) && $value['plid'] == $mlid) {
+      if (isset($value['plid']) && $value['plid'] == $mlid && $value['hidden'] =='0' ) {
         $nodes_list[] = $value['nid'];
       }
     }
