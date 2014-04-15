@@ -52,7 +52,7 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
     $block_output     = '';
     $insert_menu      = '';
 
-    $classes = theme_get_setting('ou_df_lang'); //'cymraeg';
+   // $classes = theme_get_setting('ou_df_lang'); //'cymraeg';
     //$classes = $variables['classes_array'];
     //print $classes;
     

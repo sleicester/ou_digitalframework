@@ -163,6 +163,9 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
           // Loop through the array
           foreach ($nodes as $key => $val) {
+              echo "<pre>";
+              print_r($node->language);
+              echo "</pre>";
             $path = base_path() . drupal_get_path_alias('node/'.$val->nid);
             $block_output .= '<h3><a href="'.$path.'">' . $val->title .'</a></h3>';
             $block_output .= $val->body[$node->language][0]['summary'] ;

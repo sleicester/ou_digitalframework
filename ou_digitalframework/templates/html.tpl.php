@@ -75,9 +75,20 @@
 
   
     <!--  End-->
+    
+  <?php
+  global $language_content;
+  if ($language_content->language == 'cy') {
+    $currentLanguage = 'cymraeg';
+  }
+  else {
+    $currentLanguage = 'english';
+  }
+
+  ?>
    
 </head>
-<body class="<?php print theme_get_setting('ou_df_nation'); ?> <?php print theme_get_setting('ou_df_lang'); ?> <?php print $classes; ?> " <?php print $attributes;?>>
+<body class="<?php print theme_get_setting('ou_df_nation'); ?> <?php print $currentLanguage; ?> <?php print $classes; ?> " <?php print $attributes;?>>
 
 <div id="int-site">
 
