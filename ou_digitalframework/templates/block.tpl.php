@@ -170,11 +170,16 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
             
           // Pick up the current language
           global $language_content; 
-           $selectedLanguage = $language_content->language;
-          
+          $selectedLanguage = $language_content->language;
             
           // Loop through the array
           foreach ($nodes as $key => $val) {
+              
+         // language - if not welsh then set to node value
+         if ($selectedLanguage !='cy'){
+             $selectedLanguage = $val->language;
+         }
+         
             $path = base_path() . drupal_get_path_alias('node/'.$val->nid);
             $block_output .= '<h3><a href="'.$path.'">' . $val->title .'</a></h3>';
             $block_output .= $val->body[$selectedLanguage][0]['summary'] ;
