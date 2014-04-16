@@ -172,7 +172,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
           foreach ($nodes as $key => $val) {
             $path = base_path() . drupal_get_path_alias('node/'.$val->nid);
             $block_output .= '<h3><a href="'.$path.'">' . $val->title .'</a></h3>';
-            $block_output .= $node->language.$val->body[$node->language][0]['summary'] ;
+            $block_output .= $val->nid.$val->body[$node->language][0]['summary'] ;
           }
 
           // Close the final column DIV
