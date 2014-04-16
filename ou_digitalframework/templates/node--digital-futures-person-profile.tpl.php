@@ -23,9 +23,10 @@
     	</div>
     <?php endif; ?>
 
-    <?php if ($content['field_role']): ?>
-      	<h3><?php print $content['field_role']['#title'] ?></h3>
-      	<?php print $content['field_role'][0]['#markup'] ?>
+
+    <?php if (isset($content['body'])): ?>
+      	<h3><?php print $content['body']['#title'] ?></h3>
+      	<?php print $content['body'][0]['#markup'] ?>
     <?php endif; ?>
 
 
