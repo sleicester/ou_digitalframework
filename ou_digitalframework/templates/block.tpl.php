@@ -167,12 +167,17 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
           // Load the nodes into an array
           $nodes    = entity_load('node', array_keys($entities['node']));
-
+            
+          // Pick up the current language
+          global $language_content; 
+           $selectedLanguage = $language_content->language;
+          
+            
           // Loop through the array
           foreach ($nodes as $key => $val) {
             $path = base_path() . drupal_get_path_alias('node/'.$val->nid);
             $block_output .= '<h3><a href="'.$path.'">' . $val->title .'</a></h3>';
-            $block_output .= $val->nid.$val->body[$node->language][0]['summary'] ;
+            $block_output .= $val->body[$selectedLanguage][0]['summary'] ;
           }
 
           // Close the final column DIV
