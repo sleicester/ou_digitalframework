@@ -7,17 +7,17 @@ img {
 }
 
 blockquote {
-    display: inline-block;
+  display: inline-block;
 }
 
 .ou-video-embed {
-    width:368px;
-    height: 207px;
+  width: 368px;
+  height: 207px;
 }
 
 /*remove top breadcrumb on panel page*/
 .node-type-panel #breadcrumb {
-display: none;
+  display: none;
 }
 
 /*styles for profile pages*/
@@ -61,45 +61,92 @@ display: none;
 when this code is available we should be able to remove this section
 
 input[type="radio"] + label:before {
-  background: url("../../Jwing/assets/img/form-sprites.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-  content: "";
-  display: inline-block;
-  height: 32px;
-  margin: -2px 8px 0 -32px;
-  vertical-align: middle;
-  width: 32px;
+background: url("../../Jwing/assets/img/form-sprites.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+content: "";
+display: inline-block;
+height: 32px;
+margin: -2px 8px 0 -32px;
+vertical-align: middle;
+width: 32px;
 }
 input[type="radio"]:checked + label:before, input.checked[type="radio"] + label:before {
-  background-position: 0 -200px;
+background-position: 0 -200px;
 }
 
 input[type="radio"] + label:before {
-  background-position: 0 -150px;
+background-position: 0 -150px;
 }
 
 input[type="checkbox"] + label:before {
-  background: url("../../Jwing/assets/img/form-sprites.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-  content: "";
-  display: inline-block;
-  height: 32px;
-  margin: -2px 8px 0 -32px;
-  vertical-align: middle;
-  width: 32px;
+background: url("../../Jwing/assets/img/form-sprites.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+content: "";
+display: inline-block;
+height: 32px;
+margin: -2px 8px 0 -32px;
+vertical-align: middle;
+width: 32px;
 }
 
 input[type="checkbox"] + label:before {
-  background-position: 0 -250px;
+background-position: 0 -250px;
 }
 
 input[type="checkbox"]:checked + label:before {
-    background-position: 0 -300px;
+background-position: 0 -300px;
 }
 
 .js #int-content .btn-top {
-    bottom: 0; 
-   }
+bottom: 0;
+}
 */
 
+body.wls div.interaction {
+  background-color: #d01418 !important;
+}
+body.wls table td, body.wls table th {
+  border-bottom: 1px solid #d01418;
+  border-right: 1px solid #d01418;
+}
+body.wls .int-promo {
+  background: #f3ccd6;
+  margin-bottom: 2em;
+}
+
+body.wls div.interaction {
+  background-color: #d01418 !important;
+}
+body.wls table td, body.wls table th {
+  border-bottom: 1px solid #d01418;
+  border-right: 1px solid #d01418;
+}
+body.wls .int-promo {
+  background: #f3ccd6;
+  margin-bottom: 2em;
+}
+
+body.nir div.interaction {
+  background-color: #a01851 !important;
+}
+body.nir table td, body.wls table th {
+  border-bottom: 1px solid #a01851;
+  border-right: 1px solid #a01851;
+}
+body.nir .int-promo {
+  background: #e0ccd6;
+  margin-bottom: 2em;
+}
+
+body.ire div.interaction {
+  background-color: #a01851 !important;
+}
+body.ire table td, body.wls table th {
+  border-bottom: 1px solid #a01851;
+  border-right: 1px solid #a01851;
+}
+body.ire .int-promo {
+  background: #e0ccd6;
+  margin-bottom: 2em;
+}
 
 
 
