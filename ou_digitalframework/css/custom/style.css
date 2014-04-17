@@ -154,9 +154,17 @@ body.ire .int-promo {
 
 /*style the languages switcher*/
 
-body.wls #breadcrumb {
+body.wls #breadcrumb, body.wls .panel-pane .breadcrumb {
 float: left;
 width: 75%;
+}
+
+body.wls.node-type-panel #switcher{
+display: none;
+}
+
+.clear{
+clear: both;
 }
 
 body.wls #switcher {
