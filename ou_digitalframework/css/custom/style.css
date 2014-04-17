@@ -1,10 +1,5 @@
 /*drupal specific styles*/
 
-
-body{
-border: solid 2px red;
-}
-
 img {
   border: 0 none;
   display: inline;
@@ -105,53 +100,6 @@ bottom: 0;
 }
 */
 
-body.wls div.interaction {
-  background-color: #d01418 !important;
-}
-body.wls table td, body.wls table th {
-  border-bottom: 1px solid #d01418;
-  border-right: 1px solid #d01418;
-}
-body.wls .int-promo {
-  background: #f3ccd6;
-  margin-bottom: 2em;
-}
-
-body.wls div.interaction {
-  background-color: #d01418 !important;
-}
-body.wls table td, body.wls table th {
-  border-bottom: 1px solid #d01418;
-  border-right: 1px solid #d01418;
-}
-body.wls .int-promo {
-  background: #f3ccd6;
-  margin-bottom: 2em;
-}
-
-body.nir div.interaction {
-  background-color: #a01851 !important;
-}
-body.nir table td, body.wls table th {
-  border-bottom: 1px solid #a01851;
-  border-right: 1px solid #a01851;
-}
-body.nir .int-promo {
-  background: #e0ccd6;
-  margin-bottom: 2em;
-}
-
-body.ire div.interaction {
-  background-color: #a01851 !important;
-}
-body.ire table td, body.wls table th {
-  border-bottom: 1px solid #a01851;
-  border-right: 1px solid #a01851;
-}
-body.ire .int-promo {
-  background: #e0ccd6;
-  margin-bottom: 2em;
-}
 
 /*style nations*/
 
@@ -206,10 +154,16 @@ body.ire .int-promo {
 
 /*style the languages switcher*/
 
-#block-locale-language {
-    margin: 0 auto;
-    max-width: 1180px;
-    padding: 0 15px;
+body.wls #breadcrumb {
+float: left;
+width: 75%;
+}
+
+body.wls #switcher {
+float: right;
+width: 25%;
+display: block;
+text-align: right;
 }
 
 #block-locale-language h2{
@@ -217,9 +171,7 @@ display: none;
 }
 
 ul.language-switcher-locale-url{
-  display: block;
-  list-style-image: none;
-  text-align: right;
+margin-top: 1em;
 }
 
 ul.language-switcher-locale-url li{
@@ -231,18 +183,6 @@ ul.language-switcher-locale-url li a{
    background-color: #D01418;
     color: #FFFFFF;
    padding: 0.5em;
-}
-
-ul.language-switcher-locale-url li a:after {
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-left: 0.5em;
-      content: "\f054";
 }
 
 ul.language-switcher-locale-url li.active {

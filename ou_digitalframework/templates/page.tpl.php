@@ -110,6 +110,12 @@
    			<?php if ($breadcrumb): ?>
  		     	<div class="int-container">
  		  	  		<div id="breadcrumb"><?php print $breadcrumb; ?></div>
+
+ 					<?php if ($page['switcher']): ?>
+						<div id="switcher">
+ 		  	  				<?php print render($page['switcher']); ?>
+						</div>
+ 					<?php endif; ?>
  		 	   	</div><!--/.int-container -->
  			<?php endif; ?>
 
