@@ -182,6 +182,11 @@ ul.language-switcher-locale-url{
 margin-top: 1em;
 }
 
+body.wls .panel-pane ul.language-switcher-locale-url{
+margin-top: 1em;
+float: right;
+}
+
 ul.language-switcher-locale-url li{
   display: inline;
   list-style-image: none;
