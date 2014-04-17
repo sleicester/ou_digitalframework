@@ -2,7 +2,7 @@
 
 function ou_digital_futures_preprocess_html(&$variables) {
   drupal_add_css('/oudigital/eep/assets/css/screen.css', array('type' => 'external'));
- 
+
   // add new classes to body from theme settings
   $variables['classes_array'][] = theme_get_setting('ou_df_colour_scheme');
 
@@ -53,9 +53,9 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
    // $classes = theme_get_setting('ou_df_lang'); //'cymraeg';
     //$classes = $variables['classes_array'];
     //print $classes;
-    
+
     // Switch using the current language
-        global $language_content; 
+        global $language_content;
     if ($language_content->language == 'cy') {
         // Welsh
         // Create an Array of the header menu options
@@ -104,7 +104,7 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
         $block_output .= '</div>';
         $block_output .= '</div>';
 
-    } 
+    }
     else {
 
         // Other
