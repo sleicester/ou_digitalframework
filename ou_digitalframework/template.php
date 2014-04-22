@@ -15,7 +15,15 @@ function ou_digital_futures_breadcrumb($variables) {
    if (count($variables['breadcrumb']) > 0) {
      $lastitem = sizeof($variables['breadcrumb']);
      $title = drupal_get_title();
-     $crumbs = '<dl class="breadcrumb"><dt>You are here: </td><dd>';
+     
+    global $language_content;
+    if ($language_content->language == 'cy') {
+             $crumbs = '<dl class="breadcrumb"><dt>Rydych chi yma: </td><dd>';
+        }
+        else{
+           $crumbs = '<dl class="breadcrumb"><dt>You are here: </td><dd>';      
+        }
+
      $a=1;
      foreach($variables['breadcrumb'] as $value) {
          if ($a!=$lastitem){
