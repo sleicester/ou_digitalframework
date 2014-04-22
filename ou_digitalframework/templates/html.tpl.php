@@ -47,24 +47,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
 
 <head profile="<?php print $grddl_profile; ?>">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  
+
     <!-- SC added from LA 11-4-2014 -->
-  
+
 <!--  <link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/header.css">
   <link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/footer.css">-->
-  
+
   <link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/headerandfooter.css">
-  
+
   <link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/ou-df-header.css">
 
   <!--[if lt IE 9]>
     <link  rel="stylesheet" href="/oudigital/headerandfooter/assets/css/headerandfooter-ie.css">
   <![endif]--> <!--media queries support on IE8 and lower -->
-    
+
   <!--[if lt IE 8]>
     <link  rel="stylesheet" href="/oudigital/eep/assets/css/ie.css">
   <![endif]-->
@@ -73,9 +74,9 @@
     <link  rel="stylesheet" href="/oudigital/eep/assets/fonts/fontawesome/css/font-awesome-ie7.css">
   <![endif]-->
 
-  
+
     <!--  End-->
-    
+
   <?php
   global $language_content;
   if ($language_content->language == 'cy') {
@@ -86,7 +87,7 @@
   }
 
   ?>
-   
+
 </head>
 <body class="<?php print theme_get_setting('ou_df_nation'); ?> <?php print $currentLanguage; ?> <?php print $classes; ?> " <?php print $attributes;?>>
 
@@ -106,18 +107,18 @@
 
     <!--Added SC from LA 11-4-14 -->
 <script src="/oudigital/eep/assets/js/vendor/jquery-1.10.2.min.js"></script>
-   
+
   <script src="/oudigital/eep/assets/js/vendor/jquery.placeholder.js"></script>
   <script src="/oudigital/eep/assets/js/vendor/jquery.smartresize.js"></script>
-  
+
   <script>
-  
+
     // Only hide if your CMS menu has been output correctly
     $("#ou-global-primary-navigation.ou-df-header-nav").remove();
   </script>
-  
+
   <script src="/oudigital/headerandfooter/assets/js/modules/ou-primary-navigation.js"></script>
-  
+
  <script>
      //Function that has to be called on the page to initialise the nav
       (function ($, window) {
