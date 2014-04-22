@@ -202,5 +202,7 @@ ul.language-switcher-locale-url li.active {
 display: none;
 }
 
-
+form#user-login{
+    padding-left: 20%;
+}
 
