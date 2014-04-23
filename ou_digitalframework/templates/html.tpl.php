@@ -89,7 +89,7 @@
   ?>
 
 </head>
-<body class="<?php print theme_get_setting('ou_df_nation'); ?> <?php print $currentLanguage; ?> <?php print $classes; ?> " <?php print $attributes;?>>
+<body data-page-id="ou-page-courses"  class="<?php print theme_get_setting('ou_df_nation'); ?> <?php print $currentLanguage; ?> <?php print $classes; ?> " <?php print $attributes;?>>
 
 <div id="int-site">
 
