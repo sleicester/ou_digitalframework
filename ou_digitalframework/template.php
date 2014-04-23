@@ -19,12 +19,15 @@ function ou_digital_futures_breadcrumb($variables) {
     global $language_content;
     if ($language_content->language == 'cy') {
              $crumbs = '<dl class="breadcrumb"><dt>Rydych chi yma: </td><dd>';
+             $variables['breadcrumb'][0]=str_replace('Home','Cartref',$variables['breadcrumb'][0]);    
         }
         else{
-           $crumbs = '<dl class="breadcrumb"><dt>You are here: </td><dd>';      
+           $crumbs = '<dl class="breadcrumb"><dt>You are here: </td><dd>';  
+           
         }
 
      $a=1;
+     
      foreach($variables['breadcrumb'] as $value) {
          if ($a!=$lastitem){
           $crumbs .= '<span>'. $value . ' ' . '</span> &nbsp; <i class="int-icon int-icon-chevron-right"></i> &nbsp;';
