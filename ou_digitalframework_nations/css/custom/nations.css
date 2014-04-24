@@ -1,9 +1,22 @@
 /*drupal specific styles*/
 
-.int-primary .int-toplevel-nav ul li.int-nav-active {
-  background: none repeat scroll 0 0 #FF0000;
+body.ire .int-primary .int-toplevel-nav ul li.int-nav-active {
+  background: none repeat scroll 0 0 #A01851 !important;
+  color: #fff !important;
+}
+
+.int-primary .int-toplevel-nav ul li.int-nav-active a {
   color: #fff;
 }
+
+body.ire .int-primary .int-secondlevel-nav ul li.int-nav-active a {
+  background: none repeat scroll 0 0 #E0CCD6 !important;
+  color: #000000 !important;
+}
+
+
+
+
 
 
 body.sct .int-primary ul li.int-hasChildren .int-nav-trigger {
