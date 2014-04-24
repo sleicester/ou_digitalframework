@@ -10,6 +10,10 @@ function ou_digital_futures_preprocess_html(&$variables) {
     if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
        $nid  = arg(1);
        }
+       else
+       {
+           $nid = 'unknown-nid'
+       }
   $variables['attributes_array']['data-page-id'][] = 'ou-page-'.$nid;
 }
 
