@@ -46,7 +46,7 @@ body.ou-df-ia-about.wls div.int-primary li.ou-df-ia-about.int-nav-active a {
 /*drupal specific styles*/
 
 body.sct .int-primary .int-toplevel-nav ul li.int-nav-active {
-  background: none repeat scroll 0 0 #A01851 !important;
+  background: none repeat scroll 0 0 #0065BD !important !important;
   color: #fff !important;
 }
 
@@ -54,15 +54,21 @@ body.sct .int-primary .int-toplevel-nav ul li.int-nav-active {
   color: #fff;
 }
 
+body.ou-df-ia-about.sct div.int-primary li.ou-df-ia-about a {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
 body.sct .int-primary .int-secondlevel-nav ul li.int-nav-active a {
-  background: none repeat scroll 0 0 #E0CCD6 !important;
+  background: none repeat scroll 0 0 #D4E8FF !important;
   color: #000000 !important;
 }
 
 body.ou-df-ia-about.sct div.int-primary li.ou-df-ia-about.int-nav-active a {
-  background-color: #E0CCD6 !important;
+  background-color: #D4E8FF !important;
   color: #000000 !important;
 }
+
 
 
 
