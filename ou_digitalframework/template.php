@@ -12,7 +12,7 @@ function ou_digital_futures_preprocess_html(&$variables) {
        }
        else
        {
-           $nid = 'unknown-nid'
+           $nid = 'unknown-nid';
        }
   $variables['attributes_array']['data-page-id'][] = 'ou-page-'.$nid;
 }
