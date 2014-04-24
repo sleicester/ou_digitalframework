@@ -178,6 +178,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
          // language - if not welsh then set to node value
          if ($selectedLanguage !='cy'){
              $selectedLanguage = $val->language;
+             echo $selectedLanguage;
          }
 
             $path = base_path() . drupal_get_path_alias('node/'.$val->nid);
