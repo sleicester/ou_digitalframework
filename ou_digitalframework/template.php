@@ -1,7 +1,7 @@
 <?php
 
 function ou_digital_futures_preprocess_html(&$variables) {
-  drupal_add_css('/oudigital/eep/assets/css/screen.css', array('type' => 'external'));
+  drupal_add_css('http://www-dev.open.ac.uk/oudigital/eep/assets/css/screen.css', array('type' => 'external'));
 
   // add new classes to body from theme settings
   $variables['classes_array'][] = theme_get_setting('ou_df_colour_scheme');
@@ -24,19 +24,19 @@ function ou_digital_futures_breadcrumb($variables) {
    if (count($variables['breadcrumb']) > 0) {
      $lastitem = sizeof($variables['breadcrumb']);
      $title = drupal_get_title();
-     
+
     global $language_content;
     if ($language_content->language == 'cy') {
              $crumbs = '<dl class="breadcrumb"><dt>Rydych chi yma: </td><dd>';
-             $variables['breadcrumb'][0]=str_replace('Home','Cartref',$variables['breadcrumb'][0]);    
+             $variables['breadcrumb'][0]=str_replace('Home','Cartref',$variables['breadcrumb'][0]);
         }
         else{
-           $crumbs = '<dl class="breadcrumb"><dt>You are here: </td><dd>';  
-           
+           $crumbs = '<dl class="breadcrumb"><dt>You are here: </td><dd>';
+
         }
 
      $a=1;
-     
+
      foreach($variables['breadcrumb'] as $value) {
          if ($a!=$lastitem){
           $crumbs .= '<span>'. $value . ' ' . '</span> &nbsp; <i class="int-icon int-icon-chevron-right"></i> &nbsp;';
@@ -59,13 +59,13 @@ function ou_digital_futures_preprocess_page(&$variables) {
 
       if ((!empty($variables['node'])) && ($variables['node']->type == 'panel')) {
            $variables['title']="";
-      }   
+      }
  }
- 
+
 
 
 function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
-  {   
+  {
     $block_output     = '';
     $insert_menu      = '';
 
@@ -188,7 +188,7 @@ function ou_digital_futures_menu_link__menu_block__main_menu($variables) {
     unset($element['#below']['#theme_wrappers']);
     $sub_menu = '<ul >'.drupal_render($element['#below']).'</ul>';
   }
-    
+
     // Use the NID as a Unique identifier for this element
   $menu_link_id = $element['#original_link']['link_path'];
     // Strip out the non-numeric characters leaving us with the NID
