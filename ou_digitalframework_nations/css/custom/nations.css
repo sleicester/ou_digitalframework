@@ -1,19 +1,24 @@
 /*drupal specific styles*/
 
-body.ire .int-primary ul li.int-hasChildren .int-nav-trigger {
+body.ire .int-primary #OU1 ul li.int-hasChildren .int-nav-trigger {
   color: #A01851 !important;
 }
 
-body.ire .int-primary .int-toplevel-nav ul li.int-nav-active {
+body.ire .int-primary #OU1 .int-toplevel-nav ul li.int-nav-active {
   background: none repeat scroll 0 0 #fff;
 }
 
-body.ire .int-primary ul li.int-hasChildren .int-nav-trigger:hover,
+body.ire .int-primary #OU1 ul li.int-hasChildren .int-nav-trigger:hover,
 body.ire .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
   background: #A01851 !important;
   color: #ffffff !important;
   text-decoration: none;
 }
+
+.int-primary .int-secondlevel-nav ul li.int-nav-active {
+  background: none repeat scroll 0 0 #D4E8FF;
+}
+
 
 body.sct .int-primary ul li.int-hasChildren .int-nav-trigger {
   color: #0065BD !important;
@@ -31,7 +36,7 @@ body.sct .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
 }
 
 body.wls .int-primary ul li.int-hasChildren .int-nav-trigger {
-  color: #D01418 !important;
+  color: ##D01418 !important;
 }
 
 body.wls .int-primary .int-toplevel-nav ul li.int-nav-active {
@@ -40,7 +45,7 @@ body.wls .int-primary .int-toplevel-nav ul li.int-nav-active {
 
 body.wls .int-primary ul li.int-hasChildren .int-nav-trigger:hover,
 body.wls .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
-  background: #D01418 !important;
+  background: #0065BD !important;
   color: #ffffff !important;
   text-decoration: none;
 }
