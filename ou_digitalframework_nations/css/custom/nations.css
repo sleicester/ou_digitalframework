@@ -54,7 +54,7 @@ body.sct .int-primary .int-toplevel-nav ul li.int-nav-active {
   color: #fff;
 }
 
-body.ou-df-ia-about.sct div.int-primary li.ou-df-ia-about a {
+body.ou-df-ia-about.sct div.int-primary .int-toplevel-nav li.ou-df-ia-about a {
   background-color: #FFFFFF !important;
   color: #000000 !important;
 }
