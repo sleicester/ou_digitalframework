@@ -49,7 +49,7 @@ function ou_digital_futures_nations_form_system_theme_settings_alter( & $form, &
   );*/
 
 
-  $form['ou_theme_settings']['ou_df_colour_scheme'] = array(
+ /* $form['ou_theme_settings']['ou_df_colour_scheme'] = array(
     '#type'         => 'select',
     '#title'        => t('Required site architecture'),
     '#options'       => array(
@@ -63,7 +63,7 @@ function ou_digital_futures_nations_form_system_theme_settings_alter( & $form, &
     '#default_value'=> theme_get_setting('ou_df_colour_scheme'),
     '#description'  => t("Select the required site Architecture (Determines which Header Menu tab is highlighted)"),
 
-  );
+  );*/
 
   $form['ou_theme_settings']['ou_df_siblings_block_id'] = array(
     '#type'         => 'textfield',
