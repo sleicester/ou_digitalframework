@@ -1,22 +1,8 @@
 /*drupal specific styles*/
 
-body.ire .int-primary #OU1 ul li.int-hasChildren .int-nav-trigger {
-  color: #A01851 !important;
-}
-
-body.ire .int-primary #OU1 .int-toplevel-nav ul li.int-nav-active {
-  background: none repeat scroll 0 0 #fff;
-}
-
-body.ire .int-primary #OU1 ul li.int-hasChildren .int-nav-trigger:hover,
-body.ire .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
-  background: #A01851 !important;
-  color: #ffffff !important;
-  text-decoration: none;
-}
-
-.int-primary .int-secondlevel-nav ul li.int-nav-active {
-  background: none repeat scroll 0 0 #D4E8FF;
+.int-primary .int-toplevel-nav ul li.int-nav-active {
+  background: none repeat scroll 0 0 #FF0000;
+  color: #fff;
 }
 
 
