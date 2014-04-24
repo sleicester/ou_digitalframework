@@ -22,32 +22,47 @@ body.ou-df-ia-about.ire div.int-primary li.ou-df-ia-about.int-nav-active a {
 
 
 
-body.sct .int-primary ul li.int-hasChildren .int-nav-trigger {
-  color: #0065BD !important;
+body.wls .int-primary .int-toplevel-nav ul li.int-nav-active {
+  background: none repeat scroll 0 0 #D01418 !important;
+  color: #fff !important;
 }
+
+.int-primary .int-toplevel-nav ul li.int-nav-active a {
+  color: #fff;
+}
+
+body.wls .int-primary .int-secondlevel-nav ul li.int-nav-active a {
+  background: none repeat scroll 0 0 #F3CCD6 !important;
+  color: #000000 !important;
+}
+
+body.ou-df-ia-about.ire div.int-primary li.ou-df-ia-about.int-nav-active a {
+  background-color: #F3CCD6 !important;
+  color: #000000 !important;
+}
+
+
 
 body.sct .int-primary .int-toplevel-nav ul li.int-nav-active {
-  background: none repeat scroll 0 0 #fff;
+  background: none repeat scroll 0 0 #0065BD !important;
+  color: #fff !important;
 }
 
-body.sct .int-primary ul li.int-hasChildren .int-nav-trigger:hover,
-body.sct .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
-  background: #0065BD !important;
-  color: #ffffff !important;
-  text-decoration: none;
+.int-primary .int-toplevel-nav ul li.int-nav-active a {
+  color: #fff;
 }
 
-body.wls .int-primary ul li.int-hasChildren .int-nav-trigger {
-  color: ##D01418 !important;
+body.sct .int-primary .int-secondlevel-nav ul li.int-nav-active a {
+  background: none repeat scroll 0 0 #D4E8FF !important;
+  color: #000000 !important;
 }
 
-body.wls .int-primary .int-toplevel-nav ul li.int-nav-active {
-  background: none repeat scroll 0 0 #fff;
+body.ou-df-ia-about.sct div.int-primary li.ou-df-ia-about.int-nav-active a {
+  background-color: #D4E8FF !important;
+  color: #000000 !important;
 }
 
-body.wls .int-primary ul li.int-hasChildren .int-nav-trigger:hover,
-body.wls .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
-  background: #0065BD !important;
-  color: #ffffff !important;
-  text-decoration: none;
-}
+
+
+
+
