@@ -14,11 +14,10 @@ body.ire .int-primary .int-secondlevel-nav ul li.int-nav-active a {
   color: #000000 !important;
 }
 
-body.ou-df-ia-about.ire div.int-primary li.ou-df-ia-about a {
+body.ou-df-ia-about.ire div.int-primary li.ou-df-ia-about.int-nav-active a {
   background-color: #E0CCD6 !important;
   color: #000000 !important;
 }
-
 
 
 
