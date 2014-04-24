@@ -5,6 +5,12 @@ function ou_digital_futures_preprocess_html(&$variables) {
 
   // add new classes to body from theme settings
   $variables['classes_array'][] = theme_get_setting('ou_df_colour_scheme');
+
+           // Add the NID to the body custom ID
+    if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
+       $nid  = arg(1);
+       }
+  $variables['attributes_array']['data-page-id'][] = 'ou-page-'.$nid;
 }
 
 /*
@@ -49,20 +55,15 @@ function ou_digital_futures_preprocess_page(&$variables) {
 
       if ((!empty($variables['node'])) && ($variables['node']->type == 'panel')) {
            $variables['title']="";
-
-      }
-
-
+      }   
  }
+ 
+
 
 function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
   {   
     $block_output     = '';
     $insert_menu      = '';
-
-   // $classes = theme_get_setting('ou_df_lang'); //'cymraeg';
-    //$classes = $variables['classes_array'];
-    //print $classes;
 
     // Switch using the current language
         global $language_content;
@@ -92,10 +93,10 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
         foreach ($headerLinksArray as $key=>$value) {
           // If the Theme setting matches this heading then add in the sub menu
           if ($key == theme_get_setting('ou_df_colour_scheme')) {
-            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span class="ou-page-courses">'.$value['title'].'</span></a><ul>' . $variables['tree'] . '</ul></li>';
+            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span>'.$value['title'].'</span></a><ul>' . $variables['tree'] . '</ul></li>';
           }
           else {
-            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span class="ou-page-courses">'.$value['title'].'</span></a></li>';
+            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span>'.$value['title'].'</span></a></li>';
           }
 
         }
@@ -142,10 +143,10 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
         foreach ($headerLinksArray as $key=>$value) {
           // If the Theme setting matches this heading then add in the sub menu
           if ($key == theme_get_setting('ou_df_colour_scheme')) {
-            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span class="ou-page-courses">'.$value['title'].'</span></a><ul>' . $variables['tree'] . '</ul></li>';
+            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span>'.$value['title'].'</span></a><ul>' . $variables['tree'] . '</ul></li>';
           }
           else {
-            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span class="ou-page-courses">'.$value['title'].'</span></a></li>';
+            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span>'.$value['title'].'</span></a></li>';
           }
 
         }
@@ -167,8 +168,6 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
 
     return $block_output;
   }
-
-
 /*
 **Remove drupal classes
 */
@@ -177,7 +176,7 @@ function ou_digital_futures_preprocess_menu_block_wrapper(&$variables) {
 }
 
 
- function ou_digital_futures_menu_link__menu_block__main_menu($variables) {
+function ou_digital_futures_menu_link__menu_block__main_menu($variables) {
   $element = $variables['element'];
   $sub_menu = '';
 
@@ -185,9 +184,16 @@ function ou_digital_futures_preprocess_menu_block_wrapper(&$variables) {
     unset($element['#below']['#theme_wrappers']);
     $sub_menu = '<ul >'.drupal_render($element['#below']).'</ul>';
   }
+    
+    // Use the NID as a Unique identifier for this element
+  $menu_link_id = $element['#original_link']['link_path'];
+    // Strip out the non-numeric characters leaving us with the NID
+ $menu_nid = str_replace('node/','',$menu_link_id);
+ $menu_nid = (is_numeric($menu_nid) ? $menu_nid : '');
+
 
   //add span class between href and title text, render span tags as html
-  $element['#title'] = '<span class="ou-page-courses">' . check_plain($element['#title']) . '</span>';
+  $element['#title'] = '<span class="ou-page-'.$menu_nid.'">' . check_plain($element['#title']) . '</span>';
 
   $element['#localized_options'] += array('html'=> TRUE);
 
@@ -195,6 +201,7 @@ function ou_digital_futures_preprocess_menu_block_wrapper(&$variables) {
   return '<li>' . $output . $sub_menu . "</li>";
 
 }
+
 
 /**
  * Theme a set of radio buttons.
