@@ -1,5 +1,5 @@
 <?php
-function ou_digital_futures_form_system_theme_settings_alter( & $form, & $form_state)
+function ou_digital_futures_nations_form_system_theme_settings_alter( & $form, & $form_state)
 {
   $form['ou_theme_settings'] = array(
     '#type' => 'fieldset',
