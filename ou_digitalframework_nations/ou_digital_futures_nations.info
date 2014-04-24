@@ -1,0 +1,18 @@
+name = Open University Digital Futures Nations
+description = This is a sub theme of the Open University Digital Futures Theme designed for the Nations sites.
+base theme = ou_digital_futures
+core = 7.x
+
+stylesheets[all][] = css/custom/nations.css
+regions[header] = Header
+regions[switcher] = Switcher
+regions[content] = Content
+regions[hero] = Hero
+regions[header] = Header
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+regions[highlighted-bottom] = Highlighted Bottom
+regions[content] = Content
+regions[footer] = Footer
