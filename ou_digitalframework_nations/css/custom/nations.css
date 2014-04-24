@@ -1,13 +1,16 @@
 /*drupal specific styles*/
 
 .int-primary ul li.int-hasChildren .int-nav-trigger {
-  color: red;
-  padding: 6px 0 5px;
-  position: absolute;
-  right: 0;
-  top: 0;
+  color: red !important;
 }
 
 .int-primary .int-toplevel-nav ul li.int-nav-active {
   background: none repeat scroll 0 0 #fff;
+}
+
+.int-primary ul li.int-hasChildren .int-nav-trigger:hover,
+.int-primary ul li.int-hasChildren .int-nav-trigger:focus {
+  background: red;
+  color: #ffffff !important;
+  text-decoration: none;
 }
