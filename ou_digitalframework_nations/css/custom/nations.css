@@ -46,7 +46,7 @@ body.ou-df-ia-about.wls div.int-primary li.ou-df-ia-about.int-nav-active a {
 /*drupal specific styles*/
 
 body.sct .int-primary .int-toplevel-nav ul li.int-nav-active {
-  background: none repeat scroll 0 0 #0065BD !important !important;
+  background: none repeat scroll 0 0 #0065BD !important;
   color: #fff !important;
 }
 
