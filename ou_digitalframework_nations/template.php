@@ -120,29 +120,35 @@ function ou_digital_futures_nations_menu_tree__menu_block__main_menu($variables)
   
   
 
-function ou_digital_futures_nations_menu_link__menu_block__main_menu($variables) {
-  $element = $variables['element'];
-  $sub_menu = '';
+  function ou_digital_futures_nations_menu_link__menu_block__main_menu($variables)
+  {
+    $element = $variables['element'];
+    $sub_menu= '';
 
-  if ($element['#below']) {
-    unset($element['#below']['#theme_wrappers']);
-    $sub_menu = '<ul >'.drupal_render($element['#below']).'</ul>';
-  }
+    if ($element['#below']) {
+      unset($element['#below']['#theme_wrappers']);
+      $sub_menu = '<ul >'.drupal_render($element['#below']).'</ul>';
+    }
 
     // Use the NID as a Unique identifier for this element
-  $menu_link_id = $element['#original_link']['link_path'];
-    // Strip out the non-numeric characters leaving us with the NID
- $menu_nid = str_replace('node/','',$menu_link_id);
- $menu_nid = (is_numeric($menu_nid) ? $menu_nid : '');
+    $menu_link_id = $element['#original_link']['link_path'];
+    // Strip out the non - numeric characters leaving us with the NID
+    $menu_nid     = str_replace('node/','',$menu_link_id);
+    $menu_nid     = (is_numeric($menu_nid) ? $menu_nid : '');
 
 
-  //add span class between href and title text, render span tags as html
-  $element['#title'] = '<span class="ou-page-'.$menu_nid.'">' . check_plain($element['#title']) . '</span>';
+    //add span class between href and title text, render span tags as html
+    $element['#title'] = '<span class="ou-page-'.$menu_nid.'">' . check_plain($element['#title']) . '</span>';
 
-  $element['#localized_options'] += array('html'=> TRUE);
+    $element['#localized_options'] += array('html'=> TRUE);
 
-  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  return '<li class="ou-df-ia-about">' . $output . $sub_menu . "</li>";
-
-}
+    if (in_array('active',$element['#attributes']['class'])) {
+      $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+      return '<li class="ou-df-ia-about">' . $output . $sub_menu . "</li>";
+    }
+    else {
+      $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+      return '<li>' . $output . $sub_menu . "</li>";
+    }
+  }
 
