@@ -86,7 +86,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
     $columnClass     = 'int-grid4';
     $ulCss           = 'int-bordered-list';
     $liCss           = '';
-    $aClass          = 'int-icon-text';
+    $aClass          = 'int-inline-icon-link';
     $block_output    = '';
     $numberOfColumns = 3;
 
@@ -115,14 +115,14 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
         $arrayOfAllMenuItems[$levelTwoKey]['mlid'] = $levelTwoValue['link']['mlid'];
         $arrayOfAllMenuItems[$levelTwoKey]['plid'] = $levelTwoValue['link']['plid'];
         $arrayOfAllMenuItems[$levelTwoKey]['hidden'] = $levelTwoValue['link']['hidden'];
-        
+
         foreach ($levelTwoValue['below'] as $levelThreeKey=>$levelThreeValue) {
 
           $arrayOfAllMenuItems[$levelThreeKey]['nid'] = str_replace('node/','',$levelThreeValue['link']['link_path']);
           $arrayOfAllMenuItems[$levelThreeKey]['mlid'] = $levelThreeValue['link']['mlid'];
           $arrayOfAllMenuItems[$levelThreeKey]['plid'] = $levelThreeValue['link']['plid'];
           $arrayOfAllMenuItems[$levelThreeKey]['hidden'] = $levelThreeValue['link']['hidden'];
-          
+
           foreach ($levelThreeValue['below'] as $levelFourKey=>$levelFourValue) {
 
             $arrayOfAllMenuItems[$levelFourKey]['nid'] = str_replace('node/','',$levelFourValue['link']['link_path']);
@@ -167,19 +167,19 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
           // Load the nodes into an array
           $nodes    = entity_load('node', array_keys($entities['node']));
-            
+
           // Pick up the current language
-          global $language_content; 
+          global $language_content;
           $selectedLanguage = $language_content->language;
-            
+
           // Loop through the array
           foreach ($nodes as $key => $val) {
-              
+
          // language - if not welsh then set to node value
          if ($selectedLanguage !='cy'){
              $selectedLanguage = $val->language;
          }
-         
+
             $path = base_path() . drupal_get_path_alias('node/'.$val->nid);
             $block_output .= '<h3><a href="'.$path.'">' . $val->title .'</a></h3>';
             $block_output .= $val->body[$selectedLanguage][0]['summary'] ;
@@ -263,7 +263,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
         $arrayOfAllMenuItems[$levelTwoKey]['mlid'] = $levelTwoValue['link']['mlid'];
         $arrayOfAllMenuItems[$levelTwoKey]['plid'] = $levelTwoValue['link']['plid'];
         $arrayOfAllMenuItems[$levelTwoKey]['hidden'] = $levelTwoValue['link']['hidden'];
-        
+
         foreach ($levelTwoValue['below'] as $levelThreeKey=>$levelThreeValue) {
 
 

@@ -4,6 +4,7 @@ img {
   border: 0 none;
   display: inline;
   margin: 1em 0;
+  height: auto;
 }
 
 blockquote {
@@ -202,5 +203,7 @@ ul.language-switcher-locale-url li.active {
 display: none;
 }
 
-
+form#user-login{
+    padding-left: 20%;
+}
 

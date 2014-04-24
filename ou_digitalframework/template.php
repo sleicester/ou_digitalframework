@@ -5,7 +5,6 @@ function ou_digital_futures_preprocess_html(&$variables) {
 
   // add new classes to body from theme settings
   $variables['classes_array'][] = theme_get_setting('ou_df_colour_scheme');
-
 }
 
 /*
@@ -15,8 +14,19 @@ function ou_digital_futures_breadcrumb($variables) {
    if (count($variables['breadcrumb']) > 0) {
      $lastitem = sizeof($variables['breadcrumb']);
      $title = drupal_get_title();
-     $crumbs = '<dl class="breadcrumb"><dt>You are here: </td><dd>';
+     
+    global $language_content;
+    if ($language_content->language == 'cy') {
+             $crumbs = '<dl class="breadcrumb"><dt>Rydych chi yma: </td><dd>';
+             $variables['breadcrumb'][0]=str_replace('Home','Cartref',$variables['breadcrumb'][0]);    
+        }
+        else{
+           $crumbs = '<dl class="breadcrumb"><dt>You are here: </td><dd>';  
+           
+        }
+
      $a=1;
+     
      foreach($variables['breadcrumb'] as $value) {
          if ($a!=$lastitem){
           $crumbs .= '<span>'. $value . ' ' . '</span> &nbsp; <i class="int-icon int-icon-chevron-right"></i> &nbsp;';
@@ -46,7 +56,7 @@ function ou_digital_futures_preprocess_page(&$variables) {
  }
 
 function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
-  {
+  {   
     $block_output     = '';
     $insert_menu      = '';
 
@@ -82,10 +92,10 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
         foreach ($headerLinksArray as $key=>$value) {
           // If the Theme setting matches this heading then add in the sub menu
           if ($key == theme_get_setting('ou_df_colour_scheme')) {
-            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span>'.$value['title'].'</span></a><ul>' . $variables['tree'] . '</ul></li>';
+            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span class="ou-page-courses">'.$value['title'].'</span></a><ul>' . $variables['tree'] . '</ul></li>';
           }
           else {
-            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span>'.$value['title'].'</span></a></li>';
+            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span class="ou-page-courses">'.$value['title'].'</span></a></li>';
           }
 
         }
@@ -132,10 +142,10 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
         foreach ($headerLinksArray as $key=>$value) {
           // If the Theme setting matches this heading then add in the sub menu
           if ($key == theme_get_setting('ou_df_colour_scheme')) {
-            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span>'.$value['title'].'</span></a><ul>' . $variables['tree'] . '</ul></li>';
+            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span class="ou-page-courses">'.$value['title'].'</span></a><ul>' . $variables['tree'] . '</ul></li>';
           }
           else {
-            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span>'.$value['title'].'</span></a></li>';
+            $insert_menu .= '<li class="'.$key.'"><a href="'.$value['a_href'].'"><span class="ou-page-courses">'.$value['title'].'</span></a></li>';
           }
 
         }
@@ -166,6 +176,7 @@ function ou_digital_futures_preprocess_menu_block_wrapper(&$variables) {
   $variables['classes_array'][] = '';
 }
 
+
  function ou_digital_futures_menu_link__menu_block__main_menu($variables) {
   $element = $variables['element'];
   $sub_menu = '';
@@ -176,7 +187,7 @@ function ou_digital_futures_preprocess_menu_block_wrapper(&$variables) {
   }
 
   //add span class between href and title text, render span tags as html
-  $element['#title'] = '<span>' . check_plain($element['#title']) . '</span>';
+  $element['#title'] = '<span class="ou-page-courses">' . check_plain($element['#title']) . '</span>';
 
   $element['#localized_options'] += array('html'=> TRUE);
 
