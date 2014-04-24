@@ -109,7 +109,9 @@ function ou_digital_futures_nations_menu_tree__menu_block__main_menu($variables)
         $block_output .= '<div class="int-toplevel-nav int-nav-level">';
         $block_output .= '<ul class="int-container">';
         $block_output .= '<li class="ou-df-ia-home int-home"><a href="http://www.open.ac.uk"><span>Hafan</span></a></li>';
-        $block_output .= $insert_menu;    // add in the header titles from the array
+        /*$block_output .= $insert_menu;    // add in the header titles from the array*/
+
+        $block_output .= $variables['tree'] ;    // add in the header titles from the array
         $block_output .= '</ul>';
         $block_output .= '</div>';
         $block_output .= '<div class="int-secondlevel-nav int-nav-level">';
@@ -159,7 +161,10 @@ function ou_digital_futures_nations_menu_tree__menu_block__main_menu($variables)
         $block_output .= '<div class="int-toplevel-nav int-nav-level">';
         $block_output .= '<ul class="int-container">';
         $block_output .= '<li class="ou-df-ia-home int-home"><a href="http://www.open.ac.uk"><span>Home</span></a></li>';
-        $block_output .= $insert_menu;    // add in the header titles from the array
+       
+        /*$block_output .= $insert_menu;    // add in the header titles from the array*/
+
+        $block_output .= $variables['tree'] ;    // add in the header titles from the array
         $block_output .= '</ul>';
         $block_output .= '</div>';
         $block_output .= '<div class="int-secondlevel-nav int-nav-level">';
