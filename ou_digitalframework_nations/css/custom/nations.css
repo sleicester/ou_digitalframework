@@ -14,3 +14,33 @@ body.ire .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
   color: #ffffff !important;
   text-decoration: none;
 }
+
+body.sct .int-primary ul li.int-hasChildren .int-nav-trigger {
+  color: #0065BD !important;
+}
+
+body.sct .int-primary .int-toplevel-nav ul li.int-nav-active {
+  background: none repeat scroll 0 0 #fff;
+}
+
+body.sct .int-primary ul li.int-hasChildren .int-nav-trigger:hover,
+body.sct .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
+  background: #0065BD !important;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+body.wls .int-primary ul li.int-hasChildren .int-nav-trigger {
+  color: #D01418 !important;
+}
+
+body.wls .int-primary .int-toplevel-nav ul li.int-nav-active {
+  background: none repeat scroll 0 0 #fff;
+}
+
+body.wls .int-primary ul li.int-hasChildren .int-nav-trigger:hover,
+body.wls .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
+  background: #D01418 !important;
+  color: #ffffff !important;
+  text-decoration: none;
+}
