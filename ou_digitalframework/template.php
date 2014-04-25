@@ -176,7 +176,7 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
 **Remove drupal classes
 */
 function ou_digital_futures_preprocess_menu_block_wrapper(&$variables) {
-  $variables['classes_array'][] = '';
+   $variables['classes_array'][] = '';
 }
 
 
