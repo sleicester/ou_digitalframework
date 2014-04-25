@@ -2,14 +2,26 @@
 
 
 
+
+
+body.ire .int-primary .int-toplevel-nav ul li.expanded.active-trail a {
+  color: #FFFFFF;
+}
+
+
+body.ou-df-ia-about.ire div.int-primary .int-toplevel-nav li.ou-df-ia-about a {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
 body.ire .int-toplevel-nav ul li.expanded.int-nav-active {
   background: none repeat scroll 0 0 #A01851 !important;
 }
 
-
-body.ire .int-primary .int-toplevel-nav ul li.expanded.active-trail a {
-    color: #fff;
+body.ire .int-toplevel-nav ul li.expanded.int-nav-active a{
+ color: #fff;
 }
+
 
 body.ire .int-primary .int-secondlevel-nav ul li.int-nav-active.expanded a {
   background: none repeat scroll 0 0 #D0B3C1;
