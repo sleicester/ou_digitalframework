@@ -123,6 +123,7 @@ function ou_digital_futures_nations_menu_tree__menu_block__main_menu($variables)
   function ou_digital_futures_nations_menu_link__menu_block__main_menu($variables)
   {
     $element = $variables['element'];
+
     $sub_menu= '';
 
     if ($element['#below']) {
@@ -136,19 +137,28 @@ function ou_digital_futures_nations_menu_tree__menu_block__main_menu($variables)
     $menu_nid     = str_replace('node/','',$menu_link_id);
     $menu_nid     = (is_numeric($menu_nid) ? $menu_nid : '');
 
-
     //add span class between href and title text, render span tags as html
     $element['#title'] = '<span class="ou-page-'.$menu_nid.'">' . check_plain($element['#title']) . '</span>';
 
     $element['#localized_options'] += array('html'=> TRUE);
-
-    if (in_array('active',$element['#attributes']['class'])) {
+    
+    $drupal_classes = _ou_digital_futures_nations_get_menu_link_classes($element['#attributes']['class']);
+    
       $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-      return '<li class="ou-df-ia-about">' . $output . $sub_menu . "</li>";
-    }
-    else {
-      $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-      return '<li>' . $output . $sub_menu . "</li>";
-    }
+      return '<li class="'.$drupal_classes.'">' . $output . $sub_menu . "</li>";
   }
 
+function _ou_digital_futures_nations_get_menu_link_classes($element){
+    if (in_array('active',$element)){
+        $classes_to_return ='ou-df-ia-about '; // add in an extra class to be matched with body tag
+    }
+    else {
+     $classes_to_return ='';       
+    }
+    
+    foreach($element as $key=>$value){
+        $classes_to_return .= $value . ' ' ;        
+    }
+       $classes_to_return .=' ';
+       return $classes_to_return;
+}
