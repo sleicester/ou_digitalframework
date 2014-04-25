@@ -1,11 +1,11 @@
 /*drupal specific styles*/
 
 
-.int-primary ul li.int-hasChildren .int-nav-trigger {
+body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger {
   color: #A01851;
 }
 
-.int-primary ul li.int-hasChildren .int-nav-trigger:hover, .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
+body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
     background: none repeat scroll 0 0  #A01851;
 }
 
