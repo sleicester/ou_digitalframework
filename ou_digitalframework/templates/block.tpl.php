@@ -177,10 +177,14 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
          // language - if not welsh then set to node value
          if ($selectedLanguage !='cy'){
-             $selectedLanguage = $val->language;
+             $selectedLanguage = $val->language;  
+             $languagePath = '';      
          }
-
-            $path = base_path() . drupal_get_path_alias('node/'.$val->nid);
+         else {
+             $languagePath = 'cy/';  
+         }
+             
+            $path = base_path() . $languagePath .drupal_get_path_alias('node/'.$val->nid);
             $block_output .= '<h3><a class="'.$aClass.'" href="'.$path.'">' . $val->title .'</a></h3>';
             $block_output .= $val->body[$selectedLanguage][0]['summary'] ;
           }
@@ -322,8 +326,22 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
           $block_output .= '<ul class="'.$ulCss.'">';
 
+            global $language_content;
+          $selectedLanguage = $language_content->language;
+
+          // Loop through the array
           foreach ($nodes as $key => $val) {
-            $path = base_path() . drupal_get_path_alias('node/'.$val->nid);
+
+         // language - if not welsh then set to node value
+         if ($selectedLanguage !='cy'){
+             $selectedLanguage = $val->language;  
+             $languagePath = '';      
+         }
+         else {
+             $languagePath = 'cy/';  
+         }
+             
+            $path = base_path()  . $languagePath . drupal_get_path_alias('node/'.$val->nid);
             $block_output .= '<li><a class="'.$aClass.'" href="'.$path.'">'.$val->title;
             $block_output .= '<i class="int-icon int-icon-chevron-right" aria-hidden="true"></i></a></li>';
           }
