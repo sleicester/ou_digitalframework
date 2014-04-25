@@ -102,6 +102,58 @@ body.ou-df-ia-about.wls div.int-primary .int-thirdlevel-nav li.ou-df-ia-about a 
 
 
 
+/*Scotland*/
+
+/*drupal specific styles for wales*/
+
+
+body.ou-df-ia-about.sct .int-primary ul li.int-hasChildren .int-nav-trigger {
+  color: #0065BD;
+}
+
+body.ou-df-ia-about.sct .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.sct .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
+    background: none repeat scroll 0 0  #0065BD;
+    color: #fff !important;
+}
+
+body.ou-df-ia-about.sct .int-primary .int-toplevel-nav ul li {
+  background: none repeat scroll 0 0 #fff;
+  color: #000;
+}
+
+body.ou-df-ia-about.sct div.int-primary .int-toplevel-nav li.ou-df-ia-about a {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+
+body.ou-df-ia-about.sct div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a {
+  background-color: #A6D0FF !important;
+  color: #000000 !important;
+}
+
+body.ou-df-ia-about.sct .int-primary .int-toplevel-nav ul li.int-nav-active {
+  background: none repeat scroll 0 0 #A6D0FF;
+  color: #fff;
+}
+
+body.ou-df-ia-about.sct div.int-primary .int-secondlevel-nav li.ou-df-ia-about a {
+  color: #000 !important;
+  background-color: #A6D0FF !important;
+}
+
+body.sct .int-primary .int-secondlevel-nav ul li.int-nav-active a {
+  background: none repeat scroll 0 0 #D4E8FF !important;
+  color: #000000 !important;
+}
+
+body.ou-df-ia-about.sct div.int-primary .int-thirdlevel-nav li.ou-df-ia-about a {
+  background-color: #D4E8FF !important;
+  color: #000000 !important;
+}
+
+
+
 
 
 
