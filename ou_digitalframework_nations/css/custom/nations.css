@@ -9,6 +9,10 @@ body.ire .int-toplevel-nav ul li.expanded.active-trail {
     background: none repeat scroll 0 0 #A01851 !important;
 }
 
+body.ire .int-primary .int-toplevel-nav ul li.expanded.active-trail a {
+    color: #fff;
+}
+
 
 body.ire .int-primary .int-secondlevel-nav ul li.int-nav-active {
     background: none repeat scroll 0 0 #D0B3C1;
