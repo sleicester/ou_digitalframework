@@ -50,6 +50,57 @@ body.ou-df-ia-about.ire div.int-primary .int-thirdlevel-nav li.ou-df-ia-about a 
 
 
 
+/*drupal specific styles for wales*/
+
+
+body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger {
+  color: #D01418;
+}
+
+body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
+    background: none repeat scroll 0 0  #D01418;
+    color: #fff !important;
+}
+
+body.ou-df-ia-about.wls .int-primary .int-toplevel-nav ul li {
+  background: none repeat scroll 0 0 #fff;
+  color: #000;
+}
+
+body.ou-df-ia-about.wls div.int-primary .int-toplevel-nav li.ou-df-ia-about a {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+
+body.ou-df-ia-about.wls div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a {
+  background-color: #F3CCD6 !important;
+  color: #000000 !important;
+}
+
+body.ou-df-ia-about.wls .int-primary .int-toplevel-nav ul li.int-nav-active {
+  background: none repeat scroll 0 0 #F3CCD6
+  color: #fff;
+}
+
+body.ou-df-ia-about.wls div.int-primary .int-secondlevel-nav li.ou-df-ia-about a {
+  color: #000 !important;
+  background-color: #E699AD !important;
+}
+
+body.wls .int-primary .int-secondlevel-nav ul li.int-nav-active a {
+  background: none repeat scroll 0 0 #F3CCD6 !important;
+  border-color: #D0B3C1;
+  color: #000000 !important;
+}
+
+body.ou-df-ia-about.wls div.int-primary .int-thirdlevel-nav li.ou-df-ia-about a {
+  background-color: #F3CCD6 !important;
+  color: #000000 !important;
+}
+
+
+
 
 
 
