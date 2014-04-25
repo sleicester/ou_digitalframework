@@ -15,7 +15,7 @@
 
 
     <h2><?php print $content['field_name'][0]['#markup'] ?></h2>
-    <div class="int-row">
+
 
     <?php if (isset($content['field_associated_image'])): ?>
 		<div class="profile-image">
@@ -41,7 +41,7 @@
     <?php endif; ?>
     </div>
 
-  </div>
+
 
   <?php
     // Remove the "Add new comment" link on the teaser page or if the comment
