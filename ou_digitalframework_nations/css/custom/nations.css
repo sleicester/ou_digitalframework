@@ -24,7 +24,7 @@ body.ou-df-ia-about.ire div.int-primary .int-secondlevel-nav li.ou-df-ia-about.a
 }
 
 body.ire .int-primary .int-secondlevel-nav ul li.int-nav-active.expanded.active-trail a {
-  background: none repeat scroll 0 0 #FF0000;
+  background: none repeat scroll 0 0 #E0CCD6;
 }
 
 body.ire .int-primary .int-secondlevel-nav ul li.int-nav-active {
@@ -36,7 +36,7 @@ body.ire .in-secondlevel-nav ul li.active {
 }
 
 body.ou-df-ia-about.ire div.int-primary .int-thirdlevel-nav li.ou-df-ia-about a {
-  background-color: #FF0000 !important;
+  background-color: #E0CCD6 !important;
   color: #000000 !important;
 }
 
