@@ -1,9 +1,6 @@
 /*drupal specific styles*/
 
 
-body.ire .int-primary .int-toplevel-nav ul li.int-nav-active {
-  background: none repeat scroll 0 0 #fff !important;
-}
 
 body.ire .int-toplevel-nav ul li.expanded.int-nav-active {
   background: none repeat scroll 0 0 #A01851 !important;
