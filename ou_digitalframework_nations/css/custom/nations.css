@@ -9,14 +9,14 @@ body.ire .int-primary .int-toplevel-nav ul li.expanded.active-trail a {
 }
 
 body.ou-df-ia-about.ire div.int-primary .int-toplevel-nav li.ou-df-ia-about a {
-  background-color: #FFFFFF !important;
-  color: #000000 !important;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 
-body.ou-df-ia-about.ire div.int-primary .int-toplevel-nav li.ou-df-ia-about a.active {
-  background-color: #A01851 !important;
-  color: #fff !important;
+body.ou-df-ia-about.ire div.int-primary .int-toplevel-nav li.ou-df-ia-about.expanded.active-trail.active.int-nav-active a {
+    background-color: #A01851 !important;
+    color: #FFFFFF !important;
 }
 
 
