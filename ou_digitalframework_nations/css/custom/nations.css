@@ -1,6 +1,14 @@
 /*drupal specific styles*/
 
 
+.int-primary ul li.int-hasChildren .int-nav-trigger {
+  color: #A01851;
+}
+
+.int-primary ul li.int-hasChildren .int-nav-trigger:hover, .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
+    background: none repeat scroll 0 0  #A01851;
+}
+
 body.ou-df-ia-about.ire .int-primary .int-toplevel-nav ul li {
   background: none repeat scroll 0 0 #fff;
   color: #000;
@@ -23,7 +31,7 @@ body.ou-df-ia-about.ire .int-primary .int-toplevel-nav ul li.int-nav-active {
 }
 
 body.ou-df-ia-about.ire div.int-primary .int-secondlevel-nav li.ou-df-ia-about a {
-  color: #FFFFFF !important;
+  color: #000 !important;
   background-color: #E0CCD6 !important;
 }
 
