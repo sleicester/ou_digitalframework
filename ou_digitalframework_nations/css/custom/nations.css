@@ -20,7 +20,11 @@ body.ire .int-primary .int-secondlevel-nav ul li.int-nav-active.expanded a {
 
 body.ou-df-ia-about.ire div.int-primary .int-secondlevel-nav li.ou-df-ia-about.active-trail a {
   background-color: #E0CCD6 !important;
-  color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+body.ire .int-primary .int-secondlevel-nav ul li.int-nav-active.expanded.active-trail a {
+  background: none repeat scroll 0 0 #FF0000;
 }
 
 body.ire .int-primary .int-secondlevel-nav ul li.int-nav-active {
@@ -29,6 +33,11 @@ body.ire .int-primary .int-secondlevel-nav ul li.int-nav-active {
 
 body.ire .in-secondlevel-nav ul li.active {
     background: none repeat scroll 0 0 #D4E8FF;
+}
+
+body.ou-df-ia-about.ire div.int-primary .int-thirdlevel-nav li.ou-df-ia-about a {
+  background-color: #FF0000 !important;
+  color: #000000 !important;
 }
 
 
