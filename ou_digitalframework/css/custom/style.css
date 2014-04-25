@@ -207,3 +207,6 @@ form#user-login{
     padding-left: 20%;
 }
 
+.more-right {
+    float: right;
+}
