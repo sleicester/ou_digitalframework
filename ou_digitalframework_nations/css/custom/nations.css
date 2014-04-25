@@ -8,13 +8,12 @@ body.ou-df-ia-about.ire .int-primary .int-toplevel-nav ul li {
 
 
 body.ou-df-ia-about.ire div.int-primary .int-toplevel-nav li.ou-df-ia-about a {
-  background-color: #FFFFFF !important;
+  background-color: ##A01851 !important;
   color: #000000 !important;
 }
 
-
 body.ou-df-ia-about.ire .int-primary .int-toplevel-nav ul li.int-nav-active {
-  background: none repeat scroll 0 0 red;
+  background: none repeat scroll 0 0 #D0B3C1;
   color: #fff;
 }
 
