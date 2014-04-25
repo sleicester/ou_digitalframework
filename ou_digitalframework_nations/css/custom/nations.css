@@ -7,6 +7,7 @@ body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger {
 
 body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
     background: none repeat scroll 0 0  #A01851;
+    color: #fff !important;
 }
 
 body.ou-df-ia-about.ire .int-primary .int-toplevel-nav ul li {
