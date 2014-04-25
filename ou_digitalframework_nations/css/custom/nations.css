@@ -22,6 +22,11 @@ body.ou-df-ia-about.ire .int-primary .int-toplevel-nav ul li.int-nav-active {
   color: #fff;
 }
 
+body.ou-df-ia-about.ire div.int-primary .int-third-level li.ou-df-ia-about a {
+  background-color: #E0CCD6 !important;
+  color: #000 !important;
+}
+
 
 
 
