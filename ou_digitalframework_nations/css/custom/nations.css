@@ -6,9 +6,14 @@ body.ou-df-ia-about.ire .int-primary .int-toplevel-nav ul li {
   color: #000;
 }
 
-
 body.ou-df-ia-about.ire div.int-primary .int-toplevel-nav li.ou-df-ia-about a {
-  background-color: #fff !important;
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+
+body.ou-df-ia-about.ire div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a {
+  background-color: #D0B3C1 !important;
   color: #000000 !important;
 }
 
