@@ -5,7 +5,7 @@ body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger {
   color: #A01851;
 }
 
-body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
+body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger:focus, body.ou-df-ia-about.ire div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a.int-nav-trigger:hover  {
     background: none repeat scroll 0 0  #A01851;
     color: #fff !important;
 }
@@ -106,14 +106,13 @@ body.ou-df-ia-about.wls div.int-primary .int-thirdlevel-nav li.ou-df-ia-about a 
 
 /*Scotland*/
 
-/*drupal specific styles for wales*/
 
 
 body.ou-df-ia-about.sct .int-primary ul li.int-hasChildren .int-nav-trigger {
   color: #0065BD;
 }
 
-body.ou-df-ia-about.sct .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.sct .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
+body.ou-df-ia-about.sct .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.sct .int-primary ul li.int-hasChildren .int-nav-trigger:focus, body.ou-df-ia-about.sct div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a.int-nav-trigger:hover  {
     background: none repeat scroll 0 0  #0065BD;
     color: #fff !important;
 }
