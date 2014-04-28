@@ -57,9 +57,13 @@ body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger {
   color: #D01418;
 }
 
+body.ou-df-ia-about.wls div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a {
+  background-color: #E699AD !important;
+  color: #000000 !important;
+}
 
 body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger:focus, body.ou-df-ia-about.wls div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a.int-nav-trigger:hover  {
-    background: none repeat scroll 0 0  #D01418;
+    background: none repeat scroll 0 0  #D01418 !important;
     color: #fff !important;
 }
 
@@ -74,10 +78,7 @@ body.ou-df-ia-about.wls div.int-primary .int-toplevel-nav li.ou-df-ia-about a {
 }
 
 
-body.ou-df-ia-about.wls div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a {
-  background-color: #E699AD !important;
-  color: #000000 !important;
-}
+
 
 body.ou-df-ia-about.wls .int-primary .int-toplevel-nav ul li.int-nav-active {
   background: none repeat scroll 0 0 #E699AD;
