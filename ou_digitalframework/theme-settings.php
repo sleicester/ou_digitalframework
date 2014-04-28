@@ -61,17 +61,19 @@ function ou_digital_futures_form_system_theme_settings_alter( & $form, & $form_s
 
   );
 
-  $form['ou_theme_settings']['ou_df_main_nav_block_id'] = array(
-    '#type'         => 'textfield',
-    '#title'        => t('Block ID to be used for the top navigation'),
-    '#default_value'=> theme_get_setting('ou_df_main_nav_block_id'),
-    '#description'  => t("The block ID that will be used for the top navigation - (This needs to be created first as a menu block)"),
-  );
+
   $form['ou_theme_settings']['ou_df_children_block_id'] = array(
     '#type'         => 'textfield',
     '#title'        => t('Block ID to display as Children Menu Block'),
     '#default_value'=> theme_get_setting('ou_df_children_block_id'),
     '#description'  => t("The block ID that will be used for the Children menu block - (no content for this block is displayed)"),
 
+  );
+  
+    $form['ou_theme_settings']['ou_df_main_nav_block_id'] = array(
+    '#type'         => 'textfield',
+    '#title'        => t('Block ID to be used for the top navigation'),
+    '#default_value'=> theme_get_setting('ou_df_main_nav_block_id'),
+    '#description'  => t("The block ID that will be used for the top navigation - (This needs to be created first as a menu block)"),
   );
 }
