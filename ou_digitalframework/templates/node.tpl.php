@@ -95,6 +95,8 @@
       <?php print $submitted; ?>
     </div>
   <?php endif; ?>
+<?php
+?>
 
   <div class="content clearfix"<?php print $content_attributes; ?>>
     <?php
