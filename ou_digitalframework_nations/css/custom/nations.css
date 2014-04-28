@@ -57,7 +57,10 @@ body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger {
   color: #D01418;
 }
 
-body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger:focus {
+body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger:focus, body.ou-df-ia-about.wls div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active .int-nav-trigger:hover {
+  background-color: #008000 !important;
+  color: #000000 !important;
+} {
     background: none repeat scroll 0 0  #D01418;
     color: #fff !important;
 }
