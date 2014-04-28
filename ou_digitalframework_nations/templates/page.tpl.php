@@ -85,11 +85,12 @@
 
 
    	<?php
+   	    $menu_block_id = theme_get_setting('ou_df_main_nav_block_id');
         $_sitemenutree = '';
-        $blockname = module_invoke('menu_block', 'block_view', '1');
+        $blockname = module_invoke('menu_block', 'block_view', $menu_block_id);
         $_sitemenutree .= render($blockname['content']);
         print $_sitemenutree;
-    ?>
+     ?>
 
 
 
