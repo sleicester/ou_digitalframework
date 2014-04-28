@@ -1,4 +1,4 @@
-/*drupal specific styles*/
+/*drupal specific styles for Ireland Nations sites*/
 
 
 body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger {
@@ -146,6 +146,8 @@ body.sct .int-primary .int-secondlevel-nav ul li.int-nav-active a {
   background: none repeat scroll 0 0 #D4E8FF !important;
   color: #000000 !important;
 }
+
+
 
 body.ou-df-ia-about.sct div.int-primary .int-thirdlevel-nav li.ou-df-ia-about a {
   background-color: #D4E8FF !important;
