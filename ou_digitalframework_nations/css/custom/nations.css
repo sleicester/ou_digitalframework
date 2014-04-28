@@ -5,8 +5,13 @@ body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger {
   color: #A01851;
 }
 
+body.ou-df-ia-about.ire div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a {
+  background-color: #D0B3C1 !important;
+  color: #000000 !important;
+}
+
 body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger:focus, body.ou-df-ia-about.ire div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a.int-nav-trigger:hover  {
-    background: none repeat scroll 0 0  #A01851;
+    background: none repeat scroll 0 0  #A01851 !important;
     color: #fff !important;
 }
 
@@ -21,10 +26,7 @@ body.ou-df-ia-about.ire div.int-primary .int-toplevel-nav li.ou-df-ia-about a {
 }
 
 
-body.ou-df-ia-about.ire div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a {
-  background-color: #D0B3C1 !important;
-  color: #000000 !important;
-}
+
 
 body.ou-df-ia-about.ire .int-primary .int-toplevel-nav ul li.int-nav-active {
   background: none repeat scroll 0 0 #D0B3C1;
@@ -62,7 +64,7 @@ body.ou-df-ia-about.wls div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-
   color: #000000 !important;
 }
 
-body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger:focus, body.ou-df-ia-about.wls div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a.int-nav-trigger:hover  {
+body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger:focus, body.ou-df-ia-about.wls div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a.int-nav-trigger:hover,   {
     background: none repeat scroll 0 0  #D01418 !important;
     color: #fff !important;
 }
@@ -112,8 +114,13 @@ body.ou-df-ia-about.sct .int-primary ul li.int-hasChildren .int-nav-trigger {
   color: #0065BD;
 }
 
+body.ou-df-ia-about.sct div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a {
+  background-color: #A6D0FF !important;
+  color: #000000 !important;
+}
+
 body.ou-df-ia-about.sct .int-primary ul li.int-hasChildren .int-nav-trigger:hover, body.ou-df-ia-about.sct .int-primary ul li.int-hasChildren .int-nav-trigger:focus, body.ou-df-ia-about.sct div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a.int-nav-trigger:hover  {
-    background: none repeat scroll 0 0  #0065BD;
+    background: none repeat scroll 0 0  #0065BD !important;
     color: #fff !important;
 }
 
@@ -128,10 +135,7 @@ body.ou-df-ia-about.sct div.int-primary .int-toplevel-nav li.ou-df-ia-about a {
 }
 
 
-body.ou-df-ia-about.sct div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a {
-  background-color: #A6D0FF !important;
-  color: #000000 !important;
-}
+
 
 body.ou-df-ia-about.sct .int-primary .int-toplevel-nav ul li.int-nav-active {
   background: none repeat scroll 0 0 #A6D0FF;
