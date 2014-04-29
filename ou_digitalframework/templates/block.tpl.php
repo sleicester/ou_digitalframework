@@ -342,8 +342,8 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
          }
 
             $path = base_path()  . $languagePath . drupal_get_path_alias('node/'.$val->nid);
-            $block_output .= '<li><a class="'.$aClass.'" href="'.$path.'"><span>'.$val->title.'</span>';
-            $block_output .= '<i class="int-icon int-icon-chevron-right" aria-hidden="true"></i></a></li>';
+            $block_output .= '<li><p><a class="'.$aClass.'" href="'.$path.'"><span>'.$val->title.'</span>';
+            $block_output .= '<i class="int-icon int-icon-chevron-right" aria-hidden="true"></i></a></p></li>';
           }
           $block_output .= '</ul>';
         }
