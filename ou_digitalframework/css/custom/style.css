@@ -210,3 +210,7 @@ form#user-login{
 .more-right {
     float: right;
 }
+
+span.child_arrow{
+padding-right: 2px;
+}
