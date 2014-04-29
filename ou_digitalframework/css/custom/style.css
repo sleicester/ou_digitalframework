@@ -117,3 +117,8 @@ padding-right: 3px;
 body.ou-df-ia-employers.ou_digital_futures  div.int-primary li.ou-df-ia-employers a, body.ou-df-ia-about.ou_digital_futures  div.int-primary li.ou-df-ia-about a {
   background-color: #A6D0FF !important;
 }
+
+body.ou-df-ia-employers.ou_digital_futures .int-primary ul li.int-hasChildren .int-nav-trigger:hover,
+body.ou-df-ia-employers.ou_digital_futures.int-primary ul li.int-hasChildren .int-nav-trigger:focus, body.ou-df-ia-about.ou_digital_futures .int-primary ul li.int-hasChildren .int-nav-trigger:hover,body.ou-df-ia-about.ou_digital_futures.int-primary ul li.int-hasChildren .int-nav-trigger:focus {
+  background: #0B55A8;
+}
