@@ -70,11 +70,11 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
     $insert_menu      = '';
 
     // Switch using the current language
-        global $language_content;
-    if ($language_content->language == 'cy') {
+  /*      global $language_content;
+    if ($language_content->language == 'cy') {*/
         // Welsh
         // Create an Array of the header menu options
-        $headerLinksArray = array();
+     /*   $headerLinksArray = array();
         $headerLinksArray['ou-df-ia-courses']['title'] = "Cyrsiau";
         $headerLinksArray['ou-df-ia-courses']['a_href'] = "/courses";
 
@@ -117,10 +117,10 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
         $block_output .= '<div class="int-thirdlevel-nav int-nav-level">';
         $block_output .= '</div>';
         $block_output .= '</div>';
-        $block_output .= '</div>';
+        $block_output .= '</div>';*/
 
-    }
-    else {
+/*    }
+    else {*/
 
         // Other
         // Create an Array of the header menu options
@@ -168,7 +168,7 @@ function ou_digital_futures_menu_tree__menu_block__main_menu($variables)
         $block_output .= '</div>';
         $block_output .= '</div>';
         $block_output .= '</div>';
-    }
+   /* }*/
 
     return $block_output;
   }
