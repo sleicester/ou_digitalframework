@@ -86,10 +86,12 @@
     $currentLanguage = 'english';
   }
 
+// get current theme NAME
+global $theme_key;
   ?>
 
 </head>
-<body  class="<?php print theme_get_setting('ou_df_nation'); ?> <?php print $currentLanguage; ?> <?php print $classes; ?> " <?php print $attributes;?>>
+<body  class="<?php print $theme_key; ?> <?php print theme_get_setting('ou_df_nation'); ?> <?php print $currentLanguage; ?> <?php print $classes; ?> " <?php print $attributes;?>>
 
 <div id="int-site">
 
