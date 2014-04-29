@@ -23,7 +23,7 @@ function ou_digital_futures_form_system_theme_settings_alter( & $form, & $form_s
   $form['ou_theme_settings']['ou_df_nation'] = array(
     '#type'         => 'select',
     '#title'        => t('Nation'),
-    '#options'       => array(
+    '#options'             => array(
       'no-nation'=> t('None'),
       'eng'      => t('England'),
       'ire'      => t('Ireland'),
@@ -36,23 +36,10 @@ function ou_digital_futures_form_system_theme_settings_alter( & $form, & $form_s
 
   );
 
-  /*   $form['ou_theme_settings']['ou_df_lang'] = array(
-  '#type' => 'select',
-  '#title' => t('Language'),
-  '#options' => array(
-  'english' => t('English'),
-  'cymraeg' => t('Welsh'),
-  ),
-  '#default_value' => theme_get_setting('ou_df_lang'),
-  '#description' => t("Select language  required"),
-
-  );*/
-
-
   $form['ou_theme_settings']['ou_df_colour_scheme'] = array(
     '#type'         => 'select',
     '#title'        => t('Required site architecture'),
-    '#options'             => array(
+    '#options'                   => array(
       'ou-df-ia-courses'     => t('Course'),
       'ou-df-ia-postgraduate'=> t('Postgraduate'),
       'ou-df-ia-research'    => t('Research'),
@@ -65,12 +52,6 @@ function ou_digital_futures_form_system_theme_settings_alter( & $form, & $form_s
 
   );
 
-  $form['ou_theme_settings']['ou_df_main_nav_block_id'] = array(
-    '#type'         => 'textfield',
-    '#title'        => t('Block ID to be used for the top navigation'),
-    '#default_value'=> theme_get_setting('ou_df_main_nav_block_id'),
-    '#description'  => t("The block ID that will be used for the top navigation - (This needs to be created first as a menu block)"),
-  );
 
   $form['ou_theme_settings']['ou_df_siblings_block_id'] = array(
     '#type'         => 'textfield',
@@ -80,6 +61,7 @@ function ou_digital_futures_form_system_theme_settings_alter( & $form, & $form_s
 
   );
 
+
   $form['ou_theme_settings']['ou_df_children_block_id'] = array(
     '#type'         => 'textfield',
     '#title'        => t('Block ID to display as Children Menu Block'),
@@ -87,20 +69,11 @@ function ou_digital_futures_form_system_theme_settings_alter( & $form, & $form_s
     '#description'  => t("The block ID that will be used for the Children menu block - (no content for this block is displayed)"),
 
   );
-
-  // //Create theme - setting options for header
-  // $form['ou_theme_settings']['choose_ia'] = array(
-  //   '#type' => 'select',
-  //   '#title' => t('Select digital futures header to display'),
-  //   '#default_value' => theme_get_setting('choose_ia'),
-  //   '#options' => array(
-  //     // Standard OU ICE header selections
-  //     'EEP - Digital futures' => array(
-  //       'ou - df - ia - courses' => 'Courses',
-  //       'ou - df - ia - postgraduate' => 'Postgraduate',
-  //       'ou - df - ia - news' => 'UK News and media',
-  //       'ou - df - ia - about' => 'About',
-  //     ),
-  //   ),
-  // );
+  
+    $form['ou_theme_settings']['ou_df_main_nav_block_id'] = array(
+    '#type'         => 'textfield',
+    '#title'        => t('Block ID to be used for the top navigation'),
+    '#default_value'=> theme_get_setting('ou_df_main_nav_block_id'),
+    '#description'  => t("The block ID that will be used for the top navigation - (This needs to be created first as a menu block)"),
+  );
 }

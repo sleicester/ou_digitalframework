@@ -18,3 +18,5 @@ regions[highlighted] = Highlighted
 regions[highlighted-bottom] = Highlighted Bottom
 regions[content] = Content
 regions[footer] = Footer
+
+settings[ou_df_main_nav_block_id] = 99
