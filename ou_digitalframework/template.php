@@ -3,6 +3,12 @@
 function ou_digital_futures_preprocess_html(&$variables) {
   drupal_add_css('/oudigital/eep/assets/css/screen.css', array('type' => 'external'));
   drupal_add_js('http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js', 'external');
+  
+ drupal_add_js('/oudigital/eep/assets/js/vendor/app.js', 'external');
+  drupal_add_js('/oudigital/eep/assets/js/helpers.js', 'external');
+   drupal_add_js('/oudigital/eep/assets/js/main.js', 'external');
+    drupal_add_js('/oudigital/eep/assets/js/modal.js', 'external');
+  
 
   // add new classes to body from theme settings
   $variables['classes_array'][] = theme_get_setting('ou_df_colour_scheme');
