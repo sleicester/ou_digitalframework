@@ -1,4 +1,4 @@
-/*drupal specific styles for Ireland Nations sites*/
+/*drupal specific styles for Ireland navigation*/
 
 
 body.ou-df-ia-about.ire .int-primary ul li.int-hasChildren .int-nav-trigger {
@@ -50,7 +50,7 @@ body.ou-df-ia-about.ire div.int-primary .int-thirdlevel-nav li.ou-df-ia-about a 
 
 
 
-/*drupal specific styles for Northern Ireland Nations sites*/
+/*drupal specific styles for Northern Ireland Nations navigation sites*/
 
 
 body.ou-df-ia-about.nir .int-primary ul li.int-hasChildren .int-nav-trigger {
@@ -103,7 +103,7 @@ body.ou-df-ia-about.nir div.int-primary .int-thirdlevel-nav li.ou-df-ia-about a 
 
 
 
-/*drupal specific styles for wales*/
+/*drupal specific styles for wales navigation*/
 
 
 body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger {
@@ -154,7 +154,7 @@ body.ou-df-ia-about.wls div.int-primary .int-thirdlevel-nav li.ou-df-ia-about a 
   color: #000000 !important;
 }
 
-/*Scotland*/
+/*Scotland navigation*/
 
 
 
@@ -209,6 +209,106 @@ body.ou-df-ia-about.sct div.int-primary .int-thirdlevel-nav li.ou-df-ia-about a 
 
 
 
+/*style nations*/
+
+body.wls div.interaction {
+  background-color: #d01418 !important;
+}
+body.wls table td, body.wls table th {
+  border-bottom: 1px solid #d01418;
+  border-right: 1px solid #d01418;
+}
+body.wls .int-promo {
+  background: #f3ccd6;
+  margin-bottom: 2em;
+}
+
+body.wls div.interaction {
+  background-color: #d01418 !important;
+}
+body.wls table td, body.wls table th {
+  border-bottom: 1px solid #d01418;
+  border-right: 1px solid #d01418;
+}
+body.wls .int-promo {
+  background: #f3ccd6;
+  margin-bottom: 2em;
+}
+
+body.nir div.interaction {
+  background-color: #a01851 !important;
+}
+body.nir table td, body.wls table th {
+  border-bottom: 1px solid #a01851;
+  border-right: 1px solid #a01851;
+}
+body.nir .int-promo {
+  background: #e0ccd6;
+  margin-bottom: 2em;
+}
+
+body.ire div.interaction {
+  background-color: #a01851 !important;
+}
+body.ire table td, body.wls table th {
+  border-bottom: 1px solid #a01851;
+  border-right: 1px solid #a01851;
+}
+body.ire .int-promo {
+  background: #e0ccd6;
+  margin-bottom: 2em;
+}
+
+
+/*style the languages switcher*/
+
+body.wls #breadcrumb, body.wls .panel-pane .breadcrumb {
+float: left;
+width: 75%;
+}
+
+body.wls.node-type-panel #switcher{
+display: none;
+}
+
+.clear{
+clear: both;
+}
+
+body.wls #switcher {
+float: right;
+width: 25%;
+display: block;
+text-align: right;
+}
+
+#block-locale-language h2{
+display: none;
+}
+
+ul.language-switcher-locale-url{
+margin-top: 1em;
+}
+
+body.wls .panel-pane ul.language-switcher-locale-url{
+margin-top: 1em;
+float: right;
+}
+
+ul.language-switcher-locale-url li{
+  display: inline;
+  list-style-image: none;
+}
+
+ul.language-switcher-locale-url li a{
+   background-color: #D01418;
+    color: #FFFFFF;
+   padding: 0.5em;
+}
+
+ul.language-switcher-locale-url li.active {
+display: none;
+}
 
 
 

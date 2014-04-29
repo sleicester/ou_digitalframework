@@ -101,108 +101,6 @@ bottom: 0;
 }
 */
 
-
-/*style nations*/
-
-body.wls div.interaction {
-  background-color: #d01418 !important;
-}
-body.wls table td, body.wls table th {
-  border-bottom: 1px solid #d01418;
-  border-right: 1px solid #d01418;
-}
-body.wls .int-promo {
-  background: #f3ccd6;
-  margin-bottom: 2em;
-}
-
-body.wls div.interaction {
-  background-color: #d01418 !important;
-}
-body.wls table td, body.wls table th {
-  border-bottom: 1px solid #d01418;
-  border-right: 1px solid #d01418;
-}
-body.wls .int-promo {
-  background: #f3ccd6;
-  margin-bottom: 2em;
-}
-
-body.nir div.interaction {
-  background-color: #a01851 !important;
-}
-body.nir table td, body.wls table th {
-  border-bottom: 1px solid #a01851;
-  border-right: 1px solid #a01851;
-}
-body.nir .int-promo {
-  background: #e0ccd6;
-  margin-bottom: 2em;
-}
-
-body.ire div.interaction {
-  background-color: #a01851 !important;
-}
-body.ire table td, body.wls table th {
-  border-bottom: 1px solid #a01851;
-  border-right: 1px solid #a01851;
-}
-body.ire .int-promo {
-  background: #e0ccd6;
-  margin-bottom: 2em;
-}
-
-
-/*style the languages switcher*/
-
-body.wls #breadcrumb, body.wls .panel-pane .breadcrumb {
-float: left;
-width: 75%;
-}
-
-body.wls.node-type-panel #switcher{
-display: none;
-}
-
-.clear{
-clear: both;
-}
-
-body.wls #switcher {
-float: right;
-width: 25%;
-display: block;
-text-align: right;
-}
-
-#block-locale-language h2{
-display: none;
-}
-
-ul.language-switcher-locale-url{
-margin-top: 1em;
-}
-
-body.wls .panel-pane ul.language-switcher-locale-url{
-margin-top: 1em;
-float: right;
-}
-
-ul.language-switcher-locale-url li{
-  display: inline;
-  list-style-image: none;
-}
-
-ul.language-switcher-locale-url li a{
-   background-color: #D01418;
-    color: #FFFFFF;
-   padding: 0.5em;
-}
-
-ul.language-switcher-locale-url li.active {
-display: none;
-}
-
 form#user-login{
     padding-left: 20%;
 }
@@ -213,4 +111,9 @@ form#user-login{
 
 span.child_arrow{
 padding-right: 3px;
+}
+
+
+body.ou-df-ia-employers.ou_digital_futures  div.int-primary li.ou-df-ia-employers a, body.ou-df-ia-about.ou_digital_futures  div.int-primary li.ou-df-ia-about a {
+  background-color: #A6D0FF !important;
 }
