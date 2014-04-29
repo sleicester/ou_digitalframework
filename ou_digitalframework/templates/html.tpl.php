@@ -48,6 +48,8 @@
 
 <head profile="<?php print $grddl_profile; ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<script src="/oudigital/eep/assets/js/vendor/modernizr-2.6.2.min.js"></script>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
@@ -74,6 +76,21 @@
     <link  rel="stylesheet" href="/oudigital/eep/assets/fonts/fontawesome/css/font-awesome-ie7.css">
   <![endif]-->
 
+	  <link rel="stylesheet" href="/oudigital/eep/assets/css/print.css" media="print">
+
+
+
+      <!-- favicons -->
+
+      <link rel="apple-touch-icon" href="/oudigital/external/assets/img/favicons/apple-touch-icon.png">
+
+      <link rel="icon" href="/oudigital/external/assets/img/favicons/favicon.png">
+
+      <!--[if IE]><link rel="shortcut icon" href="/oudigital/external/assets/img/favicon.ico"><![endif]-->
+
+      <meta name="msapplication-TileColor" content="#ffffff">
+
+      <meta name="msapplication-TileImage" content="/oudigital/external/assets/img/favicons/ie10-win8-tile-icon.png">
 
     <!--  End-->
 
@@ -112,6 +129,26 @@ global $theme_key;
 
   <script src="/oudigital/eep/assets/js/vendor/jquery.placeholder.js"></script>
   <script src="/oudigital/eep/assets/js/vendor/jquery.smartresize.js"></script>
+  <script src="/oudigital/eep/assets/js/app.js"></script>
+
+  	<script src="/oudigital/eep/assets/js/helpers.js"></script>
+
+  	<script src="/oudigital/eep/assets/js/modules/ui-widgets.js"></script>
+
+  	<script src="/oudigital/eep/assets/js/modules/back-to-top.js"></script>
+
+  	<script src="/oudigital/eep/assets/js/modules/modal.js"></script>
+
+    <!--[if lt IE 9]>
+
+	  <script src="/oudigital/eep/assets/js/vendor/respond.js"></script>
+
+	<![endif]-->
+
+
+
+      <script src="/oudigital/eep/assets/js/main.js"></script>
+
 
   <script>
 
