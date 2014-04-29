@@ -112,7 +112,9 @@ global $theme_key;
 
 <div id="int-site">
 
+AGONOSTIC HEADER START
   <?php include theme_get_setting('ou_df_path_to_header'); ?>
+AGNOSTIC HEADER END
   <script>
       doTranslation();
   </script>
