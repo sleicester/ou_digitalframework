@@ -177,13 +177,13 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
          // language - if not welsh then set to node value
          if ($selectedLanguage !='cy'){
-             $selectedLanguage = $val->language;  
-             $languagePath = '';      
+             $selectedLanguage = $val->language;
+             $languagePath = '';
          }
          else {
-             $languagePath = 'cy/';  
+             $languagePath = 'cy/';
          }
-             
+
             $path = base_path() . $languagePath .drupal_get_path_alias('node/'.$val->nid);
             $block_output .= '<h3><a class="'.$aClass.'" href="'.$path.'">' . $val->title .'</a></h3>';
             $block_output .= $val->body[$selectedLanguage][0]['summary'] ;
@@ -334,15 +334,15 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
 
          // language - if not welsh then set to node value
          if ($selectedLanguage !='cy'){
-             $selectedLanguage = $val->language;  
-             $languagePath = '';      
+             $selectedLanguage = $val->language;
+             $languagePath = '';
          }
          else {
-             $languagePath = 'cy/';  
+             $languagePath = 'cy/';
          }
-             
+
             $path = base_path()  . $languagePath . drupal_get_path_alias('node/'.$val->nid);
-            $block_output .= '<li><a class="'.$aClass.'" href="'.$path.'">'.$val->title;
+            $block_output .= '<li><span><a class="'.$aClass.'" href="'.$path.'">'.$val->title;</span>
             $block_output .= '<i class="int-icon int-icon-chevron-right" aria-hidden="true"></i></a></li>';
           }
           $block_output .= '</ul>';
