@@ -54,7 +54,7 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  
+
   <?php $themePath = drupal_get_path('theme',$GLOBALS['theme']); ?>
 
     <!-- SC added from LA 11-4-2014 -->
@@ -70,8 +70,8 @@
 
 
   <!--[if lt IE 9]>
-  
-    <link rel="stylesheet" href="<?php print $themePath . '/css/custom/ie-style.css'?>">
+
+    <link rel="stylesheet" href="/<?php print $themePath . '/css/custom/ie-style.css'?>">
 
     <link  rel="stylesheet" href="/oudigital/headerandfooter/assets/css/headerandfooter-ie.css">
   <![endif]--> <!--media queries support on IE8 and lower -->
@@ -102,7 +102,7 @@ global $theme_key;
 
 </head>
 <body  class="<?php print $theme_key; ?> ou-df-ia-about <?php print theme_get_setting('ou_df_nation'); ?> <?php print $currentLanguage; ?> <?php print $classes; ?> " <?php print $attributes;?>>
-<?php 
+<?php
 // Adding the Country code from the theme to the Cookie variable
 // Create an array to hold the options
 $codes = array();
@@ -120,7 +120,7 @@ $countryCookieCode = $codes[theme_get_setting('ou_df_nation')];
   <?php include theme_get_setting('ou_df_path_to_header'); ?>
   <script>
    var countryCode = '<?php echo $countryCookieCode; ?>';
-      doTranslation();        
+      doTranslation();
       if(!oucheckCookie('OU_CountryCode')){
         ousetCookie('OU_CountryCode',  countryCode, 365, mdomain);
       }
