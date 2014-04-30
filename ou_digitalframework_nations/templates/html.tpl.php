@@ -72,6 +72,7 @@
   <!--[if lt IE 9]>
   
     <link rel="stylesheet" href="<?php print $themePath . '/css/custom/ie-style.css'?>">
+
     <link  rel="stylesheet" href="/oudigital/headerandfooter/assets/css/headerandfooter-ie.css">
   <![endif]--> <!--media queries support on IE8 and lower -->
 
