@@ -99,12 +99,12 @@ global $theme_key;
 // Adding the Country code from the theme to the Cookie variable
 // Create an array to hold the options
 $codes = array();
-$codes['wls'] = 'WA_GB';
-$codes['eng'] = 'EN_GB';
-$codes['ire'] = 'IE_GB';
-$codes['nir'] = 'NI_GB';
-$codes['sct'] = 'SC_GB';
-$codes['no-nation'] = 'EN_GB';
+$codes['wls'] = 'WA|GB';
+$codes['eng'] = 'EN|GB';
+$codes['ire'] = 'IE|GB';
+$codes['nir'] = 'NI|GB';
+$codes['sct'] = 'SC|GB';
+$codes['no-nation'] = 'EN|GB';
 
 $countryCookieCode = $codes[theme_get_setting('ou_df_nation')];
 ?>
