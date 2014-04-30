@@ -1,10 +1,13 @@
 /*drupal specific styles*/
 
 img {
+  width: inherit;
+  max-width: 100%;
   border: 0 none;
   display: inline;
   margin: 1em 0;
   height: auto;
+  border: solid 1px red;
 }
 
 blockquote {
