@@ -55,7 +55,8 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
 
-  <?php $themePath = drupal_get_path('theme',$GLOBALS['theme']); ?>
+
+  <?php $themePath = base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>
 
     <!-- SC added from LA 11-4-2014 -->
 
@@ -71,7 +72,7 @@
 
   <!--[if lt IE 9]>
 
-    <link rel="stylesheet" href="/<?php print $themePath . '/css/custom/ie-style.css'?>">
+    <link rel="stylesheet" href="<?php print $themePath . '/css/custom/ie-style.css'?>">
 
     <link  rel="stylesheet" href="/oudigital/headerandfooter/assets/css/headerandfooter-ie.css">
   <![endif]--> <!--media queries support on IE8 and lower -->
