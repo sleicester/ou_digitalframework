@@ -2,7 +2,6 @@
 
 function ou_digital_futures_preprocess_html(&$variables) {
   drupal_add_css('/oudigital/eep/assets/css/screen.css', array('type' => 'external'));
-
   
   // add new classes to body from theme settings
   $variables['classes_array'][] = theme_get_setting('ou_df_colour_scheme');
