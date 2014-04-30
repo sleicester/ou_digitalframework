@@ -1,6 +1,7 @@
 /*drupal specific styles*/
 
 img {
+  width: auto;
   border: 0 none;
   display: inline;
   margin: 1em 0;
