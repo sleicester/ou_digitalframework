@@ -95,12 +95,28 @@ global $theme_key;
 
 </head>
 <body  class="<?php print $theme_key; ?> <?php print theme_get_setting('ou_df_nation'); ?> <?php print $currentLanguage; ?> <?php print $classes; ?> " <?php print $attributes;?>>
+<?php 
+// Adding the Country code from the theme to the Cookie variable
+// Create an array to hold the options
+$codes = array();
+$codes['wls'] = 'WA_GB';
+$codes['eng'] = 'EN_GB';
+$codes['ire'] = 'IE_GB';
+$codes['nir'] = 'NI_GB';
+$codes['sct'] = 'SC_GB';
+$codes['no-nation'] = 'EN_GB';
 
+$countryCookieCode = $codes[theme_get_setting('ou_df_nation')];
+?>
 <div id="int-site">
 
   <?php include theme_get_setting('ou_df_path_to_header'); ?>
-  <script>
-      doTranslation();
+ <script>
+   var countryCode = '<?php echo $countryCookieCode; ?>';
+      doTranslation();        
+      if(!oucheckCookie('OU_CountryCode')){
+        ousetCookie('OU_CountryCode',  countryCode, 365, mdomain);
+      }
   </script>
 
   <?php print $page_top; ?>
