@@ -63,9 +63,10 @@
   <link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/headerandfooter.css">
 
   <link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/ou-df-header.css">
-
+ 
   <!--[if lt IE 9]>
     <link  rel="stylesheet" href="/oudigital/headerandfooter/assets/css/headerandfooter-ie.css">
+    
   <![endif]--> <!--media queries support on IE8 and lower -->
 
   <!--[if lt IE 8]>

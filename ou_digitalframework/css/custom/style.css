@@ -20,12 +20,10 @@ blockquote {
 .node-type-panel #breadcrumb {
   display: none;
 }
-
-/*styles for profile pages*/
-
+  
 @media (min-width: 768px) {
   .profile-image{
-    float: right;
+    float:right;
   }
 }
 

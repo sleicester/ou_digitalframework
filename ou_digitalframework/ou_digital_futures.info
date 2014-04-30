@@ -6,6 +6,7 @@ stylesheets[all][] = css/custom/style.css
 stylesheets[all][] = css/ckeditor-styles.css
 stylesheets[all][] = ../../libraries/font-awesome-4.0.3/css/font-awesome.min.css
 
+
 regions[header] = Header
 regions[switcher] = Switcher
 regions[content] = Content
