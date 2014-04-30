@@ -1,0 +1,8 @@
+/*drupal IE 8 specific styles*/
+
+/*styles for profile pages*/
+ .profile-image{
+    float: right;
+    width:350px;
+    background: pink;
+  }

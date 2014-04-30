@@ -1,0 +1,69 @@
+div.call-to-action{
+    border-color: #E5E5E5 #D1D1D1 #CCCCCC #E5E5E5;
+    border-image: none;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 3px 3px #EEEEEE;
+    margin: 1em 0;
+    padding: 0 1em;
+    overflow: hidden;
+ }
+
+div.call-to-action img{
+    margin-top: 1em;
+    border: 1px solid #ADD0E1;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    float: left;
+    margin-right: 10px;
+}
+
+div.call-to-action span {
+  color: #0B55A8;
+  font-family: "CaratReg","Book Antiqua",Georgia,serif;
+  font-weight: normal;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  font-size: 1.75em;
+  display:block;
+}
+
+
+
+img.align-right{
+    margin-top: 1em;
+    border: 1px solid #ADD0E1;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    float: right;
+    margin-left: 10px;
+}
+
+
+
+img.align-left{
+    margin-top: 1em;
+    border: 1px solid #ADD0E1;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    float: left;
+    margin-right: 10px;
+}
+
+img.centre-image {
+  border: 1px solid #ADD0E1;
+  padding: 0.5em;
+  display: block;
+  margin: 0 auto;
+}
+
+.region-sidebar-second img.align-left, .region-sidebar-second img.align-right{
+    margin-top: 0em;
+}
+
+.int-intro-text {
+  color: #0B55A8;
+  font-family: "CaratReg","Book Antiqua",Georgia,serif;
+  font-size: 1.25em;
+}
