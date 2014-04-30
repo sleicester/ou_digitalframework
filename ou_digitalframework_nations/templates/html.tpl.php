@@ -56,10 +56,6 @@
   <?php print $scripts; ?>
 
 
-
-<?php print base_path().drupal_get_path('theme',$GLOBALS['theme']) ?>
-<br />
-
   <?php $themePath = base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>
 
     <!-- SC added from LA 11-4-2014 -->

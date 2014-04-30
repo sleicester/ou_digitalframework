@@ -54,7 +54,8 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-<?php $themePath = drupal_get_path('theme',$GLOBALS['theme']); ?>
+ <?php $themePath = base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>
+
     <!-- SC added from LA 11-4-2014 -->
 
 <!--  <link rel="stylesheet" href="/oudigital/headerandfooter/assets/css/header.css">
