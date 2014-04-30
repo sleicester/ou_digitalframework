@@ -101,7 +101,7 @@ global $theme_key;
 $codes = array();
 $codes['wls'] = 'WA|GB';
 $codes['eng'] = 'EN|GB';
-$codes['ire'] = 'IE|GB';
+$codes['ire'] = 'IE|IE';
 $codes['nir'] = 'NI|GB';
 $codes['sct'] = 'SC|GB';
 $codes['no-nation'] = 'EN|GB';
