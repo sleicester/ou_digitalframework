@@ -126,3 +126,7 @@ body.ou-df-ia-employers.ou_digital_futures.int-primary ul li.int-hasChildren .in
 .interaction {
     overflow: visible;
 }
+
+.breadcrumb dd span, .breadcrumb dd a {
+  white-space: normal;
+}
