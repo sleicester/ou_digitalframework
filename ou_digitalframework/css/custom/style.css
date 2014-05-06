@@ -20,6 +20,12 @@ img {
   height: auto;
 }
 
+/* centre class - created to centre full width banner images*/
+
+.centre {
+text-align: center;
+}
+
 blockquote {
   display: inline-block;
 }
