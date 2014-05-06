@@ -1,5 +1,18 @@
 /*drupal specific styles*/
 
+/*remove drupal system bullets*/
+
+ul li.leaf {
+  list-style-image: none;
+  list-style-type: none;
+}
+
+ul li.expanded {
+  list-style-type: none;
+  list-style-image: none;
+}
+
+/* ensure image width/ratio of images*/
 img {
   width: auto;
   border: 0 none;
@@ -130,3 +143,8 @@ body.ou-df-ia-employers.ou_digital_futures.int-primary ul li.int-hasChildren .in
 .breadcrumb dd span, .breadcrumb dd a {
   white-space: normal;
 }
+
+ul {
+list-style-type: none;
+}
+
