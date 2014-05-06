@@ -290,19 +290,18 @@ float: right;
 width: 25%;
 display: block;
 text-align: right;
+margin-top: 0.5em;
 }
 
 #block-locale-language h2{
 display: none;
 }
 
-ul.language-switcher-locale-url {
-  margin-top: 0.5em;
-  margin-bottom: 0em;
+ul.language-switcher-locale-url{
+margin-top: 0.5em;
 }
 
 body.wls .panel-pane ul.language-switcher-locale-url{
-margin-top: 1em;
 float: right;
 }
 
