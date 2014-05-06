@@ -296,8 +296,9 @@ text-align: right;
 display: none;
 }
 
-ul.language-switcher-locale-url{
-margin-top: 1em;
+ul.language-switcher-locale-url {
+  margin-top: 0.5em;
+  margin-bottom: 0em;
 }
 
 body.wls .panel-pane ul.language-switcher-locale-url{
