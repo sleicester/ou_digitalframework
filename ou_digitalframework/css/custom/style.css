@@ -27,9 +27,10 @@ img {
 text-align: center;
 }
 
-.centre p {
+.centre p, .centre img {
 padding: 0;
 margin: 0;
+}
 
 .overlay{
 position: relative;
