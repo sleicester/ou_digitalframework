@@ -35,6 +35,10 @@ body.ou-df-ia-about.ire div.int-primary .int-secondlevel-nav li.ou-df-ia-about a
   background-color: #E0CCD6 !important;
 }
 
+body.ou-df-ia-about.ire .int-primary .int-secondlevel-nav ul li.int-nav-active{
+  background: none repeat scroll 0 0 #D0B3C1;
+}
+
 body.ire .int-primary .int-secondlevel-nav ul li.int-nav-active a {
   background: none repeat scroll 0 0 #E0CCD6 !important;
   border-color: #D0B3C1;
@@ -82,6 +86,10 @@ body.ou-df-ia-about.nir .int-primary .int-toplevel-nav ul li.int-nav-active {
   color: #fff;
 }
 
+body.ou-df-ia-about.nir .int-primary .int-secondlevel-nav ul li.int-nav-active{
+  background: none repeat scroll 0 0 #D0B3C1;
+}
+
 body.ou-df-ia-about.nir div.int-primary .int-secondlevel-nav li.ou-df-ia-about a {
   color: #000 !important;
   background-color: #E0CCD6 !important;
@@ -110,7 +118,7 @@ body.ou-df-ia-about.wls .int-primary ul li.int-hasChildren .int-nav-trigger {
   color: #D01418;
 }
 
-body.ou-df-ia-about.wls div.int-primary .int-toplevel-nav li.ou-df-ia-about.int-nav-active a {
+body.ou-df-ia-about.wls div.int-primary .int-secondlevel-nav li.ou-df-ia-about.int-nav-active a {
   background-color: #E699AD !important;
   color: #000000 !important;
 }
@@ -133,6 +141,10 @@ body.ou-df-ia-about.wls div.int-primary .int-toplevel-nav li.ou-df-ia-about a {
 body.ou-df-ia-about.wls .int-primary .int-toplevel-nav ul li.int-nav-active {
   background: none repeat scroll 0 0 #E699AD;
   color: #fff;
+}
+
+body.ou-df-ia-about.wls .int-primary .int-secondlevel-nav ul li.int-nav-active {
+  background: none repeat scroll 0 0 #F3CCD6;
 }
 
 body.ou-df-ia-about.wls div.int-primary .int-secondlevel-nav li.ou-df-ia-about a {
@@ -182,6 +194,10 @@ body.ou-df-ia-about.sct div.int-primary .int-toplevel-nav li.ou-df-ia-about a {
 body.ou-df-ia-about.sct .int-primary .int-toplevel-nav ul li.int-nav-active {
   background: none repeat scroll 0 0 #A6D0FF;
   color: #fff;
+}
+
+body.ou-df-ia-about.sct .int-primary .int-secondlevel-nav ul li.int-nav-active{
+  background: none repeat scroll 0 0 #A6D0FF;
 }
 
 body.ou-df-ia-about.sct div.int-primary .int-secondlevel-nav li.ou-df-ia-about a {
