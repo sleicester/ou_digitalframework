@@ -36,7 +36,7 @@ margin: 0;
 position: relative;
 }
 
-.overlay h1 span{
+.overlay span{
 position: absolute;
 bottom: 0;
   background-color: #A01851 !important;
