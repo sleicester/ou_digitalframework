@@ -36,17 +36,32 @@ margin: 0;
 position: relative;
 }
 
-.overlay span{
+.overlay span.old{
 position: absolute;
 bottom: 0;
 background-color: #A01851 !important;
--ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; // IE8
-filter: alpha(opacity=70); // IE 5-7
-opacity: 0.7;
 display: block;
 color: #fff;
 margin-bottom: 0.67em;
-}
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  /* IE 5-7 */
+ filter: alpha(opacity=70);
+  /* Netscape */
+-moz-opacity: 0.7;
+  /* Safari 1.x */
+ -khtml-opacity: 0.7;
+ opacity: 0.7;
+ }
+ 
+.overlay span.new{
+position: absolute;
+top: 0;
+display: block;
+color: #fff;
+margin-top: 0.37em;
+padding: 0.5em;
+border: solid 1px #000;
+ }
 
 
 
