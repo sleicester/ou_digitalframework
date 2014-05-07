@@ -39,7 +39,9 @@ position: relative;
 .overlay span{
 position: absolute;
 bottom: 0;
-  background-color: #A01851 !important;
+background-color: #A01851 !important;
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; // IE8
+filter: alpha(opacity=70); // IE 5-7
 opacity: 0.7;
 display: block;
 color: #fff;
