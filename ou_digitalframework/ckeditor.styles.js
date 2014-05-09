@@ -97,5 +97,15 @@ if(typeof(CKEDITOR) !== 'undefined') {
     }
 },
 
+{
+    name : 'OU list style',
+    element : 'ul',
+    attributes :
+    {
+        'class' : 'ou-list',
+    }
+},
+
+
   ]);
 }

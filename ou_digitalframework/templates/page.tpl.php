@@ -133,7 +133,7 @@
 		<?php endif; ?>
 
   			<div class="int-row">
-    			<div id="content" clas="generatedcontent" ><div class="section">
+    			<div id="content"><div class="section">
 	      			<a id="main-content"></a>
 
 					<?php print render($title_prefix); ?>
