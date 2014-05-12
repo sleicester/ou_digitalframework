@@ -51,12 +51,10 @@ if(typeof(CKEDITOR) !== 'undefined') {
 			 element : 'i'},
 
             { name : 'Citation',
-			 element : 'cite',
- 			},
+			 element : 'cite'},
 
  			{ name : 'Inline quotation',
-			  element : 'q',
- 			},
+			  element : 'q'},
 
 {
     name : 'Image on Left',
@@ -64,8 +62,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
     attributes :
     {
         'class' : 'align-left',
-        'align' : 'left'
-    }
+        'align' : 'left'}
 },
 
 {
@@ -74,8 +71,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
     attributes :
     {
         'class' : 'align-right',
-        'align' : 'right'
-    }
+        'align' : 'right'}
 },
 
 {
@@ -84,8 +80,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
     attributes :
     {
         'class' : 'centre-image',
-        'align' : 'center'
-    }
+        'align' : 'center'}
 },
 
 {
@@ -93,7 +88,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
     element : 'p',
     attributes :
     {
-        'class' : 'int-intro-text',
+        'class' : 'int-intro-text'
     }
 },
 
@@ -102,9 +97,8 @@ if(typeof(CKEDITOR) !== 'undefined') {
     element : 'ul',
     attributes :
     {
-        'class' : 'ou-list',
-    }
-},
+        'class' : 'ou-list'}
+}
 
 
   ]);
