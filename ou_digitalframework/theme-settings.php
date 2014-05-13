@@ -1,10 +1,21 @@
 <?php
+/**
+* @file theme-settings.php
+* 
+*/
+
+/**
+* 
+* Sets and saves variables used in the Nations theme - these variables available to the theme throughout
+*/
 function ou_digital_futures_form_system_theme_settings_alter( & $form, & $form_state)
-{
+{ 
   $form['ou_theme_settings'] = array(
     '#type' => 'fieldset',
     '#title'=> t('Open University Theme Settings'),
   );
+  
+  
   $form['ou_theme_settings']['ou_df_path_to_header'] = array(
     '#type'         => 'textfield',
     '#title'        => t('Path to Header'),
@@ -23,7 +34,7 @@ function ou_digital_futures_form_system_theme_settings_alter( & $form, & $form_s
   $form['ou_theme_settings']['ou_df_nation'] = array(
     '#type'         => 'select',
     '#title'        => t('Nation'),
-    '#options'             => array(
+    '#options'                         => array(
       'no-nation'=> t('None'),
       'eng'      => t('England'),
       'ire'      => t('Ireland'),
@@ -39,7 +50,7 @@ function ou_digital_futures_form_system_theme_settings_alter( & $form, & $form_s
   $form['ou_theme_settings']['ou_df_colour_scheme'] = array(
     '#type'         => 'select',
     '#title'        => t('Required site architecture'),
-    '#options'                   => array(
+    '#options'                               => array(
       'ou-df-ia-courses'     => t('Course'),
       'ou-df-ia-postgraduate'=> t('Postgraduate'),
       'ou-df-ia-research'    => t('Research'),
@@ -69,8 +80,8 @@ function ou_digital_futures_form_system_theme_settings_alter( & $form, & $form_s
     '#description'  => t("The block ID that will be used for the Children menu block - (no content for this block is displayed)"),
 
   );
-  
-    $form['ou_theme_settings']['ou_df_main_nav_block_id'] = array(
+
+  $form['ou_theme_settings']['ou_df_main_nav_block_id'] = array(
     '#type'         => 'textfield',
     '#title'        => t('Block ID to be used for the top navigation'),
     '#default_value'=> theme_get_setting('ou_df_main_nav_block_id'),

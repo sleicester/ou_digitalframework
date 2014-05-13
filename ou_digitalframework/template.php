@@ -3,12 +3,17 @@
 function ou_digital_futures_preprocess_html(&$variables) {
   drupal_add_css('/oudigital/eep/assets/css/screen.css', array('type' => 'external'));
   
-  // add new classes to body from theme settings
+  /* add new classes to body from theme settings */
   $variables['classes_array'][] = theme_get_setting('ou_df_colour_scheme');
 
-           // Add the NID to the body custom ID
+/*
+** Add the NID to the body custom ID
+** This is used by the OU Framework H&F to determine the current menu item and 
+** and open the correct Navigation level accordingly
+*/
+    
     if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
-       $nid  = arg(1);
+           $nid  = arg(1);
        }
        else
        {
@@ -20,6 +25,7 @@ function ou_digital_futures_preprocess_html(&$variables) {
 /*
 **Theme the appearance of the breadcrumb to add jywing classes
 */
+
 function ou_digital_futures_breadcrumb($variables) {
    if (count($variables['breadcrumb']) > 0) {
      $lastitem = sizeof($variables['breadcrumb']);
@@ -55,6 +61,7 @@ function ou_digital_futures_breadcrumb($variables) {
 /*
 **Hide the <h1> title when node type is a panel
 */
+
 function ou_digital_futures_preprocess_page(&$variables) {
 
       if ((!empty($variables['node'])) && ($variables['node']->type == 'panel')) {

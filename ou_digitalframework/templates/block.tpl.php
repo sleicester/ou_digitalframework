@@ -321,6 +321,8 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
           ->propertyCondition('status', 1)
           ->execute();
 
+    print_r($entities);
+
           // Load the nodes into an array & count them
           $nodes    = entity_load('node', array_keys($entities['node']));
 

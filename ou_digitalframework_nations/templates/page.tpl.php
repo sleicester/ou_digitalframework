@@ -85,11 +85,20 @@
 
 
    	<?php
+       
+       /**
+       * @param
+       * - $menu_block_id - the block id to be loaded in this sites menu block
+       * set in theme settings using variable theme_get_setting('ou_df_main_nav_block_id')
+       * @param
+       * - $blockname - variable containing the block to be loaded for rendering
+       **/
+    
    	    $menu_block_id = theme_get_setting('ou_df_main_nav_block_id');
         $_sitemenutree = '';
         $blockname = module_invoke('menu_block', 'block_view', $menu_block_id);
         $_sitemenutree .= render($blockname['content']);
-        print $_sitemenutree;
+         print $_sitemenutree;
      ?>
 
 
