@@ -104,6 +104,7 @@ global $theme_key;
 </head>
 <body  class="<?php print $theme_key; ?> ou-df-ia-about <?php print theme_get_setting('ou_df_nation'); ?> <?php print $currentLanguage; ?> <?php print $classes; ?> " <?php print $attributes;?>>
 <?php
+
 /**
 * 
 * @param
@@ -128,8 +129,8 @@ $codes['no-nation'] = 'EN|GB';
 * $countryCookieCode - converts the value setting in the Theme settings file 
 * into a variable value (taken from the array) that is then made available to JS
 **/
-$countryCookieCode = $codes[theme_get_setting('ou_df_nation')];
 
+$countryCookieCode = $codes[theme_get_setting('ou_df_nation')];
 
 ?>
 

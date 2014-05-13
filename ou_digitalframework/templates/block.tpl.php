@@ -296,13 +296,14 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
       }
     }
 
-    if(isset($mlid)){
-       foreach ($arrayOfAllMenuItems as $key=>$value) {
-      if (isset($value['plid']) && $value['plid'] == $mlid && $value['hidden'] =='0' ) {
+  if (isset($mlid)) {
+    foreach ($arrayOfAllMenuItems as $key=>$value) {
+      if (isset($value['plid']) && $value['plid'] == $mlid && is_numeric($value['nid']) && $value['hidden'] == '0' ) {
         $nodes_list[] = $value['nid'];
       }
     }
-    }
+  }
+  
 
 
     if (!empty($nodes_list)) {
@@ -320,9 +321,7 @@ if ( arg(0) == 'node' && is_numeric(arg(1)) && ! arg(2) ) {
           ->propertyCondition('nid',$columnval,'IN')
           ->propertyCondition('status', 1)
           ->execute();
-
-    print_r($entities);
-
+          
           // Load the nodes into an array & count them
           $nodes    = entity_load('node', array_keys($entities['node']));
 
