@@ -99,12 +99,12 @@ global $theme_key;
 <body  class="<?php print $theme_key; ?> <?php print theme_get_setting('ou_df_nation'); ?> <?php print $currentLanguage; ?> <?php print $classes; ?> " <?php print $attributes;?>>
 <?php
 /**
-* 
+*
 * @param
 * $codes - array that contains the possiblke country & language combinations
 * add / remove items in this array to change options
 * using the format $codes['COUNTRYCODE'] = 'COOKIE VALUE'
-* 
+*
 * Adding the Country code from the theme to the Cookie variable
 */
 $codes = array();
@@ -117,8 +117,8 @@ $codes['no-nation'] = 'EN|GB';
 
 /**
 * @param
-* 
-* $countryCookieCode - converts the value setting in the Theme settings file 
+*
+* $countryCookieCode - converts the value setting in the Theme settings file
 * into a variable value (taken from the array) that is then made available to JS
 **/
 
@@ -147,7 +147,9 @@ $countryCookieCode = $codes[theme_get_setting('ou_df_nation')];
 
   <script src="/oudigital/eep/assets/js/vendor/jquery.placeholder.js"></script>
   <script src="/oudigital/eep/assets/js/vendor/jquery.smartresize.js"></script>
-
+  <script src="<?php print $themePath . '/js/app.js'?>"></script>
+  <script src="/oudigital/eep/assets/js/modules/back-to-top.js"></script>
+  <script src="<?php print $themePath . '/js/main.js'?>"></script>
   <script>
 
     // Only hide if your CMS menu has been output correctly
