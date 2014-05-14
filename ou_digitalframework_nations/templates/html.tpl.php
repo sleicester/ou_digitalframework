@@ -104,8 +104,17 @@ global $theme_key;
 </head>
 <body  class="<?php print $theme_key; ?> ou-df-ia-about <?php print theme_get_setting('ou_df_nation'); ?> <?php print $currentLanguage; ?> <?php print $classes; ?> " <?php print $attributes;?>>
 <?php
-// Adding the Country code from the theme to the Cookie variable
-// Create an array to hold the options
+
+/**
+* 
+* @param
+* $codes - array that contains the possiblke country & language combinations
+* add / remove items in this array to change options
+* using the format $codes['COUNTRYCODE'] = 'COOKIE VALUE'
+* 
+* Adding the Country code from the theme to the Cookie variable
+*/
+
 $codes = array();
 $codes['wls'] = 'WA|GB';
 $codes['eng'] = 'EN|GB';
@@ -114,7 +123,15 @@ $codes['nir'] = 'NI|GB';
 $codes['sct'] = 'SC|GB';
 $codes['no-nation'] = 'EN|GB';
 
+/**
+* @param
+* 
+* $countryCookieCode - converts the value setting in the Theme settings file 
+* into a variable value (taken from the array) that is then made available to JS
+**/
+
 $countryCookieCode = $codes[theme_get_setting('ou_df_nation')];
+
 ?>
 
 <div id="int-site">
