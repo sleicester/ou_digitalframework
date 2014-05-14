@@ -139,9 +139,7 @@ $countryCookieCode = $codes[theme_get_setting('ou_df_nation')];
   <script>
    var countryCode = '<?php echo $countryCookieCode; ?>';
       doTranslation();
-      if(!oucheckCookie('OU_CountryCode')){
-        ousetCookie('OU_CountryCode',  countryCode, 365, mdomain);
-      }
+      
   </script>
 
   <?php print $page_top; ?>
