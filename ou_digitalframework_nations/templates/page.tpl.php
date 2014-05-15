@@ -85,7 +85,7 @@
 
 
    	<?php
-       
+
        /**
        * @param
        * - $menu_block_id - the block id to be loaded in this sites menu block
@@ -93,7 +93,7 @@
        * @param
        * - $blockname - variable containing the block to be loaded for rendering
        **/
-    
+
    	    $menu_block_id = theme_get_setting('ou_df_main_nav_block_id');
         $_sitemenutree = '';
         $blockname = module_invoke('menu_block', 'block_view', $menu_block_id);
@@ -177,6 +177,12 @@
 
 		</div><!--/.int-promo-->
 		<?php endif; ?>
+				<div id="int-btn-top" class="btn-top scrollIn" role="button">
+				<a href="#int-site">
+				<i class="int-icon int-icon-chevron-up"></i>
+				<span> Back to top</span>
+				</a>
+		</div>
   	</main>
 
   	<footer role="contentinfo"><div class="section">

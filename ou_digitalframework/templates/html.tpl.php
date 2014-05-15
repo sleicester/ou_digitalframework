@@ -130,7 +130,7 @@ $countryCookieCode = $codes[theme_get_setting('ou_df_nation')];
  <script>
    var countryCode = '<?php echo $countryCookieCode; ?>';
       doTranslation();
-    
+
   </script>
 
   <?php print $page_top; ?>
@@ -145,9 +145,6 @@ $countryCookieCode = $codes[theme_get_setting('ou_df_nation')];
 
   <script src="/oudigital/eep/assets/js/vendor/jquery.placeholder.js"></script>
   <script src="/oudigital/eep/assets/js/vendor/jquery.smartresize.js"></script>
-  <script src="<?php print $themePath . '/js/app.js'?>"></script>
-  <script src="/oudigital/eep/assets/js/modules/back-to-top.js"></script>
-  <script src="<?php print $themePath . '/js/main.js'?>"></script>
   <script>
 
     // Only hide if your CMS menu has been output correctly
