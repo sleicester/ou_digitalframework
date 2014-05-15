@@ -177,12 +177,7 @@
 
 		</div><!--/.int-promo-->
 		<?php endif; ?>
-		<div id="int-btn-top" class="btn-top scrollIn" role="button">
-		<a href="#int-site">
-		<i class="int-icon int-icon-chevron-up"></i>
-		<span> Back to top</span>
-		</a>
-		</div>
+
   	</main>
 
   	<footer role="contentinfo"><div class="section">
