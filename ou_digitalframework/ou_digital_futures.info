@@ -20,4 +20,10 @@ regions[highlighted-bottom] = Highlighted Bottom
 regions[content] = Content
 regions[footer] = Footer
 
-settings[ou_df_main_nav_block_id] = 99
+settings[ou_df_main_nav_block_id] = 1
+settings[ou_df_children_block_id] = 1
+settings[ou_df_siblings_block_id] = 2
+settings[ou_df_siblings_block_id] = 2
+settings[ou_df_path_to_header] = /var/www/html/includes/oudigital/ou_hdr_public.html
+settings[ou_df_path_to_footer] = /var/www/html/includes/oudigital/ou_ftr_public.html
+
