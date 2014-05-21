@@ -46,7 +46,7 @@ function ou_digital_futures_preprocess_html( & $variables)
   }
 
 // add a class to indicate the current drupal level
-  $variables['classes_array'][] = 'item-menu-level-' . $level;
+  $variables['classes_array'][] = 'item-drupal-menu-level-' . $level;
   // Depending on the current theme
   // we set the menu depth to compare against
   // ou_digital_futures renders 2 Levels (drupal)
